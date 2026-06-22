@@ -1,4 +1,4 @@
-import { GENERATE_QUESTIONS_PROMPT_V4 } from "@/prompts/generate-questions.v4";
+import { GENERATE_QUESTIONS_PROMPT_V4_1 } from "@/prompts/generate-questions.v4.1";
 
 import OpenAI from "openai";
 
@@ -19,7 +19,7 @@ export async function generateQuestions(sourceText: string) {
     messages: [
       {
         role: "system",
-        content: GENERATE_QUESTIONS_PROMPT_V4.trim(),
+        content: GENERATE_QUESTIONS_PROMPT_V4_1.trim(),
       },
       {
         role: "user",
