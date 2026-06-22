@@ -1,0 +1,65 @@
+{
+  "sourceId": "931357fc-921d-403a-aa32-c91a2b429251",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "REST는 Stateless의 특징을 가지고 있다.",
+      "answer": "O",
+      "explanation": "REST의 주요 특징 중 하나는 Stateless이다."
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 REST의 주요 특징이 아닌 것은 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Client-Server"
+        },
+        {
+          "key": "B",
+          "text": "Stateless"
+        },
+        {
+          "key": "C",
+          "text": "Cacheable"
+        },
+        {
+          "key": "D",
+          "text": "Dynamic Interface"
+        }
+      ],
+      "answer": "D",
+      "explanation": "REST의 주요 특징에는 Dynamic Interface가 포함되지 않는다."
+    },
+    {
+      "type": "blank",
+      "question": "REST의 주요 특징 중 하나는 ____ System이다.",
+      "answer": "Layered",
+      "acceptedAnswers": [
+        "Layered"
+      ],
+      "explanation": "REST의 주요 특징 중 하나는 Layered System이다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "REST의 주요 특징을 나열하시오.",
+      "answer": [
+        "Client-Server",
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "Layered System"
+      ],
+      "acceptedAnswers": [
+        "Client-Server",
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "Layered System"
+      ],
+      "explanation": "REST의 주요 특징으로는 Client-Server, Stateless, Cacheable, Uniform Interface, Layered System이 있다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:09:06.458Z"
+}

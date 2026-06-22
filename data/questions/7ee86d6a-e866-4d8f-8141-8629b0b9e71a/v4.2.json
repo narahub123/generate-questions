@@ -1,0 +1,65 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "HTTP 요청 과정에는 DNS 조회가 포함된다.",
+      "answer": "O",
+      "explanation": "HTTP 요청 과정의 첫 번째 단계는 DNS 조회이다."
+    },
+    {
+      "type": "mcq",
+      "question": "HTTP 요청 과정에서 두 번째 단계는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "TCP 연결"
+        },
+        {
+          "key": "B",
+          "text": "HTTP 요청 전송"
+        },
+        {
+          "key": "C",
+          "text": "서버 응답 수신"
+        },
+        {
+          "key": "D",
+          "text": "브라우저 렌더링"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTP 요청 과정의 두 번째 단계는 TCP 연결이다."
+    },
+    {
+      "type": "blank",
+      "question": "HTTP 요청 과정의 마지막 단계는 ____이다.",
+      "answer": "브라우저 렌더링",
+      "acceptedAnswers": [
+        "브라우저 렌더링"
+      ],
+      "explanation": "HTTP 요청 과정의 마지막 단계는 브라우저 렌더링이다."
+    },
+    {
+      "type": "sequence",
+      "question": "HTTP 요청 과정의 단계를 올바른 순서로 나열하시오.",
+      "shuffledItems": [
+        "서버 응답 수신",
+        "HTTP 요청 전송",
+        "브라우저 렌더링",
+        "TCP 연결",
+        "DNS 조회"
+      ],
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "서버 응답 수신",
+        "브라우저 렌더링"
+      ],
+      "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청 전송, 서버 응답 수신, 브라우저 렌더링의 순서로 진행된다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:11:42.108Z"
+}
