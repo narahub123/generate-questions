@@ -1,0 +1,76 @@
+{
+  "sourceId": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "TCP는 비연결이다.",
+      "answer": "X",
+      "explanation": "TCP는 연결 지향이다."
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 TCP의 특징이 아닌 것은?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "신뢰성 보장"
+        },
+        {
+          "key": "B",
+          "text": "속도가 빠름"
+        },
+        {
+          "key": "C",
+          "text": "속도가 상대적으로 느림"
+        },
+        {
+          "key": "D",
+          "text": "연결 지향"
+        }
+      ],
+      "answer": "B",
+      "explanation": "TCP는 속도가 상대적으로 느림."
+    },
+    {
+      "type": "blank",
+      "question": "UDP는 ____이다.",
+      "answer": "비연결",
+      "acceptedAnswers": [
+        "비연결"
+      ],
+      "explanation": "UDP는 비연결이다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "TCP의 특징을 나열하시오.",
+      "answer": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림"
+      ],
+      "acceptedAnswers": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림"
+      ],
+      "explanation": "TCP의 특징은 연결 지향, 신뢰성 보장, 속도가 상대적으로 느림이다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "UDP의 특징을 나열하시오.",
+      "answer": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "acceptedAnswers": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "explanation": "UDP의 특징은 비연결, 신뢰성 보장 없음, 속도가 빠름이다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:14:16.259Z"
+}
