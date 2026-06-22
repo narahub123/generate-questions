@@ -1,0 +1,46 @@
+{
+  "sourceId": "931357fc-921d-403a-aa32-c91a2b429251",
+  "version": "v4.1",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "REST는 상태를 유지하는 시스템이다.",
+      "answer": "X",
+      "explanation": "REST는 Stateless, 즉 상태를 유지하지 않는 시스템이다."
+    },
+    {
+      "type": "mcq",
+      "question": "REST의 주요 특징 중 하나가 아닌 것은?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Client-Server"
+        },
+        {
+          "key": "B",
+          "text": "Stateless"
+        },
+        {
+          "key": "C",
+          "text": "Cacheable"
+        },
+        {
+          "key": "D",
+          "text": "Dynamic Interface"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Dynamic Interface는 REST의 주요 특징이 아니다."
+    },
+    {
+      "type": "blank",
+      "question": "REST의 주요 특징 중 하나는 ____이다.",
+      "answer": "Layered System",
+      "acceptedAnswers": [
+        "Layered System"
+      ],
+      "explanation": "REST의 주요 특징 중 하나는 Layered System이다."
+    }
+  ],
+  "createdAt": "2026-06-22T06:50:10.845Z"
+}
