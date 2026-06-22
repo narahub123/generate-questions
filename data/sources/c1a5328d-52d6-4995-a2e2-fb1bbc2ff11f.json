@@ -1,0 +1,6 @@
+{
+  "id": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
+  "title": "Test 08 - 혼합형",
+  "content": "REST API\n\nREST는 Stateless를 따른다.\n\nREST의 주요 특징\n\n- Stateless\n- Cacheable\n- Uniform Interface\n\nHTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청\n4. 응답\n\nREST는 서버가 클라이언트 상태를 저장하지 않는다.",
+  "createdAt": "2026-06-22T06:02:05.958Z"
+}

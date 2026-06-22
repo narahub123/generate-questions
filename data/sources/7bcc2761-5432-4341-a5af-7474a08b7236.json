@@ -1,0 +1,6 @@
+{
+  "id": "7bcc2761-5432-4341-a5af-7474a08b7236",
+  "title": "Test 07 - 코드 + 설명",
+  "content": "```ts\nconst user = {\n  name: \"Tom\"\n};\n```\n\n객체(Object)는 여러 값을 하나로 묶어 저장할 수 있다.\n\n객체의 각 값은 key와 value로 구성된다.",
+  "createdAt": "2026-06-22T06:01:53.972Z"
+}

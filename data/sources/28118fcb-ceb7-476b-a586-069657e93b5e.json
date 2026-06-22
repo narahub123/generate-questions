@@ -1,0 +1,6 @@
+{
+  "id": "28118fcb-ceb7-476b-a586-069657e93b5e",
+  "title": "Test 12 - 계층적 노트",
+  "content": "OSI 7계층\n\nTransport Layer\n- TCP\n- UDP\n\nNetwork Layer\n- IP\n- ICMP\n\nApplication Layer\n- HTTP\n- HTTPS",
+  "createdAt": "2026-06-22T06:02:49.606Z"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "title": "Test 03 - 절차형 (Sequence)",
+  "content": "HTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청 전송\n4. 서버 응답 수신\n5. 브라우저 렌더링",
+  "createdAt": "2026-06-22T06:01:11.643Z"
+}

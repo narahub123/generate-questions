@@ -99,6 +99,99 @@
     "content": "In today’s rapidly changing world, learning is no longer something that ends after graduation. Technology, society, and industries continue to evolve, making lifelong learning an essential skill for personal and professional growth. People who continuously learn are often better prepared to adapt to new challenges and opportunities.\n\nOne of the biggest benefits of lifelong learning is the ability to stay relevant in the workplace. New tools and technologies emerge every year, and employees who actively improve their skills can remain competitive. For example, a software developer who regularly studies new programming languages and frameworks will have more opportunities than someone who relies only on outdated knowledge.\n\nLifelong learning also contributes to personal development. Learning a new language, reading books, or studying a different culture can broaden perspectives and improve critical thinking. It helps people become more open-minded and better equipped to understand complex issues. Furthermore, acquiring new knowledge often increases confidence because individuals feel more capable of handling unfamiliar situations.\n\nAnother important aspect is curiosity. Curious people naturally seek answers and explore new ideas. This mindset encourages creativity and innovation. Many successful entrepreneurs, scientists, and artists attribute their achievements to a continuous desire to learn and experiment. Their willingness to explore beyond their comfort zones often leads to groundbreaking discoveries and achievements.\n\nModern technology has made learning more accessible than ever before. Online courses, educational videos, digital libraries, and virtual communities allow anyone with an internet connection to gain knowledge from experts around the world. As a result, education is no longer limited by location, age, or financial status.\n\nIn conclusion, lifelong learning is a valuable habit that benefits both individuals and society. It enhances career prospects, promotes personal growth, encourages creativity, and enables people to adapt to a constantly changing world. By maintaining a commitment to learning throughout life, individuals can continue to grow, contribute, and succeed in an increasingly complex future.",
     "createdAt": "2026-06-17T01:27:20.841Z",
     "hasQuestions": true,
-    "questionCount": 4
+    "questionCount": 4,
+    "versions": [
+      "v4"
+    ]
+  },
+  {
+    "id": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+    "title": "Test 01 - 정의형 (Definition)",
+    "content": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.\n\n데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.\n\n패킷 손실 시 재전송을 수행한다.",
+    "createdAt": "2026-06-22T06:00:42.168Z"
+  },
+  {
+    "id": "931357fc-921d-403a-aa32-c91a2b429251",
+    "title": "Test 02 - 특징 나열형 (Characteristics)",
+    "content": "REST의 주요 특징\n\n- Client-Server\n- Stateless\n- Cacheable\n- Uniform Interface\n- Layered System",
+    "createdAt": "2026-06-22T06:00:59.831Z"
+  },
+  {
+    "id": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+    "title": "Test 03 - 절차형 (Sequence)",
+    "content": "HTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청 전송\n4. 서버 응답 수신\n5. 브라우저 렌더링",
+    "createdAt": "2026-06-22T06:01:11.643Z"
+  },
+  {
+    "id": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+    "title": "Test 04 - 비교형 (Comparison)",
+    "content": "TCP\n\n- 연결 지향\n- 신뢰성 보장\n- 속도가 상대적으로 느림\n\nUDP\n\n- 비연결\n- 신뢰성 보장 없음\n- 속도가 빠름",
+    "createdAt": "2026-06-22T06:01:21.056Z"
+  },
+  {
+    "id": "a9b7131f-af60-4993-8f98-d121b265cd74",
+    "title": "Test 05 - 구성 요소형 (Components)",
+    "content": "JWT는 다음 세 부분으로 구성된다.\n\n- Header\n- Payload\n- Signature\n\nHeader에는 알고리즘 정보가 저장된다.\n\nPayload에는 사용자 정보(Claim)가 저장된다.\n\nSignature는 위변조를 방지한다.",
+    "createdAt": "2026-06-22T06:01:32.216Z"
+  },
+  {
+    "id": "28c674e0-ea65-4947-aa86-3c4d46a8a841",
+    "title": "Test 06 - 표 형태",
+    "content": "프로토콜 | 기본 포트\n\nHTTP | 80\n\nHTTPS | 443\n\nSSH | 22\n\nFTP | 21",
+    "createdAt": "2026-06-22T06:01:43.108Z"
+  },
+  {
+    "id": "7bcc2761-5432-4341-a5af-7474a08b7236",
+    "title": "Test 07 - 코드 + 설명",
+    "content": "```ts\nconst user = {\n  name: \"Tom\"\n};\n```\n\n객체(Object)는 여러 값을 하나로 묶어 저장할 수 있다.\n\n객체의 각 값은 key와 value로 구성된다.",
+    "createdAt": "2026-06-22T06:01:53.972Z"
+  },
+  {
+    "id": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
+    "title": "Test 08 - 혼합형",
+    "content": "REST API\n\nREST는 Stateless를 따른다.\n\nREST의 주요 특징\n\n- Stateless\n- Cacheable\n- Uniform Interface\n\nHTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청\n4. 응답\n\nREST는 서버가 클라이언트 상태를 저장하지 않는다.",
+    "createdAt": "2026-06-22T06:02:05.958Z"
+  },
+  {
+    "id": "8a4b23b8-da4a-4813-baac-396ff2fcff07",
+    "title": "Test 09 - 매우 짧은 노트",
+    "content": "Stack은 LIFO 구조이다.",
+    "createdAt": "2026-06-22T06:02:14.308Z"
+  },
+  {
+    "id": "680e3f55-4e6a-4fc7-86c2-5e161e6931d4",
+    "title": "Test 10 - 긴 설명형",
+    "content": "브라우저에 URL을 입력하면 먼저 DNS 조회를 수행하여 도메인에 해당하는 IP 주소를 찾는다.\n\n이후 서버와 TCP 연결을 맺는다.\n\nTCP 연결이 완료되면 HTTP 요청을 전송한다.\n\n서버는 요청을 처리한 뒤 HTTP 응답을 반환한다.\n\n브라우저는 HTML을 파싱하고 CSS와 JavaScript를 다운로드한 뒤 화면을 렌더링한다.",
+    "createdAt": "2026-06-22T06:02:22.268Z"
+  },
+  {
+    "id": "3aa7dcf3-2f5b-4fb3-a34e-8ab950fa09ed",
+    "title": "Test 11 - 중복 개념 노트",
+    "content": "TCP는 연결 지향 프로토콜이다.\n\nTCP는 신뢰성 있는 데이터 전송을 제공한다.\n\nTCP는 데이터 손실 시 재전송을 수행한다.\n\nTCP는 연결을 설정한 후 데이터를 전송한다.",
+    "createdAt": "2026-06-22T06:02:39.600Z"
+  },
+  {
+    "id": "28118fcb-ceb7-476b-a586-069657e93b5e",
+    "title": "Test 12 - 계층적 노트",
+    "content": "OSI 7계층\n\nTransport Layer\n- TCP\n- UDP\n\nNetwork Layer\n- IP\n- ICMP\n\nApplication Layer\n- HTTP\n- HTTPS",
+    "createdAt": "2026-06-22T06:02:49.606Z"
+  },
+  {
+    "id": "365b92d6-6bc8-4577-ad93-fe5f727f95fb",
+    "title": "Test 13 - 잘못된 내용이 포함된 노트",
+    "content": "HTTP의 기본 포트는 443이다.\n\nTCP는 비연결 지향 프로토콜이다.\n\nOSI는 6계층으로 이루어져 있다.",
+    "createdAt": "2026-06-22T06:04:48.875Z"
+  },
+  {
+    "id": "47c5beb2-b225-4d7c-b671-bf27af74c190",
+    "title": "Test 14 - 문제형 노트",
+    "content": "Q. TCP란 무엇인가?\n\nA. 연결 지향 프로토콜이다.\n\nQ. HTTP 기본 포트는?\n\nA. 80\n\nQ. REST의 특징은?\n\nA. Stateless",
+    "createdAt": "2026-06-22T06:05:02.545Z"
+  },
+  {
+    "id": "60a9046e-d689-41d1-ac10-68db6b44dc44",
+    "title": "Test 15 - 정리되지 않은 노트",
+    "content": "TCP 연결지향\n\nudp 빠름\n\nhttp 80\n\nhttps 443\n\nstateless 서버가 상태 저장 안함\n\ndns 먼저\n\ntcp\n\nhttp\n\n응답\n\n렌더링",
+    "createdAt": "2026-06-22T06:05:17.361Z"
   }
 ]

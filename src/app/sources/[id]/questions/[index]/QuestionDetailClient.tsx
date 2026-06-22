@@ -2,16 +2,24 @@
 
 import { Question } from "@/types";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   ArrowLeft,
   CheckCircle2,
   XCircle,
-  HelpCircle,
   ArrowRight,
   Loader2,
-  Award,
+  AlertCircle,
 } from "lucide-react";
+
+// 각각 분리된 독립 컴포넌트들을 default import로 가져옵니다.
+import McqQuestion from "@/components/questions/McqQuestion";
+import OxQuestion from "@/components/questions/OxQuestion";
+import ShortQuestion from "@/components/questions/ShortQuestion";
+import BlankQuestion from "@/components/questions/BlankQuestion";
+import SequenceQuestion from "@/components/questions/SequenceQuestion";
+import KeywordListQuestion from "@/components/questions/KeywordListQuestion";
+import KeywordFindQuestion from "@/components/questions/KeywordFindQuestion";
 
 export default function QuestionDetailClient({
   id,
@@ -21,27 +29,87 @@ export default function QuestionDetailClient({
   index: string;
 }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const version = searchParams.get("version");
+
   const [question, setQuestion] = useState<Question | null>(null);
   const [answer, setAnswer] = useState<string>("");
   const [result, setResult] = useState<null | "correct" | "wrong">(null);
   const [submitted, setSubmitted] = useState(false);
 
   async function load() {
-    const res = await fetch(`/api/questions?sourceId=${id}`);
-    const data = await res.json();
-    setQuestion(data.questions?.[Number(index)]);
+    if (!id || !version) return;
+
+    try {
+      const res = await fetch(
+        `/api/questions?sourceId=${id}&version=${encodeURIComponent(version)}`,
+      );
+      const data = await res.json();
+      setQuestion(data.questions?.[Number(index)] || null);
+    } catch (error) {
+      console.error("문제를 불러오는데 실패했습니다.", error);
+    }
   }
 
   useEffect(() => {
-    if (!id) return;
     load();
-  }, [id]);
+  }, [id, index, version]);
+
+  if (!version) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-3 text-gray-500">
+        <AlertCircle className="w-8 h-8 text-red-500" />
+        <p className="text-sm font-medium">유효하지 않은 접근입니다.</p>
+        <p className="text-xs text-gray-400">
+          버전 정보가 지정되지 않았습니다.
+        </p>
+        <button
+          onClick={() => router.push(`/sources/${id}`)}
+          className="text-xs text-blue-600 underline mt-2"
+        >
+          노트 상세보기로 돌아가기
+        </button>
+      </div>
+    );
+  }
 
   function submit() {
     if (!question || !answer.trim()) return;
 
-    // 대소문자나 공백에 따른 오답 처리를 방지하기 위해 trim() 및 변환 적용 가능
-    const isCorrect = answer.trim() === question.answer.trim();
+    let isCorrect = false;
+
+    // 2. 새로운 유형들은 정답 데이터 형태가 배열 구조(또는 JSON 형태 배열 문자열)이므로 분기 채점 유도
+    if (["keyword-find", "keyword-list", "sequence"].includes(question.type)) {
+      try {
+        const userArray: string[] = JSON.parse(answer);
+        const serverArray: string[] = Array.isArray(question.answer)
+          ? question.answer
+          : JSON.parse(question.answer as unknown as string);
+
+        if (question.type === "keyword-find") {
+          // 키워드 찾기는 순서 상관없이 요소 일치 여부 검사
+          isCorrect =
+            userArray.length === serverArray.length &&
+            userArray.every((val) => serverArray.includes(val));
+        } else if (question.type === "keyword-list") {
+          // 주관식 다중 나열은 동의어 목록(acceptedAnswers)과 유연하게 크로스체킹하면 좋으나,
+          // 기본적으로 유저 입력 배열이 정답 배열 원소들을 모두 상호 포함하는지 체크
+          isCorrect =
+            userArray.length === serverArray.length &&
+            userArray.every((val) =>
+              serverArray.map((s) => s.trim()).includes(val.trim()),
+            );
+        } else if (question.type === "sequence") {
+          // 순서 맞추기는 인덱스 순서까지 완벽히 일치해야 정답
+          isCorrect = JSON.stringify(userArray) === JSON.stringify(serverArray);
+        }
+      } catch (e) {
+        isCorrect = false;
+      }
+    } else {
+      // 기본 텍스트 단일 매칭 유형 (ox, mcq, short, blank)
+      isCorrect = answer.trim() === String(question.answer).trim();
+    }
 
     setResult(isCorrect ? "correct" : "wrong");
     setSubmitted(true);
@@ -58,128 +126,120 @@ export default function QuestionDetailClient({
 
   const currentNum = Number(index) + 1;
 
+  // 독립 파일 컴포넌트를 타입에 맞게 매핑 분기 처리
+  const renderQuestionBody = () => {
+    switch (question.type) {
+      case "mcq":
+        return (
+          <McqQuestion
+            question={question}
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      case "ox":
+        return (
+          <OxQuestion
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      case "short":
+        return (
+          <ShortQuestion
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      case "blank":
+        return (
+          <BlankQuestion
+            question={question}
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      // 3. 신규 컴포넌트 라우팅 스위치 케이스 등록
+      case "keyword-find":
+        return (
+          <KeywordFindQuestion
+            question={question}
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      case "keyword-list":
+        return (
+          <KeywordListQuestion
+            question={question}
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      case "sequence":
+        return (
+          <SequenceQuestion
+            question={question}
+            answer={answer}
+            setAnswer={setAnswer}
+            submitted={submitted}
+          />
+        );
+      default:
+        return (
+          <p className="text-sm text-gray-500">
+            지원하지 않는 유형의 문제입니다.
+          </p>
+        );
+    }
+  };
+
   return (
     <div className="max-w-2xl mx-auto p-6 space-y-6">
-      {/* 상단 네비게이션 */}
       <button
-        onClick={() => router.push(`/sources/${id}/questions`)}
+        onClick={() =>
+          router.push(
+            `/sources/${id}/questions?version=${encodeURIComponent(version)}`,
+          )
+        }
         className="inline-flex items-center text-sm text-gray-500 hover:text-gray-900 transition-colors gap-1"
       >
         <ArrowLeft className="w-4 h-4" />
         문제 목록으로 돌아가기
       </button>
 
-      {/* 퀴즈 카드 풀이 영역 */}
       <main className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
-        {/* 카드 상단 정보바 */}
         <div className="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
-          <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md uppercase tracking-wider">
-            {question.type} QUIZ
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md uppercase tracking-wider">
+              {question.type} QUIZ
+            </span>
+            <span className="text-[11px] font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded-md">
+              버전: {version}
+            </span>
+          </div>
           <span className="text-sm font-semibold text-gray-500">
             Question {currentNum}
           </span>
         </div>
 
         <div className="p-6 space-y-6">
-          {/* 질문 제목 (빈칸 채우기 유형이 아닐 때만 렌더링) */}
+          {/* 빈칸 채우기 유형이 아닐 때만 공통 질문 텍스트 출력 */}
           {question.type !== "blank" && (
             <h2 className="text-xl font-bold text-gray-900 leading-snug">
               {question.question}
             </h2>
           )}
 
-          {/* 1. 객관식 (MCQ) UI */}
-          {question.type === "mcq" && (
-            <ul className="grid gap-3">
-              {question.choices?.map((c) => {
-                const isSelected = answer === c.key;
-                return (
-                  <li key={c.key}>
-                    <button
-                      disabled={submitted}
-                      onClick={() => setAnswer(c.key)}
-                      className={`w-full text-left p-4 rounded-xl border text-sm font-medium transition-all flex items-center gap-3
-                        ${
-                          isSelected
-                            ? "border-blue-500 bg-blue-50/50 text-blue-700 font-semibold ring-2 ring-blue-500/20"
-                            : "border-gray-200 hover:bg-gray-50 text-gray-700"
-                        } disabled:cursor-not-allowed`}
-                    >
-                      <span
-                        className={`w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold transition-colors
-                        ${isSelected ? "bg-blue-600 border-blue-600 text-white" : "border-gray-300 bg-white text-gray-500"}`}
-                      >
-                        {c.key}
-                      </span>
-                      <span>{c.text}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
+          {/* 컴포넌트 렌더링 함수 실행 */}
+          {renderQuestionBody()}
 
-          {/* 2. O/X UI */}
-          {question.type === "ox" && (
-            <div className="grid grid-cols-2 gap-4">
-              {["O", "X"].map((option) => {
-                const isSelected = answer === option;
-                return (
-                  <button
-                    key={option}
-                    disabled={submitted}
-                    onClick={() => setAnswer(option)}
-                    className={`p-6 rounded-xl border text-2xl font-bold transition-all
-                      ${
-                        isSelected
-                          ? option === "O"
-                            ? "border-green-500 bg-green-50 text-green-600 ring-2 ring-green-500/20"
-                            : "border-red-500 bg-red-50 text-red-600 ring-2 ring-red-500/20"
-                          : "border-gray-200 hover:bg-gray-50 text-gray-400"
-                      } disabled:cursor-not-allowed`}
-                  >
-                    {option}
-                  </button>
-                );
-              })}
-            </div>
-          )}
-
-          {/* 3. 주관식 단답형 (SHORT) UI */}
-          {question.type === "short" && (
-            <div className="space-y-1">
-              <input
-                disabled={submitted}
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                placeholder="정답을 입력하세요"
-                className="w-full border border-gray-300 rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition disabled:bg-gray-50 disabled:text-gray-500"
-              />
-            </div>
-          )}
-
-          {/* 4. 빈칸 채우기 (BLANK) UI */}
-          {question.type === "blank" && (
-            <h2 className="text-xl font-bold text-gray-900 leading-loose whitespace-normal">
-              {question.question.split("____").map((part, i) => (
-                <span key={i} className="inline-flex flex-wrap items-center">
-                  {part}
-                  {i === 0 && (
-                    <input
-                      disabled={submitted}
-                      value={answer}
-                      onChange={(e) => setAnswer(e.target.value)}
-                      placeholder="정답"
-                      className="mx-2 text-center border-b-2 border-gray-400 focus:border-blue-600 outline-none text-blue-600 bg-transparent px-2 w-32 font-bold transition disabled:text-gray-500 disabled:border-gray-200"
-                    />
-                  )}
-                </span>
-              ))}
-            </h2>
-          )}
-
-          {/* 제출 버튼 (제출 전 상태에만 활성화) */}
           {!submitted && (
             <button
               onClick={submit}
@@ -191,7 +251,6 @@ export default function QuestionDetailClient({
           )}
         </div>
 
-        {/* 5. 채점 결과 및 해설 영역 (제출 완료 후 노출) */}
         {submitted && (
           <div
             className={`border-t p-6 space-y-4 transition-colors duration-300 ${
@@ -246,10 +305,13 @@ export default function QuestionDetailClient({
               </div>
             </div>
 
-            {/* 다음 문제 풀기 유도 안내 (선택 구현 사항) */}
             <div className="flex justify-end pt-2">
               <button
-                onClick={() => router.push(`/sources/${id}/questions`)}
+                onClick={() =>
+                  router.push(
+                    `/sources/${id}/questions?version=${encodeURIComponent(version)}`,
+                  )
+                }
                 className="inline-flex items-center gap-1 text-sm font-semibold text-gray-700 hover:text-gray-900 transition-colors"
               >
                 문제 목록으로 이동 <ArrowRight className="w-4 h-4" />

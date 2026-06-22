@@ -6,19 +6,26 @@ const QUESTION_DIR = path.join(process.cwd(), "data", "questions");
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const sourceId = searchParams.get("sourceId");
+  const version = searchParams.get("version");
 
-  if (!sourceId) {
-    return Response.json({ error: "sourceId required" }, { status: 400 });
+  // sourceId와 version 둘 다 필수 항목입니다.
+  if (!sourceId || !version) {
+    return Response.json(
+      { error: "sourceId와 version 파라미터가 모두 필요합니다." },
+      { status: 400 },
+    );
   }
 
-  const filePath = path.join(QUESTION_DIR, `${sourceId}.json`);
+  // 변경된 경로: data/questions/[sourceId]/[version].json
+  const filePath = path.join(QUESTION_DIR, sourceId, `${version.trim()}.json`);
 
   // 1) 파일 존재 체크
   if (!fs.existsSync(filePath)) {
     return Response.json({
       sourceId,
+      version,
       questions: [],
-      message: "No questions found",
+      message: `해당 버전(${version})의 문제를 찾을 수 없습니다.`,
     });
   }
 
@@ -27,6 +34,7 @@ export async function GET(req: Request) {
 
   return Response.json({
     sourceId,
+    version: data.version || version,
     questions: data.questions || [],
     createdAt: data.createdAt,
   });

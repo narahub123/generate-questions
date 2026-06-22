@@ -1,0 +1,49 @@
+{
+  "sourceId": "d0451f10-7acc-42e0-a157-b7f018259699",
+  "version": "v4",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "Lifelong learning is no longer something that ends after graduation.",
+      "answer": "O",
+      "explanation": "The text states that learning is no longer something that ends after graduation, emphasizing the importance of lifelong learning."
+    },
+    {
+      "type": "mcq",
+      "question": "What is one of the biggest benefits of lifelong learning?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Staying relevant in the workplace"
+        },
+        {
+          "key": "B",
+          "text": "Reducing the need for technology"
+        },
+        {
+          "key": "C",
+          "text": "Avoiding new challenges"
+        },
+        {
+          "key": "D",
+          "text": "Limiting personal development"
+        }
+      ],
+      "answer": "A",
+      "explanation": "The text highlights that one of the biggest benefits of lifelong learning is the ability to stay relevant in the workplace."
+    },
+    {
+      "type": "blank",
+      "question": "Lifelong learning contributes to personal ______.",
+      "answer": "development",
+      "acceptedAnswers": [
+        "growth",
+        "improvement",
+        "advancement",
+        "development"
+      ],
+      "explanation": "The text mentions that lifelong learning contributes to personal development."
+    }
+  ],
+  "createdAt": "2026-06-22T06:12:55.923Z"
+}

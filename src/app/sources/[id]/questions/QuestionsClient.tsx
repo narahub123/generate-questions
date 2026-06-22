@@ -1,24 +1,34 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import {
   ArrowLeft,
   HelpCircle,
-  CheckCircle2,
   ChevronRight,
   Loader2,
+  AlertCircle,
 } from "lucide-react";
 
 export default function QuestionsClient({ id }: { id: string }) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // 1. 주소창에서 version 파라미터 추출
+  const version = searchParams.get("version");
+
   const [questions, setQuestions] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
 
   async function load() {
+    if (!id || !version) return;
+
     try {
       setIsLoading(true);
-      const res = await fetch(`/api/questions?sourceId=${id}`);
+      // 2. API 호출 시 sourceId와 version을 함께 전달
+      const res = await fetch(
+        `/api/questions?sourceId=${id}&version=${encodeURIComponent(version)}`,
+      );
       const data = await res.json();
       setQuestions(data.questions || []);
     } catch (error) {
@@ -29,9 +39,27 @@ export default function QuestionsClient({ id }: { id: string }) {
   }
 
   useEffect(() => {
-    if (!id) return;
     load();
-  }, [id]);
+  }, [id, version]);
+
+  // 에러 핸들링: 만약 주소창에 버전 정보가 누락된 채 진입했을 경우
+  if (!version) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-3 text-gray-500">
+        <AlertCircle className="w-8 h-8 text-red-500" />
+        <p className="text-sm font-medium">유효하지 않은 접근입니다.</p>
+        <p className="text-xs text-gray-400">
+          버전 정보가 지정되지 않았습니다.
+        </p>
+        <button
+          onClick={() => router.push(`/sources/${id}`)}
+          className="text-xs text-blue-600 underline mt-2"
+        >
+          노트 상세보기로 돌아가기
+        </button>
+      </div>
+    );
+  }
 
   // 로딩 상태 UI
   if (isLoading) {
@@ -39,7 +67,7 @@ export default function QuestionsClient({ id }: { id: string }) {
       <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-2">
         <Loader2 className="w-8 h-8 animate-spin text-blue-500" />
         <p className="text-sm text-gray-500">
-          생성된 문제를 불러오는 중입니다...
+          [{version}] 버전 문제를 불러오는 중입니다...
         </p>
       </div>
     );
@@ -69,6 +97,15 @@ export default function QuestionsClient({ id }: { id: string }) {
             </span>
             개의 문제입니다. 클릭하여 풀이를 시작하세요.
           </p>
+          {/* 현재 활성화된 버전을 상단에 가시적으로 표시 */}
+          <div className="mt-2 flex items-center gap-1.5">
+            <span className="text-xs font-medium text-gray-400">
+              선택된 버전:
+            </span>
+            <span className="text-xs font-bold text-blue-700 bg-blue-50 border border-blue-100 px-2 py-0.5 rounded-md">
+              {version}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -76,14 +113,20 @@ export default function QuestionsClient({ id }: { id: string }) {
       <div className="space-y-3">
         {questions.length === 0 ? (
           <div className="text-center py-16 border border-dashed border-gray-300 rounded-xl text-gray-400 text-sm">
-            생성된 문제가 없습니다. 이전 페이지에서 문제를 먼저 생성해주세요.
+            해당 버전({version})으로 생성된 문제가 없습니다. 이전 페이지에서
+            문제를 먼저 생성해주세요.
           </div>
         ) : (
           <div className="grid gap-4">
             {questions.map((q, i) => (
               <div
                 key={i}
-                onClick={() => router.push(`/sources/${id}/questions/${i}`)}
+                // 3. 개별 문제를 풀러 이동할 때도 어떤 버전의 문제셋인지 쿼리 파라미터로 명시해줍니다.
+                onClick={() =>
+                  router.push(
+                    `/sources/${id}/questions/${i}?version=${encodeURIComponent(version)}`,
+                  )
+                }
                 className="group flex items-start justify-between p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-blue-500 hover:shadow-md cursor-pointer transition-all duration-200"
               >
                 <div className="space-y-3 pr-4 flex-1">

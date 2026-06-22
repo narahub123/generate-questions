@@ -1,0 +1,6 @@
+{
+  "id": "931357fc-921d-403a-aa32-c91a2b429251",
+  "title": "Test 02 - 특징 나열형 (Characteristics)",
+  "content": "REST의 주요 특징\n\n- Client-Server\n- Stateless\n- Cacheable\n- Uniform Interface\n- Layered System",
+  "createdAt": "2026-06-22T06:00:59.831Z"
+}

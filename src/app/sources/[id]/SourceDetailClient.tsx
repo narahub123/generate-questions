@@ -3,8 +3,14 @@
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-// lucide-react에서 필요한 아이콘 임포트
-import { ArrowLeft, BookOpen, FileText, Loader2, Sparkles } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  FileText,
+  Loader2,
+  Sparkles,
+  PlusCircle,
+} from "lucide-react";
 
 export default function SourceDetailClient() {
   const router = useRouter();
@@ -14,14 +20,34 @@ export default function SourceDetailClient() {
   const [source, setSource] = useState<any>(null);
   const [isGenerating, setIsGenerating] = useState(false);
 
+  // 입력 및 선택을 위한 상태 관리
+  const [versionInput, setVersionInput] = useState(""); // 생성할 버전명 입력
+  const [selectedVersion, setSelectedVersion] = useState(""); // 풀이할 버전 선택
+
   async function load() {
     const res = await fetch(`/api/sources/${id}`);
     const data = await res.json();
     setSource(data);
+
+    // 기본적으로 생성된 최신 버전이 있다면 첫 번째 버전을 선택 상태로 둡니다.
+    if (data.versions && data.versions.length > 0) {
+      setSelectedVersion(data.versions[data.versions.length - 1]);
+    }
   }
 
   async function generate() {
-    if (isGenerating) return; // 이미 생성 중이면 중복 실행 방지
+    if (isGenerating) return;
+    if (!versionInput.trim()) {
+      alert("생성할 버전 이름을 입력해주세요. (예: v1, 2차 테스트 등)");
+      return;
+    }
+
+    // 이미 존재하는 버전 이름인지 체크
+    if (source?.versions?.includes(versionInput.trim())) {
+      if (!confirm("이미 존재하는 버전 이름입니다. 덮어쓰시겠습니까?")) {
+        return;
+      }
+    }
 
     setIsGenerating(true);
     try {
@@ -30,18 +56,20 @@ export default function SourceDetailClient() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ sourceId: id }),
+        body: JSON.stringify({
+          sourceId: id,
+          version: versionInput.trim(),
+        }),
       });
 
       if (!res.ok) {
         throw new Error("generate failed");
       }
 
-      // 생성 성공 후 데이터를 다시 로드하여 source.hasQuestions 상태를 갱신하거나 페이지를 새로고침합니다.
+      // 생성 성공 후 입력 폼 초기화 및 데이터 리로드
+      setVersionInput("");
       await load();
-
-      // 즉시 이동하고 싶다면 아래 주석을 해제하세요.
-      // router.push(`/sources/${id}/questions`);
+      alert(`[${versionInput}] 버전의 문제가 성공적으로 생성되었습니다.`);
     } catch (error) {
       console.error("문제 생성 실패", error);
       alert("문제 생성에 실패했습니다. 다시 시도해주세요.");
@@ -64,9 +92,8 @@ export default function SourceDetailClient() {
     );
   }
 
-  // 백엔드 API 설계에 따라 source.hasQuestions 또는 source.questions?.length > 0 등으로 조건을 맞춰주세요.
-  const isQuestionGenerated =
-    source.hasQuestions || (source.questions && source.questions.length > 0);
+  // 백엔드에서 내려주는 versions 배열을 기준으로 판단합니다.
+  const hasVersions = source.versions && source.versions.length > 0;
 
   return (
     <div className="max-w-2xl mx-auto p-6 space-y-6">
@@ -96,14 +123,27 @@ export default function SourceDetailClient() {
           </p>
         </div>
 
-        {/* 하단 액션 바 */}
-        <div className="border-t border-gray-100 bg-gray-50/50 p-4 flex justify-end gap-3">
-          {/* 1. 문제가 생성되지 않았을 때만 '문제 생성' 버튼 노출 */}
-          {!isQuestionGenerated && (
+        {/* 하단 제어 및 액션 섹션 */}
+        <div className="border-t border-gray-100 bg-gray-50/50 p-6 space-y-4">
+          {/* 상단 파트: 버전 지정하여 AI 문제 생성 (항상 유지) */}
+          <div className="flex flex-col sm:flex-row gap-2 items-end sm:items-center justify-between p-4 bg-white border border-gray-100 rounded-lg">
+            <div className="w-full sm:w-auto flex-1 space-y-1">
+              <label className="text-xs font-semibold text-gray-500 block">
+                새로운 문제 버전 이름
+              </label>
+              <input
+                type="text"
+                placeholder="예: 기본 프롬프트, 심화 질문 등"
+                value={versionInput}
+                onChange={(e) => setVersionInput(e.target.value)}
+                disabled={isGenerating}
+                className="w-full max-w-xs px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+              />
+            </div>
             <button
               onClick={generate}
-              disabled={isGenerating}
-              className="flex items-center justify-center gap-2 py-2.5 px-5 bg-gray-950 hover:bg-gray-800 disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-medium text-sm rounded-lg transition shadow-sm"
+              disabled={isGenerating || !versionInput.trim()}
+              className="w-full sm:w-auto flex items-center justify-center gap-2 py-2 px-4 bg-gray-950 hover:bg-gray-800 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed text-white font-medium text-sm rounded-lg transition shadow-sm whitespace-nowrap"
             >
               {isGenerating ? (
                 <>
@@ -117,18 +157,57 @@ export default function SourceDetailClient() {
                 </>
               )}
             </button>
-          )}
+          </div>
 
-          {/* 2. 문제가 이미 생성되어 있을 때만 '문제 풀기' 버튼 노출 */}
-          {isQuestionGenerated && (
+          {/* 하단 파트: 생성된 문제 풀기 (버전 선택 필수) */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2">
+            <div className="flex flex-1 items-center gap-3">
+              <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                버전 선택:
+              </span>
+              {hasVersions ? (
+                <select
+                  value={selectedVersion}
+                  onChange={(e) => setSelectedVersion(e.target.value)}
+                  className="w-full max-w-xs px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20"
+                >
+                  <option value="">-- 풀이할 버전을 선택하세요 --</option>
+                  {source.versions.map((ver: string, idx: number) => (
+                    <option key={idx} value={ver}>
+                      {ver}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <span className="text-xs text-gray-400 bg-gray-100 px-3 py-2 rounded-lg w-full max-w-xs block text-center sm:text-left">
+                  생성된 문제가 없습니다. 먼저 위에서 문제를 생성하세요.
+                </span>
+              )}
+            </div>
+
+            {/* 선택한 버전을 쿼리 파라미터로 넘겨줌 */}
             <Link
-              href={`/sources/${id}/questions`}
-              className="flex items-center justify-center gap-2 py-2.5 px-5 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded-lg transition shadow-sm"
+              href={
+                selectedVersion
+                  ? `/sources/${id}/questions?version=${encodeURIComponent(selectedVersion)}`
+                  : "#"
+              }
+              onClick={(e) => {
+                if (!selectedVersion) {
+                  e.preventDefault();
+                  alert("풀이할 버전을 선택해야 이동할 수 있습니다.");
+                }
+              }}
+              className={`flex items-center justify-center gap-2 py-2.5 px-5 font-medium text-sm rounded-lg transition shadow-sm border ${
+                selectedVersion
+                  ? "bg-blue-600 hover:bg-blue-700 text-white border-transparent"
+                  : "bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed pointer-events-none"
+              }`}
             >
               <BookOpen className="w-4 h-4" />
-              <span>생성된 문제 풀기</span>
+              <span>선택한 버전 문제 풀기</span>
             </Link>
-          )}
+          </div>
         </div>
       </article>
     </div>

@@ -1,0 +1,6 @@
+{
+  "id": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+  "title": "Test 04 - 비교형 (Comparison)",
+  "content": "TCP\n\n- 연결 지향\n- 신뢰성 보장\n- 속도가 상대적으로 느림\n\nUDP\n\n- 비연결\n- 신뢰성 보장 없음\n- 속도가 빠름",
+  "createdAt": "2026-06-22T06:01:21.056Z"
+}
