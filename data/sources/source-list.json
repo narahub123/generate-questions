@@ -1,0 +1,104 @@
+[
+  {
+    "id": "08f3106b-d397-4471-89c7-a678c5c1839f",
+    "title": "테스트 ",
+    "content": "테스트 노트입니다",
+    "createdAt": "2026-06-14T06:53:14.841Z"
+  },
+  {
+    "id": "19efc04a-df90-4d77-9aa1-f4aff5609404",
+    "title": "광합성",
+    "content": "식물의 엽록체에서는 광합성이 일어난다. 광합성은 빛 에너지를 화학 에너지로 바꾸는 과정이다.",
+    "createdAt": "2026-06-14T07:36:53.865Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  },
+  {
+    "id": "df67b7db-0fb6-452f-8483-c6512b78224d",
+    "title": "광합성 테스트 2",
+    "content": "광합성은 식물이 빛 에너지를 이용하여 이산화탄소와 물로부터 포도당을 생성하는 과정이다.",
+    "createdAt": "2026-06-14T08:46:59.723Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  },
+  {
+    "id": "cd289696-9edc-49e1-a481-6e74b422851d",
+    "title": "광합성 테스트 3",
+    "content": "식물의 광합성은 엽록체에서 일어나며, 빛 반응과 캘빈 회로로 구성된다. 빛 반응에서는 물이 분해되어 산소가 생성되고 ATP와 NADPH가 만들어진다.",
+    "createdAt": "2026-06-14T08:49:59.452Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  },
+  {
+    "id": "5129f20f-7e60-4079-b491-9308cadb75c0",
+    "title": "광합성 테스트 4",
+    "content": "광합성은 식물 세포의 엽록체에서 일어나며, 빛 에너지를 화학 에너지로 전환하는 과정이다. 이 과정은 빛 반응과 캘빈 회로로 나뉘며, 빛 반응에서는 물이 분해되어 산소가 방출되고 ATP와 NADPH가 생성된다. 이후 캘빈 회로에서 이산화탄소가 고정되어 포도당이 합성된다.",
+    "createdAt": "2026-06-14T08:51:32.588Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  },
+  {
+    "id": "849134ae-e9a2-48be-b65f-a4447abb926a",
+    "title": "슬리이딩 윈도우",
+    "content": "슬라이딩 윈도우(Sliding Window)는 연속된 구간을 효율적으로 탐색하기 위한 알고리즘 패턴이다. 핵심은 “구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용”하는 것이다.\n\n1. 핵심 개념\n\n배열이나 문자열에서 고정 길이 또는 가변 길이의 연속 구간(window)을 잡고,\n이 구간을 한 칸씩 이동시키면서 값을 갱신한다.\n\n완전 탐색: O(n²)\n슬라이딩 윈도우: O(n)\n2. 기본 구조 (고정 길이)\n\n예: 길이 k의 부분합\n\nlet sum = 0;\n\n// 초기 윈도우\nfor (let i = 0; i < k; i++) {\n  sum += arr[i];\n}\n\nlet result = sum;\n\n// 윈도우 이동\nfor (let i = k; i < arr.length; i++) {\n  sum += arr[i];       // 새 값 추가\n  sum -= arr[i - k];   // 이전 값 제거\n  result = Math.max(result, sum);\n}\n\n👉 포인트:\n매번 다시 계산하지 않고 “추가 + 제거”로 갱신\n\n3. 가변 길이 슬라이딩 윈도우\n\n조건을 만족하는 구간을 찾는 형태\n\n예: 합이 S 이상인 최소 길이\n\nlet left = 0;\nlet sum = 0;\nlet result = Infinity;\n\nfor (let right = 0; right < arr.length; right++) {\n  sum += arr[right];\n\n  while (sum >= target) {\n    result = Math.min(result, right - left + 1);\n    sum -= arr[left];\n    left++;\n  }\n}\n\n👉 포인트:\n\nright 확장\n조건 만족하면 left 축소\n4. 언제 사용하는가\n\n다음 조건이면 거의 슬라이딩 윈도우다:\n\n“연속된 부분 배열 / 부분 문자열”\n“최대 / 최소 / 개수”\n“길이 k 고정”\n“조건 만족하는 최소/최대 구간”\n5. 대표 유형\n1) 고정 길이\n최대 합\n평균\nk개 문자 패턴\n2) 가변 길이\n최소 길이 subarray\n조건 만족하는 longest substring\n중복 없는 substring\n6. 핵심 사고 방식\n\n슬라이딩 윈도우는 결국 이것 하나다:\n\n“전체를 다시 보지 말고, 변화된 부분만 업데이트해라”\n\n7. 자주 하는 실수\n매번 window 전체를 다시 계산 (O(n²))\nleft 이동 조건을 잘못 설정\nwindow 상태(합, count 등) 업데이트 누락\n8. 한 줄 정리\n\n연속 구간 문제를 “확장 + 축소 + 상태 갱신”으로 O(n)에 해결하는 패턴",
+    "createdAt": "2026-06-15T04:56:41.047Z",
+    "hasQuestions": true,
+    "questionCount": 5
+  },
+  {
+    "id": "fd714bc4-4115-4ed6-b735-7ddb940f0d3d",
+    "title": "딥러닝",
+    "content": "딥러닝은 그냥 요즘 많이 쓰는 인공지능 방식인데, 사실 생각보다 원리가 단순한 것 같기도 하다. 입력 데이터를 막 넣으면 내부에서 여러 층을 거치면서 점점 특징을 뽑아낸다고 하는데, 이게 사람이 생각하는 방식이랑 비슷한 건지 아닌지는 잘 모르겠다.\n\n예를 들어서 고양이 사진을 넣으면 처음에는 그냥 색깔이나 선 같은 걸 보고, 그다음에는 귀 모양이나 눈 위치 같은 걸 보고, 마지막에는 전체적으로 고양이인지 아닌지를 판단한다고 한다. 근데 이런 단계가 진짜로 의미가 있는 건지 아니면 그냥 수학적으로 그렇게 맞춰진 건지는 좀 애매하다.\n\n그리고 신기한 건 학습을 많이 시키면 정확도가 계속 올라간다는 점이다. 근데 또 너무 많이 학습시키면 오히려 새로운 데이터에 약해진다고 하는데 이걸 과적합이라고 부른다고 들었다. 이름은 뭔가 있어 보이는데 사실 그냥 “외운 상태” 같은 느낌이다.\n\n딥러닝이 중요한 이유는 데이터만 많으면 사람이 규칙을 하나하나 안 만들어도 된다는 점이라고 하는데, 실제로는 데이터 정리하는 게 더 힘든 것 같기도 하다. 이미지 같은 경우도 다 라벨링을 해야 한다고 해서 생각보다 노동이 많이 들어간다.\n\n또 어떤 사람들은 이걸 뇌 구조랑 비슷하다고 설명하는데 실제 뇌랑 얼마나 비슷한지는 잘 모르겠다. 그냥 층이 여러 개 있다는 점만 비슷한 것 같다. 결국은 행렬 계산을 엄청 많이 하는 프로그램이라는 느낌이 더 강하다.",
+    "createdAt": "2026-06-15T05:12:51.976Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  },
+  {
+    "id": "1f1f4746-a693-4e0e-97ea-9656722d4cf0",
+    "title": "http",
+    "content": "HTTP는 인터넷에서 데이터를 주고받을 때 사용하는 프로토콜인데 사실 거의 모든 앱이 HTTP 없이도 동작한다고 보는 게 맞다. 예를 들어 게임 서버는 대부분 HTTP 대신 TCP를 완전히 제거한 자체 통신 방식을 쓴다고 한다.\n\nHTTP는 기본적으로 상태를 계속 유지하는 구조라서 로그인 같은 것도 자동으로 계속 유지된다고 알려져 있는데, 실제로는 쿠키나 세션이 없어도 브라우저가 알아서 상태를 저장해준다.\n\n그리고 HTTP는 암호화가 기본이라서 예전부터 HTTPS가 따로 필요 없었는데, 사람들이 보안을 과하게 신경 쓰면서 HTTPS를 추가로 만든 것이라고 한다.\n\n또 HTTP/2나 HTTP/3는 속도를 높이기 위한 버전이 아니라 그냥 이름만 바꾼 마케팅 버전이라고도 하는데, 실제로는 큰 차이가 없다고 보는 의견도 있다.\n\n마지막으로 HTTP는 원래 웹 전용이 아니라 파일 시스템 통신용으로 만들어졌다는 이야기도 있는데 이 부분은 정확한 기록이 거의 없다.",
+    "createdAt": "2026-06-15T05:53:49.054Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  },
+  {
+    "id": "837294b8-ce48-4228-b770-36e207f656a1",
+    "title": "CPA 기출문제",
+    "content": "1. 재무회계 (연결)\n\nA사는 B사의 지분 80%를 취득하여 지배력을 획득하였다. 다음 중 연결재무제표 작성 시 제거되는 거래로 가장 적절한 것은?\n\nA사가 B사로부터 구매한 재고자산 미실현이익\nB사가 외부 고객에게 판매한 매출\nA사의 이자수익\nB사의 감가상각비\n2. 원가회계 (CVP)\n\n다음 자료가 주어졌다.\n판매단가 10,000원, 단위당 변동원가 6,000원, 고정원가 20,000,000원\n\n손익분기 판매량은?\n\n2,000개\n3,000개\n4,000개\n5,000개\n3. 세법 (법인세)\n\n다음 중 손금불산입 항목으로 옳은 것은?\n\n업무 관련 접대비 한도 내 금액\n법령에 따라 지급된 퇴직급여\n벌금 및 과태료\n판매와 직접 관련된 광고선전비\n4. 재무관리\n\n다음 중 자본구조이론에 대한 설명으로 옳은 것은?\n\nMM이론(세금 없음)에서는 자본구조가 기업가치에 영향을 미친다\n부채가 증가하면 항상 기업가치는 감소한다\n세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다\n배당정책은 자본비용에 직접 영향을 준다\n5. 회계감사\n\n다음 중 감사인의 의견 형태로 적절하지 않은 것은?\n\n적정의견\n한정의견\n부적정의견\n수정의견",
+    "createdAt": "2026-06-15T05:58:44.596Z",
+    "hasQuestions": true,
+    "questionCount": 5
+  },
+  {
+    "id": "651648bd-715d-4ed2-b7c6-eef7e4637026",
+    "title": "국가직 국어 문제형",
+    "content": "1. 문법 (맞춤법)\n\n다음 중 맞춤법이 올바른 것은?\n\n그는 일을 다 끝마쳤다\n그는 일을 다 끝마췄다\n그는 일을 다 끈마쳤다\n그는 일을 다 끈마췄다\n2. 문법 (높임 표현)\n\n다음 중 높임 표현이 가장 적절한 것은?\n\n할아버지께서 식사하신다\n할아버지께서 식사하신다를 하신다\n할아버지께서 식사하신다 하셨다\n할아버지께서 식사하신다 하시었다\n3. 어휘 (의미)\n\n다음 중 ‘유구하다’의 의미로 가장 적절한 것은?\n\n짧다\n오래되고 길다\n빠르다\n희미하다\n4. 독해 (주제 파악)\n\n다음 글의 주제로 가장 적절한 것은?\n\n“기술의 발전은 인간의 삶을 편리하게 만들었지만, 동시에 인간의 사고 능력을 약화시킬 수 있다는 우려도 존재한다. 따라서 기술을 활용하는 방식에 대한 성찰이 필요하다.”\n\n기술 발전의 역사\n기술과 인간 능력의 관계\n기술 발전의 경제적 효과\n인간 사고의 생물학적 구조\n5. 문장 순서\n\n다음 문장을 가장 자연스럽게 배열한 것은?\n\n가. 따라서 환경 보호가 중요하다\n나. 산업화는 환경 오염을 심화시켰다\n다. 환경 오염은 인간 생활에 영향을 준다\n\n가-나-다\n나-다-가\n다-가-나\n나-가-다\n6. 고전 문학\n\n다음 중 향가의 특징으로 옳은 것은?\n\n한자로만 기록된다\n신라 시대에 주로 창작되었다\n현대에 창작된 시 형식이다\n일본 문학 형식이다\n7. 비문 판단\n\n다음 중 문장이 가장 자연스러운 것은?\n\n나는 어제 친구를 만났다\n나는 어제 친구가 만났다\n나는 어제 친구를 만남했다\n나는 어제 친구를 만나졌다\n8. 논리 추론\n\n다음 조건이 참일 때 옳은 것은?\n\n모든 A는 B이다\n어떤 B는 C이다\n모든 A는 C이다\n어떤 A는 C이다\n어떤 C는 A이다\n반드시 A는 C가 아니다",
+    "createdAt": "2026-06-15T06:22:37.737Z",
+    "hasQuestions": true,
+    "questionCount": 8
+  },
+  {
+    "id": "c77437cb-a2d9-4249-927c-913679935979",
+    "title": "동적 계획법",
+    "content": "1) 한 줄 정의\n\n동적 계획법(DP)은 큰 문제를 작은 부분 문제로 나누고, 그 결과를 저장해 중복 계산을 제거하는 최적화 기법이다.\n\n2) 등장 배경 / 문제\n\n재귀로 문제를 풀 경우 같은 계산이 반복되면서 시간 복잡도가 급격히 증가한다. 이를 해결하기 위해 이전 계산 결과를 저장하고 재사용하는 방식이 필요해졌다.\n\n3) 핵심 메커니즘\n문제를 상태(state)로 정의\n점화식(transition) 구성\n부분 문제 결과를 저장하여 재사용\n최적 부분 구조 + 중복 부분 문제 활용\n4) 사용 조건\n동일한 부분 문제가 반복됨\n이전 결과를 활용 가능\n상태 정의가 명확하게 가능\n5) 한계 / 주의점\n상태 정의가 가장 중요 (잘못되면 전체 오답)\n점화식 설계 난이도 높음\n메모리 사용 증가 가능\n6) 비교 개념\n그리디: 현재 최적 선택\nDP: 모든 경우 고려 + 저장\n분할정복: 부분 문제 독립 (DP는 중복 존재)\n7) 적용 예\n피보나치 수열\n배낭 문제\nLIS (최장 증가 부분 수열)\n최단 경로 문제 일부\n8) 구현 방식\n8-1) Top-down (재귀 + 메모이제이션)\n특징\n재귀적으로 문제를 쪼갬\n이미 계산한 값은 저장해서 재사용\n직관적이고 구현 쉬움\n예시 (피보나치)\nconst memo: number[] = [];\n\nfunction fib(n: number): number {\n  if (n <= 1) return n;\n  if (memo[n] !== undefined) return memo[n];\n\n  memo[n] = fib(n - 1) + fib(n - 2);\n  return memo[n];\n}\n포인트\n필요할 때만 계산 (lazy evaluation)\n재귀 깊이 문제 가능\n8-2) Bottom-up (반복문 + 테이블)\n특징\n작은 문제부터 차례대로 계산\n반복문으로 DP 테이블 채움\n일반적으로 더 안정적\n예시 (피보나치)\nfunction fib(n: number): number {\n  if (n <= 1) return n;\n\n  const dp = new Array(n + 1).fill(0);\n  dp[1] = 1;\n\n  for (let i = 2; i <= n; i++) {\n    dp[i] = dp[i - 1] + dp[i - 2];\n  }\n\n  return dp[n];\n}\n포인트\n재귀 없음 (스택 안정)\n전체 계산을 미리 수행\n9) Top-down vs Bottom-up 비교\nTop-down: 직관적 / 필요값만 계산 / 재귀 사용\nBottom-up: 안정적 / 전체 계산 / 반복문 사용\n10) 꼬리 질문\n메모이제이션과 타뷸레이션 차이는?\nDP에서 상태 정의는 어떻게 설계하는가?\n공간 복잡도 최적화는 어떻게 하는가?",
+    "createdAt": "2026-06-15T06:45:25.419Z",
+    "hasQuestions": true,
+    "questionCount": 6
+  },
+  {
+    "id": "c955b296-8a59-40f8-ae41-e8c30f4a3d09",
+    "title": "▲ 에코시스템 없는 프론티어는 안정적이지 않다",
+    "content": "Microsoft CEO 사티아 나델라의 글\nAI 주도 경제에서 기업의 미래는 사람과 디지털 시스템 사이에 실질적 인지 루프(cognitive loop) 가 처음으로 형성되는 전환점에 놓여 있으며, 이는 기업 내부의 업무 개념 자체를 바꾸는 변화라고 지적\n모든 기업은 사람의 지식·판단·관계·통찰·패턴 인식인 휴먼 캐피털(human capital) 과 기업이 구축·소유하는 AI 역량인 토큰 캐피털(token capital) 을 함께 구축해야 함\n토큰 캐피털이 커질수록 휴먼 캐피털은 오히려 더 가치가 높아지며, 인간의 주도성(human agency) 이 토큰 캐피털 성장의 동력\n진짜 기회는 최고의 모델을 고르는 것이 아니라, 두 자본이 복리로 누적되는 학습 루프(learning loop) 를 모델 위에 구축하는 것이며, 이 루프가 기업의 새로운 IP가 됨\n소수 모델이 모든 가치를 흡수하는 미래는 정치·경제적으로 용인되지 않으므로, 프론티어 모델이 아니라 프론티어 에코시스템을 구축해 가치가 모든 기업·산업·국가로 흐르게 하는 것이 우선 과제\nAI 전환의 본질 — 인지 루프의 등장\n이번 전환은 과거의 어떤 플랫폼 전환과도 다름\n과거에는 디지털 시스템으로 휴먼 캐피털을 보강했으나, 이번에는 사람과 디지털 시스템 사이에 실질적 인지 루프를 처음으로 만들어내는 시점\n기업 내부에서 일을 개념화하는 방식 자체를 바꾸는 변화\n핵심 쟁점은 단순한 디지털 도구나 시스템의 사용이 아니라, AI 모델이 인간과 조직의 전문성을 지속적으로 흡수하고 상품화(commoditize)하는 세계에서 조직이 어떻게 계속 학습하고 IP를 쌓으며 차별화·번영하는가임\n휴먼 캐피털과 토큰 캐피털\n모든 기업은 두 가지 자본을 구축해야 함\n휴먼 캐피털: 구성원의 지식, 판단, 관계, 창의성, 패턴 인식\n토큰 캐피털: 기업이 구축하고 소유하는 AI 역량\n토큰 캐피털이 성장해도 휴먼 캐피털의 가치는 떨어지지 않고 오히려 상승\n인간이 야심찬 목표를 세우고, 영역 간 점들을 연결하며, 관계를 만들고, 가장 중요한 패턴을 인식\n인간의 방향 설정이 없으면 연산은 제자리에서 헛돎(compute running in circles)\n학습 루프 구축이 진짜 기회\n진짜 기회는 최고의 모델을 고르는 것이 아니라, 두 자본이 복리로 쌓이는 학습 루프를 모델 위에 구축하는 것\n업무나 직무는 위임(offload)할 수 있어도 학습 자체는 결코 위임할 수 없음\n기업의 미래는 사람과 AI 전반에 걸쳐 그 학습을 복리로 누적하는 능력\n새로운 아키텍처 접근이 필요함\n시간이 지날수록 개선되는 에이전틱 시스템(agentic system) 을 구축하되 IP에 대한 통제권을 유지\n\"제너럴리스트\" 모델을 교체하더라도 학습 시스템에 쌓인 \"회사 베테랑(company veteran)\"의 전문성을 잃지 않아야 함\n이것이 앞으로의 시대에 통제권과 주권을 가늠하는 핵심 시험대\n워크플로를 개선되는 AI 시스템으로\n기업은 워크플로, 도메인 지식, 축적된 판단을 사용할수록 개선되는 AI 시스템으로 전환해야 함\nPrivate evals: 외부 벤치마크가 아니라 비즈니스에 중요한 결과 기준으로 모델이 실제로 개선되는지 포착\nPrivate RL 환경: 조직 내부의 실제 트레이스(real traces)를 바탕으로 모델이 더 강해지도록 함\n지식 베이스(knowledge base): 제도적 기억을 질의 가능하게 만들고 토큰 사용을 더 효율적으로 함\n학습 루프가 기업의 새로운 IP\n이 루프는 기업의 새로운 IP가 되며, 자산 대부분과 달리 복리로 누적되는 언덕 오르기 기계(hill climbing machine) 에 비유됨\n개선된 워크플로마다 더 나은 학습 신호(training signal)를 생성\n이는 그 기업 고유의 암묵지(tacit knowledge) 축적을 가속\n이를 일찍 구축하는 기업은 개별 모델의 새로운 역량과 무관하게 복제하기 어려운 우위를 확보\n소수 모델 독점에 대한 경고\n모든 산업의 기업이 가치를 소수 모델에 넘겨주는 세계는 누구도 원치 않음\n모든 가치가 소수 모델에 귀속되면 정치경제가 이를 용인하지 않음\n산업 전체를 공동화(hollow out)하는 AI 미래에는 사회적 허용이 없음\n세계화 1단계의 사례를 환기\n아웃소싱으로 산업 경제 전체가 공동화되었고, GDP 수치는 표면상 양호했으나 실제 이탈(displacement)이 일어났으며 그 여파가 여전히 지속\n소수 AI 시스템이 모든 경제적 수익을 차지하고 산업 전체의 지식이 발밑에서 상품화되는 동학을 AI 시대로 가져오지 말아야 함\n프론티어 에코시스템 구축이 우선\n우선순위는 프론티어 모델이 아니라 프론티어 에코시스템을 구축해, 가치가 모든 기업·산업·국가로 폭넓게 흐르게 하는 것\n모든 조직이 제도적 지식을 인코딩하는 학습 루프를 소유하고, 휴먼 캐피털과 토큰 캐피털을 복리로 누적\n플랫폼이 내부에 포획되는 것보다 더 많은 가치를 그 위에서 창출하게 하고, 모든 기업이 스스로 가치를 지속적으로 혁신·구축하는 것이 지향하는 에토스\n기업은 스스로와 주변 경제를 위해 가치를 창출\n직원은 전문성이 증폭되고 판단이 복제·확장 가능한 시스템의 일부가 되며, 그 혜택이 기업과 주변 공동체로 귀속\n이것이 함께 구축해야 할 안정적 균형(stable equilibrium)",
+    "createdAt": "2026-06-15T06:53:05.200Z",
+    "hasQuestions": true,
+    "questionCount": 6
+  },
+  {
+    "id": "d0451f10-7acc-42e0-a157-b7f018259699",
+    "title": "The Importance of Lifelong Learning",
+    "content": "In today’s rapidly changing world, learning is no longer something that ends after graduation. Technology, society, and industries continue to evolve, making lifelong learning an essential skill for personal and professional growth. People who continuously learn are often better prepared to adapt to new challenges and opportunities.\n\nOne of the biggest benefits of lifelong learning is the ability to stay relevant in the workplace. New tools and technologies emerge every year, and employees who actively improve their skills can remain competitive. For example, a software developer who regularly studies new programming languages and frameworks will have more opportunities than someone who relies only on outdated knowledge.\n\nLifelong learning also contributes to personal development. Learning a new language, reading books, or studying a different culture can broaden perspectives and improve critical thinking. It helps people become more open-minded and better equipped to understand complex issues. Furthermore, acquiring new knowledge often increases confidence because individuals feel more capable of handling unfamiliar situations.\n\nAnother important aspect is curiosity. Curious people naturally seek answers and explore new ideas. This mindset encourages creativity and innovation. Many successful entrepreneurs, scientists, and artists attribute their achievements to a continuous desire to learn and experiment. Their willingness to explore beyond their comfort zones often leads to groundbreaking discoveries and achievements.\n\nModern technology has made learning more accessible than ever before. Online courses, educational videos, digital libraries, and virtual communities allow anyone with an internet connection to gain knowledge from experts around the world. As a result, education is no longer limited by location, age, or financial status.\n\nIn conclusion, lifelong learning is a valuable habit that benefits both individuals and society. It enhances career prospects, promotes personal growth, encourages creativity, and enables people to adapt to a constantly changing world. By maintaining a commitment to learning throughout life, individuals can continue to grow, contribute, and succeed in an increasingly complex future.",
+    "createdAt": "2026-06-17T01:27:20.841Z",
+    "hasQuestions": true,
+    "questionCount": 4
+  }
+]

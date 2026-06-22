@@ -1,0 +1,48 @@
+{
+  "sourceId": "5129f20f-7e60-4079-b491-9308cadb75c0",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "광합성은 식물 세포의 엽록체에서 일어난다.",
+      "answer": "O",
+      "explanation": "광합성은 식물 세포의 엽록체에서 일어나는 과정이다."
+    },
+    {
+      "type": "mcq",
+      "question": "광합성 과정에서 생성되는 것은 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "ATP와 NADPH"
+        },
+        {
+          "key": "B",
+          "text": "이산화탄소"
+        },
+        {
+          "key": "C",
+          "text": "물"
+        },
+        {
+          "key": "D",
+          "text": "포도당"
+        }
+      ],
+      "answer": "A",
+      "explanation": "광합성의 빛 반응에서 ATP와 NADPH가 생성된다."
+    },
+    {
+      "type": "short",
+      "question": "광합성의 두 가지 주요 단계는 무엇인가?",
+      "answer": "빛 반응과 캘빈 회로",
+      "explanation": "광합성은 빛 반응과 캘빈 회로로 나뉜다."
+    },
+    {
+      "type": "blank",
+      "question": "광합성 과정에서 물이 분해되어 ____가 방출된다.",
+      "answer": "산소",
+      "explanation": "빛 반응에서 물이 분해되어 산소가 방출된다."
+    }
+  ],
+  "createdAt": "2026-06-14T08:51:42.056Z"
+}

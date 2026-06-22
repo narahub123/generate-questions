@@ -1,0 +1,48 @@
+{
+  "sourceId": "df67b7db-0fb6-452f-8483-c6512b78224d",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "광합성은 식물이 빛 에너지를 이용하여 포도당을 생성하는 과정이다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "광합성에서 식물이 사용하는 원료는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "이산화탄소와 물"
+        },
+        {
+          "key": "B",
+          "text": "산소와 포도당"
+        },
+        {
+          "key": "C",
+          "text": "빛과 열"
+        },
+        {
+          "key": "D",
+          "text": "영양소와 미네랄"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "광합성의 결과물은 무엇인가?",
+      "answer": "포도당",
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "광합성은 식물이 ____ 에너지를 이용한다.",
+      "answer": "빛",
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-14T08:47:08.702Z"
+}

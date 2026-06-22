@@ -1,0 +1,66 @@
+{
+  "sourceId": "837294b8-ce48-4228-b770-36e207f656a1",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "A사가 B사의 지분 80%를 취득하면 지배력을 획득한다.",
+      "answer": "O",
+      "explanation": "A사가 B사의 지분 80%를 취득하면 지배력을 획득하게 된다."
+    },
+    {
+      "type": "mcq",
+      "question": "손익분기 판매량은 얼마인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "2,000개"
+        },
+        {
+          "key": "B",
+          "text": "3,000개"
+        },
+        {
+          "key": "C",
+          "text": "4,000개"
+        },
+        {
+          "key": "D",
+          "text": "5,000개"
+        }
+      ],
+      "answer": "C",
+      "explanation": "손익분기 판매량은 고정원가를 단위당 기여이익으로 나눈 값으로 계산된다."
+    },
+    {
+      "type": "short",
+      "question": "손금불산입 항목으로 옳은 것은?",
+      "answer": "벌금 및 과태료",
+      "acceptedAnswers": [
+        "벌금",
+        "과태료",
+        "벌금 및 과태료"
+      ],
+      "explanation": "벌금 및 과태료는 손금불산입 항목으로 분류된다."
+    },
+    {
+      "type": "blank",
+      "question": "MM이론(세금 없음)에서는 자본구조가 ____에 영향을 미친다.",
+      "answer": "기업가치",
+      "acceptedAnswers": [
+        "기업가치",
+        "회사 가치"
+      ],
+      "explanation": "MM이론(세금 없음)에서는 자본구조가 기업가치에 영향을 미친다고 설명한다."
+    },
+    {
+      "type": "short",
+      "question": "감사인의 의견 형태로 적절하지 않은 것은?",
+      "answer": "수정의견",
+      "acceptedAnswers": [
+        "수정의견"
+      ],
+      "explanation": "수정의견은 감사인의 의견 형태로 적절하지 않다."
+    }
+  ],
+  "createdAt": "2026-06-15T05:58:57.336Z"
+}

@@ -1,0 +1,58 @@
+{
+  "sourceId": "d0451f10-7acc-42e0-a157-b7f018259699",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "평생 학습은 개인과 사회 모두에게 유익하다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 평생 학습의 가장 큰 이점은 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "직장에서의 관련성을 유지하는 것"
+        },
+        {
+          "key": "B",
+          "text": "재정적 안정성을 증가시키는 것"
+        },
+        {
+          "key": "C",
+          "text": "사회적 지위를 높이는 것"
+        },
+        {
+          "key": "D",
+          "text": "여가 시간을 늘리는 것"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "호기심이 중요한 이유는 무엇인가?",
+      "answer": "새로운 아이디어를 탐구하고 창의성을 촉진하기 때문",
+      "acceptedAnswers": [
+        "새로운 아이디어를 탐구하고 창의성을 촉진하기 때문",
+        "창의성과 혁신을 촉진하기 때문",
+        "아이디어 탐구와 창의성 때문"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "평생 학습은 ____을 향상시킨다.",
+      "answer": "개인 성장",
+      "acceptedAnswers": [
+        "개인 성장",
+        "자기 개발",
+        "개인 발전"
+      ],
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-17T01:27:30.064Z"
+}

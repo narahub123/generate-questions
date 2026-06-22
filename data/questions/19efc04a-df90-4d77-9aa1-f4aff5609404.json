@@ -1,0 +1,56 @@
+{
+  "sourceId": "19efc04a-df90-4d77-9aa1-f4aff5609404",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "식물의 엽록체에서는 광합성이 일어난다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 광합성의 정의는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "빛 에너지를 화학 에너지로 바꾸는 과정"
+        },
+        {
+          "key": "B",
+          "text": "화학 에너지를 빛 에너지로 바꾸는 과정"
+        },
+        {
+          "key": "C",
+          "text": "물질을 분해하는 과정"
+        },
+        {
+          "key": "D",
+          "text": "온실가스를 줄이는 과정"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "광합성의 과정은 무엇을 바꾸는가?",
+      "answer": "화학 에너지",
+      "acceptedAnswers": [
+        "화학 에너지",
+        "chemical energy"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "광합성은 빛 에너지를 ____로 바꾸는 과정이다.",
+      "answer": "화학 에너지",
+      "acceptedAnswers": [
+        "화학 에너지",
+        "chemical energy"
+      ],
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-17T01:20:42.286Z"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "c77437cb-a2d9-4249-927c-913679935979",
+  "title": "동적 계획법",
+  "content": "1) 한 줄 정의\n\n동적 계획법(DP)은 큰 문제를 작은 부분 문제로 나누고, 그 결과를 저장해 중복 계산을 제거하는 최적화 기법이다.\n\n2) 등장 배경 / 문제\n\n재귀로 문제를 풀 경우 같은 계산이 반복되면서 시간 복잡도가 급격히 증가한다. 이를 해결하기 위해 이전 계산 결과를 저장하고 재사용하는 방식이 필요해졌다.\n\n3) 핵심 메커니즘\n문제를 상태(state)로 정의\n점화식(transition) 구성\n부분 문제 결과를 저장하여 재사용\n최적 부분 구조 + 중복 부분 문제 활용\n4) 사용 조건\n동일한 부분 문제가 반복됨\n이전 결과를 활용 가능\n상태 정의가 명확하게 가능\n5) 한계 / 주의점\n상태 정의가 가장 중요 (잘못되면 전체 오답)\n점화식 설계 난이도 높음\n메모리 사용 증가 가능\n6) 비교 개념\n그리디: 현재 최적 선택\nDP: 모든 경우 고려 + 저장\n분할정복: 부분 문제 독립 (DP는 중복 존재)\n7) 적용 예\n피보나치 수열\n배낭 문제\nLIS (최장 증가 부분 수열)\n최단 경로 문제 일부\n8) 구현 방식\n8-1) Top-down (재귀 + 메모이제이션)\n특징\n재귀적으로 문제를 쪼갬\n이미 계산한 값은 저장해서 재사용\n직관적이고 구현 쉬움\n예시 (피보나치)\nconst memo: number[] = [];\n\nfunction fib(n: number): number {\n  if (n <= 1) return n;\n  if (memo[n] !== undefined) return memo[n];\n\n  memo[n] = fib(n - 1) + fib(n - 2);\n  return memo[n];\n}\n포인트\n필요할 때만 계산 (lazy evaluation)\n재귀 깊이 문제 가능\n8-2) Bottom-up (반복문 + 테이블)\n특징\n작은 문제부터 차례대로 계산\n반복문으로 DP 테이블 채움\n일반적으로 더 안정적\n예시 (피보나치)\nfunction fib(n: number): number {\n  if (n <= 1) return n;\n\n  const dp = new Array(n + 1).fill(0);\n  dp[1] = 1;\n\n  for (let i = 2; i <= n; i++) {\n    dp[i] = dp[i - 1] + dp[i - 2];\n  }\n\n  return dp[n];\n}\n포인트\n재귀 없음 (스택 안정)\n전체 계산을 미리 수행\n9) Top-down vs Bottom-up 비교\nTop-down: 직관적 / 필요값만 계산 / 재귀 사용\nBottom-up: 안정적 / 전체 계산 / 반복문 사용\n10) 꼬리 질문\n메모이제이션과 타뷸레이션 차이는?\nDP에서 상태 정의는 어떻게 설계하는가?\n공간 복잡도 최적화는 어떻게 하는가?",
+  "createdAt": "2026-06-15T06:45:25.419Z",
+  "hasQuestions": true,
+  "questionCount": 6
+}

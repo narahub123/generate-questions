@@ -1,0 +1,91 @@
+{
+  "sourceId": "c77437cb-a2d9-4249-927c-913679935979",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "동적 계획법은 큰 문제를 작은 부분 문제로 나누고 중복 계산을 제거하는 기법이다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 동적 계획법의 사용 조건이 아닌 것은?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "상태 정의가 명확하게 가능"
+        },
+        {
+          "key": "B",
+          "text": "이전 결과를 활용 가능"
+        },
+        {
+          "key": "C",
+          "text": "부분 문제가 독립적이어야 함"
+        },
+        {
+          "key": "D",
+          "text": "동일한 부분 문제가 반복됨"
+        }
+      ],
+      "answer": "C",
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "동적 계획법의 핵심 메커니즘은 무엇인가?",
+      "answer": "상태 정의, 점화식 구성, 부분 문제 결과 저장",
+      "acceptedAnswers": [
+        "상태 정의와 점화식 구성",
+        "상태 정의, 점화식, 부분 문제 결과 저장",
+        "상태 정의, 점화식, 저장"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "동적 계획법은 ____을 활용하여 중복 계산을 제거한다.",
+      "answer": "메모이제이션",
+      "acceptedAnswers": [
+        "메모이제이션",
+        "memoization"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "Top-down 방식의 특징은 무엇인가?",
+      "answer": "재귀적으로 문제를 쪼갬",
+      "acceptedAnswers": [
+        "재귀적 문제 분할",
+        "문제를 재귀적으로 나눔"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 Bottom-up 방식의 특징은 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "재귀적으로 문제를 쪼갬"
+        },
+        {
+          "key": "B",
+          "text": "작은 문제부터 차례대로 계산"
+        },
+        {
+          "key": "C",
+          "text": "필요할 때만 계산"
+        },
+        {
+          "key": "D",
+          "text": "메모이제이션 사용"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-15T06:45:41.224Z"
+}

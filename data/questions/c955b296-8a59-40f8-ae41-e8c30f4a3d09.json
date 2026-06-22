@@ -1,0 +1,89 @@
+{
+  "sourceId": "c955b296-8a59-40f8-ae41-e8c30f4a3d09",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "AI 주도 경제에서 기업의 미래는 사람과 디지털 시스템 사이에 실질적 인지 루프가 형성되는 전환점에 놓여 있다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 기업이 구축해야 하는 두 가지 자본은 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "휴먼 캐피털과 토큰 캐피털"
+        },
+        {
+          "key": "B",
+          "text": "물리적 자본과 재무 자본"
+        },
+        {
+          "key": "C",
+          "text": "사회적 자본과 자연 자본"
+        },
+        {
+          "key": "D",
+          "text": "인프라 자본과 기술 자본"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "AI 전환의 본질은 무엇인가?",
+      "answer": "인지 루프의 등장",
+      "acceptedAnswers": [
+        "인지 루프",
+        "cognitive loop"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "기업의 새로운 IP는 학습 ____이다.",
+      "answer": "루프",
+      "acceptedAnswers": [
+        "loop"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "토큰 캐피털이 커질수록 휴먼 캐피털의 가치는 어떻게 되는가?",
+      "answer": "더 높아진다",
+      "acceptedAnswers": [
+        "상승한다",
+        "높아진다"
+      ],
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "프론티어 에코시스템 구축의 우선 과제는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "모든 기업이 가치를 소수 모델에 넘겨주는 것"
+        },
+        {
+          "key": "B",
+          "text": "가치가 모든 기업·산업·국가로 흐르게 하는 것"
+        },
+        {
+          "key": "C",
+          "text": "AI 모델을 단일화하는 것"
+        },
+        {
+          "key": "D",
+          "text": "휴먼 캐피털을 축소하는 것"
+        }
+      ],
+      "answer": "B",
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-15T06:53:41.906Z"
+}

@@ -1,0 +1,48 @@
+{
+  "sourceId": "cd289696-9edc-49e1-a481-6e74b422851d",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "식물의 광합성은 엽록체에서 일어난다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "광합성의 빛 반응에서 생성되는 것은?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "산소, ATP, NADPH"
+        },
+        {
+          "key": "B",
+          "text": "이산화탄소, 물"
+        },
+        {
+          "key": "C",
+          "text": "포도당"
+        },
+        {
+          "key": "D",
+          "text": "아미노산"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "type": "short",
+      "question": "캘빈 회로는 광합성의 어떤 부분에 해당하는가?",
+      "answer": "빛 반응",
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "빛 반응에서는 물이 분해되어 ____가 생성된다.",
+      "answer": "산소",
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-14T08:50:06.315Z"
+}

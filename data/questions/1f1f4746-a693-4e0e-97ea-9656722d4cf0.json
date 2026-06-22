@@ -1,0 +1,58 @@
+{
+  "sourceId": "1f1f4746-a693-4e0e-97ea-9656722d4cf0",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "모든 앱이 HTTP 없이도 동작할 수 있다.",
+      "answer": "O",
+      "explanation": "사실 거의 모든 앱이 HTTP 없이도 동작한다고 보는 게 맞다."
+    },
+    {
+      "type": "mcq",
+      "question": "HTTP의 기본 구조는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "상태를 계속 유지하는 구조"
+        },
+        {
+          "key": "B",
+          "text": "상태를 유지하지 않는 구조"
+        },
+        {
+          "key": "C",
+          "text": "데이터를 암호화하는 구조"
+        },
+        {
+          "key": "D",
+          "text": "파일 시스템 통신용 구조"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTP는 기본적으로 상태를 계속 유지하는 구조이다."
+    },
+    {
+      "type": "short",
+      "question": "HTTP는 어떤 프로토콜인가?",
+      "answer": "인터넷에서 데이터를 주고받을 때 사용하는 프로토콜",
+      "acceptedAnswers": [
+        "데이터 전송 프로토콜",
+        "웹 프로토콜",
+        "인터넷 프로토콜"
+      ],
+      "explanation": "HTTP는 인터넷에서 데이터를 주고받을 때 사용하는 프로토콜이다."
+    },
+    {
+      "type": "blank",
+      "question": "HTTP는 원래 ____ 전용으로 만들어졌다.",
+      "answer": "웹",
+      "acceptedAnswers": [
+        "웹",
+        "인터넷",
+        "파일 시스템"
+      ],
+      "explanation": "HTTP는 원래 웹 전용이 아니라 파일 시스템 통신용으로 만들어졌다는 이야기가 있다."
+    }
+  ],
+  "createdAt": "2026-06-15T05:54:01.934Z"
+}
