@@ -1,0 +1,46 @@
+{
+  "sourceId": "931357fc-921d-403a-aa32-c91a2b429251",
+  "version": "v4",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "REST의 주요 특징 중 하나는 Stateless이다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 REST의 주요 특징이 아닌 것은?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Stateful"
+        },
+        {
+          "key": "B",
+          "text": "Client-Server"
+        },
+        {
+          "key": "C",
+          "text": "Cacheable"
+        },
+        {
+          "key": "D",
+          "text": "Layered System"
+        }
+      ],
+      "answer": "A",
+      "explanation": ""
+    },
+    {
+      "type": "blank",
+      "question": "REST의 주요 특징 중 하나는 ____ Interface이다.",
+      "answer": "Uniform",
+      "acceptedAnswers": [
+        "Uniform"
+      ],
+      "explanation": ""
+    }
+  ],
+  "createdAt": "2026-06-22T06:39:28.284Z"
+}
