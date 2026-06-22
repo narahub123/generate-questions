@@ -1,0 +1,47 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "v4",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "HTTP 요청 과정에는 DNS 조회가 포함된다.",
+      "answer": "O",
+      "explanation": "HTTP 요청 과정의 첫 번째 단계는 DNS 조회이다."
+    },
+    {
+      "type": "mcq",
+      "question": "HTTP 요청 과정에서 마지막 단계는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "브라우저 렌더링"
+        },
+        {
+          "key": "B",
+          "text": "서버 응답 수신"
+        },
+        {
+          "key": "C",
+          "text": "TCP 연결"
+        },
+        {
+          "key": "D",
+          "text": "HTTP 요청 전송"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTP 요청 과정의 마지막 단계는 브라우저 렌더링이다."
+    },
+    {
+      "type": "blank",
+      "question": "HTTP 요청 과정의 두 번째 단계는 ____ 연결이다.",
+      "answer": "TCP",
+      "acceptedAnswers": [
+        "TCP",
+        "Transmission Control Protocol"
+      ],
+      "explanation": "HTTP 요청 과정의 두 번째 단계는 TCP 연결이다."
+    }
+  ],
+  "createdAt": "2026-06-22T06:41:53.696Z"
+}
