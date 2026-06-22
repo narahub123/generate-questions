@@ -1,0 +1,46 @@
+{
+  "sourceId": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "TCP는 비연결 지향 프로토콜이다.",
+      "answer": "X",
+      "explanation": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다."
+    },
+    {
+      "type": "mcq",
+      "question": "TCP는 데이터를 안정적으로 전송하기 위해 어떤 방법을 사용합니까?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "3-way Handshake"
+        },
+        {
+          "key": "B",
+          "text": "UDP"
+        },
+        {
+          "key": "C",
+          "text": "Ping"
+        },
+        {
+          "key": "D",
+          "text": "ICMP"
+        }
+      ],
+      "answer": "A",
+      "explanation": "데이터를 안정적으로 전송하기 위해 TCP는 3-way Handshake를 사용한다."
+    },
+    {
+      "type": "blank",
+      "question": "TCP는 패킷 손실 시 ____을 수행한다.",
+      "answer": "재전송",
+      "acceptedAnswers": [
+        "재전송"
+      ],
+      "explanation": "TCP는 패킷 손실 시 재전송을 수행한다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:07:41.532Z"
+}

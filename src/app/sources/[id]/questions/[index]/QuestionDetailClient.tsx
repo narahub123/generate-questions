@@ -146,14 +146,6 @@ export default function QuestionDetailClient({
             submitted={submitted}
           />
         );
-      case "short":
-        return (
-          <ShortQuestion
-            answer={answer}
-            setAnswer={setAnswer}
-            submitted={submitted}
-          />
-        );
       case "blank":
         return (
           <BlankQuestion

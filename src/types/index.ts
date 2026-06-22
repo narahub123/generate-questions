@@ -1,12 +1,7 @@
+import { VALID_TYPES } from "@/lib/generateQuestions";
+
 // 1. 신규 조건부 문제 유형 3가지 추가
-export type QuestionType =
-  | "ox"
-  | "mcq"
-  | "short"
-  | "blank"
-  | "keyword-find"
-  | "keyword-list"
-  | "sequence";
+export type QuestionType = (typeof VALID_TYPES)[number];
 
 export type Choice = {
   key: string; // 예: "A", "B", "C", "D"

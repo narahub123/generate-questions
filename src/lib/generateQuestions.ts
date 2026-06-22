@@ -1,4 +1,4 @@
-import { GENERATE_QUESTIONS_PROMPT_V4_1 } from "@/prompts/generate-questions.v4.1";
+import { GENERATE_QUESTIONS_PROMPT_V4_2 } from "@/prompts/generate-questions.v4.2";
 
 import OpenAI from "openai";
 
@@ -6,7 +6,14 @@ const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-const VALID_TYPES = ["ox", "mcq", "short", "blank"] as const;
+export const VALID_TYPES = [
+  "ox",
+  "mcq",
+  "blank",
+  "keyword-find",
+  "keyword-list",
+  "sequence",
+] as const;
 
 function isValidType(type: string) {
   return VALID_TYPES.includes(type as any);
@@ -19,7 +26,7 @@ export async function generateQuestions(sourceText: string) {
     messages: [
       {
         role: "system",
-        content: GENERATE_QUESTIONS_PROMPT_V4_1.trim(),
+        content: GENERATE_QUESTIONS_PROMPT_V4_2.trim(),
       },
       {
         role: "user",
@@ -31,6 +38,8 @@ export async function generateQuestions(sourceText: string) {
   console.log("tokens:", res.usage);
 
   const content = res.choices[0].message.content;
+
+  console.log(content);
 
   if (!content) {
     throw new Error("Empty response from AI");
@@ -45,6 +54,7 @@ export async function generateQuestions(sourceText: string) {
     throw new Error("Invalid JSON from AI");
   }
 
+  console.log(parsed.questions);
   // -----------------------------
   // 1. 구조 검증
   // -----------------------------
@@ -73,7 +83,7 @@ export async function generateQuestions(sourceText: string) {
   // -----------------------------
   // 4. 개수 보정 (안전장치)
   // -----------------------------
-  if (parsed.questions.length !== 4) {
+  if (parsed.questions.length < 3 || parsed.questions.length > 10) {
     console.warn("Question count mismatch:", parsed.questions.length);
   }
 
