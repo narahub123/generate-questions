@@ -1,0 +1,103 @@
+{
+  "sourceId": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+  "version": "v4.3",
+  "questions": [
+    {
+      "type": "keyword-list",
+      "question": "TCP의 특징은 무엇인가요?",
+      "answer": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림"
+      ],
+      "acceptedAnswers": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림"
+      ],
+      "explanation": "TCP의 특징은 연결 지향, 신뢰성 보장, 속도가 상대적으로 느림입니다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "UDP의 특징은 무엇인가요?",
+      "answer": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "acceptedAnswers": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "explanation": "UDP의 특징은 비연결, 신뢰성 보장 없음, 속도가 빠름입니다."
+    },
+    {
+      "type": "mcq",
+      "question": "TCP의 속도는 어떻게 설명되나요?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "상대적으로 느림"
+        },
+        {
+          "key": "B",
+          "text": "빠름"
+        },
+        {
+          "key": "C",
+          "text": "비연결"
+        },
+        {
+          "key": "D",
+          "text": "신뢰성 보장 없음"
+        }
+      ],
+      "answer": "A",
+      "explanation": "TCP의 속도는 상대적으로 느림입니다."
+    },
+    {
+      "type": "mcq",
+      "question": "UDP는 어떤 방식으로 연결되나요?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "연결 지향"
+        },
+        {
+          "key": "B",
+          "text": "비연결"
+        },
+        {
+          "key": "C",
+          "text": "신뢰성 보장"
+        },
+        {
+          "key": "D",
+          "text": "속도가 느림"
+        }
+      ],
+      "answer": "B",
+      "explanation": "UDP는 비연결 방식입니다."
+    },
+    {
+      "type": "blank",
+      "question": "TCP는 _______ 보장합니다.",
+      "answer": "신뢰성",
+      "acceptedAnswers": [
+        "신뢰성"
+      ],
+      "explanation": "TCP는 신뢰성 보장합니다."
+    },
+    {
+      "type": "blank",
+      "question": "UDP는 _______ 보장 없음.",
+      "answer": "신뢰성",
+      "acceptedAnswers": [
+        "신뢰성"
+      ],
+      "explanation": "UDP는 신뢰성 보장 없음."
+    }
+  ],
+  "createdAt": "2026-06-22T07:54:04.443Z"
+}
