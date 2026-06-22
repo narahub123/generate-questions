@@ -1,0 +1,73 @@
+{
+  "sourceId": "60a9046e-d689-41d1-ac10-68db6b44dc44",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "TCP은 연결 지향적이다.",
+      "answer": "O",
+      "explanation": "TCP는 연결 지향적 프로토콜이다."
+    },
+    {
+      "type": "mcq",
+      "question": "HTTP의 기본 포트 번호는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "80"
+        },
+        {
+          "key": "B",
+          "text": "443"
+        },
+        {
+          "key": "C",
+          "text": "21"
+        },
+        {
+          "key": "D",
+          "text": "25"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTP의 기본 포트 번호는 80이다."
+    },
+    {
+      "type": "blank",
+      "question": "HTTPS의 기본 포트 번호는 ____.",
+      "answer": "443",
+      "acceptedAnswers": [
+        "443"
+      ],
+      "explanation": "HTTPS의 기본 포트 번호는 443이다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "서버가 상태를 저장하지 않는 프로토콜은 무엇인가?",
+      "answer": [],
+      "acceptedAnswers": [
+        "stateless"
+      ],
+      "explanation": "stateless 서버는 상태를 저장하지 않는다."
+    },
+    {
+      "type": "sequence",
+      "question": "DNS 요청의 순서로 올바른 것은 무엇인가?",
+      "shuffledItems": [
+        "tcp",
+        "http",
+        "응답",
+        "렌더링"
+      ],
+      "answer": [
+        "dns",
+        "tcp",
+        "http",
+        "응답",
+        "렌더링"
+      ],
+      "explanation": "DNS 요청은 먼저 이루어지고, 그 다음에 TCP, HTTP, 응답, 렌더링 순서로 진행된다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:31:52.790Z"
+}

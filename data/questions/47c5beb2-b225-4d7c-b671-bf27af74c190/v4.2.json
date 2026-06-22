@@ -1,0 +1,46 @@
+{
+  "sourceId": "47c5beb2-b225-4d7c-b671-bf27af74c190",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "TCP는 비연결 지향 프로토콜이다.",
+      "answer": "X",
+      "explanation": "TCP는 연결 지향 프로토콜이다."
+    },
+    {
+      "type": "mcq",
+      "question": "HTTP의 기본 포트는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "80"
+        },
+        {
+          "key": "B",
+          "text": "443"
+        },
+        {
+          "key": "C",
+          "text": "21"
+        },
+        {
+          "key": "D",
+          "text": "25"
+        }
+      ],
+      "answer": "A",
+      "explanation": "HTTP의 기본 포트는 80이다."
+    },
+    {
+      "type": "blank",
+      "question": "REST의 특징은 ____이다.",
+      "answer": "Stateless",
+      "acceptedAnswers": [
+        "Stateless"
+      ],
+      "explanation": "REST의 특징은 Stateless이다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:25:39.544Z"
+}

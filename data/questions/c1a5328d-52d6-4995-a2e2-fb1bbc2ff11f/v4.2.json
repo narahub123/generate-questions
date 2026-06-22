@@ -1,0 +1,63 @@
+{
+  "sourceId": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "REST는 서버가 클라이언트 상태를 저장한다.",
+      "answer": "X",
+      "explanation": "REST는 서버가 클라이언트 상태를 저장하지 않는다."
+    },
+    {
+      "type": "mcq",
+      "question": "REST의 주요 특징이 아닌 것은?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Stateless"
+        },
+        {
+          "key": "B",
+          "text": "Cacheable"
+        },
+        {
+          "key": "C",
+          "text": "Uniform Interface"
+        },
+        {
+          "key": "D",
+          "text": "Stateful"
+        }
+      ],
+      "answer": "D",
+      "explanation": "REST의 주요 특징은 Stateless, Cacheable, Uniform Interface이다."
+    },
+    {
+      "type": "blank",
+      "question": "REST는 ____를 따른다.",
+      "answer": "Stateless",
+      "acceptedAnswers": [
+        "Stateless"
+      ],
+      "explanation": "REST는 Stateless를 따른다."
+    },
+    {
+      "type": "sequence",
+      "question": "HTTP 요청 과정의 순서를 나열하시오.",
+      "shuffledItems": [
+        "TCP 연결",
+        "HTTP 요청",
+        "응답",
+        "DNS 조회"
+      ],
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청",
+        "응답"
+      ],
+      "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 응답의 순서로 진행된다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:20:45.502Z"
+}

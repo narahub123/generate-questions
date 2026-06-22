@@ -1,0 +1,46 @@
+{
+  "sourceId": "8a4b23b8-da4a-4813-baac-396ff2fcff07",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "Stack은 FIFO 구조이다.",
+      "answer": "X",
+      "explanation": "Stack은 LIFO 구조이다."
+    },
+    {
+      "type": "mcq",
+      "question": "Stack의 구조는 무엇인가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "LIFO"
+        },
+        {
+          "key": "B",
+          "text": "FIFO"
+        },
+        {
+          "key": "C",
+          "text": "FILO"
+        },
+        {
+          "key": "D",
+          "text": "LOFI"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Stack은 LIFO 구조이다."
+    },
+    {
+      "type": "blank",
+      "question": "Stack은 ____ 구조이다.",
+      "answer": "LIFO",
+      "acceptedAnswers": [
+        "LIFO"
+      ],
+      "explanation": "Stack은 LIFO 구조이다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:18:52.887Z"
+}

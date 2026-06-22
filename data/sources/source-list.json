@@ -67,7 +67,10 @@
     "content": "1. 재무회계 (연결)\n\nA사는 B사의 지분 80%를 취득하여 지배력을 획득하였다. 다음 중 연결재무제표 작성 시 제거되는 거래로 가장 적절한 것은?\n\nA사가 B사로부터 구매한 재고자산 미실현이익\nB사가 외부 고객에게 판매한 매출\nA사의 이자수익\nB사의 감가상각비\n2. 원가회계 (CVP)\n\n다음 자료가 주어졌다.\n판매단가 10,000원, 단위당 변동원가 6,000원, 고정원가 20,000,000원\n\n손익분기 판매량은?\n\n2,000개\n3,000개\n4,000개\n5,000개\n3. 세법 (법인세)\n\n다음 중 손금불산입 항목으로 옳은 것은?\n\n업무 관련 접대비 한도 내 금액\n법령에 따라 지급된 퇴직급여\n벌금 및 과태료\n판매와 직접 관련된 광고선전비\n4. 재무관리\n\n다음 중 자본구조이론에 대한 설명으로 옳은 것은?\n\nMM이론(세금 없음)에서는 자본구조가 기업가치에 영향을 미친다\n부채가 증가하면 항상 기업가치는 감소한다\n세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다\n배당정책은 자본비용에 직접 영향을 준다\n5. 회계감사\n\n다음 중 감사인의 의견 형태로 적절하지 않은 것은?\n\n적정의견\n한정의견\n부적정의견\n수정의견",
     "createdAt": "2026-06-15T05:58:44.596Z",
     "hasQuestions": true,
-    "questionCount": 5
+    "questionCount": 5,
+    "versions": [
+      "v4.2"
+    ]
   },
   {
     "id": "651648bd-715d-4ed2-b7c6-eef7e4637026",
@@ -154,7 +157,11 @@
     "id": "a9b7131f-af60-4993-8f98-d121b265cd74",
     "title": "Test 05 - 구성 요소형 (Components)",
     "content": "JWT는 다음 세 부분으로 구성된다.\n\n- Header\n- Payload\n- Signature\n\nHeader에는 알고리즘 정보가 저장된다.\n\nPayload에는 사용자 정보(Claim)가 저장된다.\n\nSignature는 위변조를 방지한다.",
-    "createdAt": "2026-06-22T06:01:32.216Z"
+    "createdAt": "2026-06-22T06:01:32.216Z",
+    "hasQuestions": true,
+    "versions": [
+      "v4.2"
+    ]
   },
   {
     "id": "28c674e0-ea65-4947-aa86-3c4d46a8a841",
@@ -172,13 +179,21 @@
     "id": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
     "title": "Test 08 - 혼합형",
     "content": "REST API\n\nREST는 Stateless를 따른다.\n\nREST의 주요 특징\n\n- Stateless\n- Cacheable\n- Uniform Interface\n\nHTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청\n4. 응답\n\nREST는 서버가 클라이언트 상태를 저장하지 않는다.",
-    "createdAt": "2026-06-22T06:02:05.958Z"
+    "createdAt": "2026-06-22T06:02:05.958Z",
+    "hasQuestions": true,
+    "versions": [
+      "v4.2"
+    ]
   },
   {
     "id": "8a4b23b8-da4a-4813-baac-396ff2fcff07",
     "title": "Test 09 - 매우 짧은 노트",
     "content": "Stack은 LIFO 구조이다.",
-    "createdAt": "2026-06-22T06:02:14.308Z"
+    "createdAt": "2026-06-22T06:02:14.308Z",
+    "hasQuestions": true,
+    "versions": [
+      "v4.2"
+    ]
   },
   {
     "id": "680e3f55-4e6a-4fc7-86c2-5e161e6931d4",
@@ -202,18 +217,30 @@
     "id": "365b92d6-6bc8-4577-ad93-fe5f727f95fb",
     "title": "Test 13 - 잘못된 내용이 포함된 노트",
     "content": "HTTP의 기본 포트는 443이다.\n\nTCP는 비연결 지향 프로토콜이다.\n\nOSI는 6계층으로 이루어져 있다.",
-    "createdAt": "2026-06-22T06:04:48.875Z"
+    "createdAt": "2026-06-22T06:04:48.875Z",
+    "hasQuestions": true,
+    "versions": [
+      "v4.2"
+    ]
   },
   {
     "id": "47c5beb2-b225-4d7c-b671-bf27af74c190",
     "title": "Test 14 - 문제형 노트",
     "content": "Q. TCP란 무엇인가?\n\nA. 연결 지향 프로토콜이다.\n\nQ. HTTP 기본 포트는?\n\nA. 80\n\nQ. REST의 특징은?\n\nA. Stateless",
-    "createdAt": "2026-06-22T06:05:02.545Z"
+    "createdAt": "2026-06-22T06:05:02.545Z",
+    "hasQuestions": true,
+    "versions": [
+      "v4.2"
+    ]
   },
   {
     "id": "60a9046e-d689-41d1-ac10-68db6b44dc44",
     "title": "Test 15 - 정리되지 않은 노트",
     "content": "TCP 연결지향\n\nudp 빠름\n\nhttp 80\n\nhttps 443\n\nstateless 서버가 상태 저장 안함\n\ndns 먼저\n\ntcp\n\nhttp\n\n응답\n\n렌더링",
-    "createdAt": "2026-06-22T06:05:17.361Z"
+    "createdAt": "2026-06-22T06:05:17.361Z",
+    "hasQuestions": true,
+    "versions": [
+      "v4.2"
+    ]
   }
 ]

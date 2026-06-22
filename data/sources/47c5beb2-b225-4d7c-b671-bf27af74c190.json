@@ -2,5 +2,9 @@
   "id": "47c5beb2-b225-4d7c-b671-bf27af74c190",
   "title": "Test 14 - 문제형 노트",
   "content": "Q. TCP란 무엇인가?\n\nA. 연결 지향 프로토콜이다.\n\nQ. HTTP 기본 포트는?\n\nA. 80\n\nQ. REST의 특징은?\n\nA. Stateless",
-  "createdAt": "2026-06-22T06:05:02.545Z"
+  "createdAt": "2026-06-22T06:05:02.545Z",
+  "hasQuestions": true,
+  "versions": [
+    "v4.2"
+  ]
 }

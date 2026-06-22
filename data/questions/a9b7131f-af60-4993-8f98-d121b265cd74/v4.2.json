@@ -1,0 +1,61 @@
+{
+  "sourceId": "a9b7131f-af60-4993-8f98-d121b265cd74",
+  "version": "v4.2",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "JWT는 Header, Payload, Signature의 세 부분으로 구성된다.",
+      "answer": "O",
+      "explanation": "JWT는 Header, Payload, Signature의 세 부분으로 구성된다."
+    },
+    {
+      "type": "mcq",
+      "question": "JWT의 Header에는 무엇이 저장되는가?",
+      "choices": [
+        {
+          "key": "A",
+          "text": "알고리즘 정보"
+        },
+        {
+          "key": "B",
+          "text": "사용자 정보"
+        },
+        {
+          "key": "C",
+          "text": "위변조 방지 정보"
+        },
+        {
+          "key": "D",
+          "text": "세션 정보"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Header에는 알고리즘 정보가 저장된다."
+    },
+    {
+      "type": "blank",
+      "question": "Payload에는 사용자 정보(Claim)가 저장된다. Signature는 위변조를 방지한다. Signature는 ____를 방지한다.",
+      "answer": "위변조",
+      "acceptedAnswers": [
+        "위변조"
+      ],
+      "explanation": "Signature는 위변조를 방지한다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "JWT의 구성 요소는 무엇인가?",
+      "answer": [
+        "Header",
+        "Payload",
+        "Signature"
+      ],
+      "acceptedAnswers": [
+        "Header",
+        "Payload",
+        "Signature"
+      ],
+      "explanation": "JWT는 Header, Payload, Signature의 세 부분으로 구성된다."
+    }
+  ],
+  "createdAt": "2026-06-22T07:16:30.755Z"
+}
