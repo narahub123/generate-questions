@@ -1,0 +1,377 @@
+{
+  "sourceId": "60a9046e-d689-41d1-ac10-68db6b44dc44",
+  "version": "mul-agent-test9",
+  "questions": [
+    {
+      "type": "keyword-list",
+      "question": "TCP 연결지향에서 추출할 수 있는 키워드는 무엇인가?",
+      "answer": [
+        "TCP",
+        "연결지향"
+      ],
+      "explanation": "TCP는 연결지향 프로토콜로, 데이터 전송 전에 연결을 설정합니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "keyword-list",
+      "question": "udp 빠움에서 추출할 수 있는 키워드는 무엇인가?",
+      "answer": [
+        "udp",
+        "빠름"
+      ],
+      "explanation": "UDP는 비연결형 프로토콜로, 빠른 데이터 전송이 가능합니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "keyword-list",
+      "question": "http 80에서 추출할 수 있는 키워드는 무엇인가?",
+      "answer": [
+        "http",
+        "80"
+      ],
+      "explanation": "HTTP는 웹에서 사용되는 프로토콜이며, 기본 포트는 80입니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "keyword-list",
+      "question": "https 443에서 추출할 수 있는 키워드는 무엇인가?",
+      "answer": [
+        "https",
+        "443"
+      ],
+      "explanation": "HTTPS는 보안 HTTP 프로토콜이며, 기본 포트는 443입니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "stateless 서버가 상태 저장 안함은 참인가 거짓인가?",
+      "answer": "O",
+      "explanation": "Stateless 서버는 클라이언트의 상태를 저장하지 않습니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "sequence",
+      "question": "dns 먼저에서 추출할 수 있는 키워드는 어떤 순서인가?",
+      "answer": [
+        "dns",
+        "먼저"
+      ],
+      "explanation": "DNS는 도메인 이름을 IP 주소로 변환하는 과정에서 먼저 수행됩니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "먼저",
+        "dns"
+      ]
+    },
+    {
+      "type": "keyword-find",
+      "question": "tcp http 응답 렌더링에서 찾을 수 있는 키워드는 무엇인가?",
+      "answer": [
+        "tcp",
+        "http",
+        "응답",
+        "렌더링"
+      ],
+      "explanation": "TCP는 HTTP 응답을 렌더링하는 데 사용되는 프로토콜입니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [
+        "tcp",
+        "http",
+        "응답",
+        "렌더링"
+      ],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "keyword-list",
+          "source": "TCP 연결지향",
+          "extract": [
+            "TCP",
+            "연결지향"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "keyword-list",
+          "source": "udp 빠름",
+          "extract": [
+            "udp",
+            "빠름"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "keyword-list",
+          "source": "http 80",
+          "extract": [
+            "http",
+            "80"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "keyword-list",
+          "source": "https 443",
+          "extract": [
+            "https",
+            "443"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "ox",
+          "source": "stateless 서버가 상태 저장 안함",
+          "extract": "stateless 서버가 상태 저장 안함",
+          "answerShape": "string"
+        },
+        {
+          "type": "sequence",
+          "source": "dns 먼저",
+          "extract": [
+            "dns",
+            "먼저"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "keyword-find",
+          "source": "tcp http 응답 렌더링",
+          "extract": [
+            "tcp",
+            "http",
+            "응답",
+            "렌더링"
+          ],
+          "answerShape": "string[]"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "TCP 연결지향에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "TCP",
+            "연결지향"
+          ],
+          "explanation": "TCP는 연결지향 프로토콜로, 데이터 전송 전에 연결을 설정합니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "udp 빠움에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "udp",
+            "빠름"
+          ],
+          "explanation": "UDP는 비연결형 프로토콜로, 빠른 데이터 전송이 가능합니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "http 80에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "http",
+            "80"
+          ],
+          "explanation": "HTTP는 웹에서 사용되는 프로토콜이며, 기본 포트는 80입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "https 443에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "https",
+            "443"
+          ],
+          "explanation": "HTTPS는 보안 HTTP 프로토콜이며, 기본 포트는 443입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "stateless 서버가 상태 저장 안함은 참인가 거짓인가?",
+          "answer": "O",
+          "explanation": "Stateless 서버는 클라이언트의 상태를 저장하지 않습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "dns 먼저에서 추출할 수 있는 키워드는 어떤 순서인가?",
+          "answer": [
+            "dns",
+            "먼저"
+          ],
+          "explanation": "DNS는 도메인 이름을 IP 주소로 변환하는 과정에서 먼저 수행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "먼저",
+            "dns"
+          ]
+        },
+        {
+          "type": "keyword-find",
+          "question": "tcp http 응답 렌더링에서 찾을 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "tcp",
+            "http",
+            "응답",
+            "렌더링"
+          ],
+          "explanation": "TCP는 HTTP 응답을 렌더링하는 데 사용되는 프로토콜입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [
+            "tcp",
+            "http",
+            "응답",
+            "렌더링"
+          ],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "TCP 연결지향에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "TCP",
+            "연결지향"
+          ],
+          "explanation": "TCP는 연결지향 프로토콜로, 데이터 전송 전에 연결을 설정합니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "udp 빠움에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "udp",
+            "빠름"
+          ],
+          "explanation": "UDP는 비연결형 프로토콜로, 빠른 데이터 전송이 가능합니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "http 80에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "http",
+            "80"
+          ],
+          "explanation": "HTTP는 웹에서 사용되는 프로토콜이며, 기본 포트는 80입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "https 443에서 추출할 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "https",
+            "443"
+          ],
+          "explanation": "HTTPS는 보안 HTTP 프로토콜이며, 기본 포트는 443입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "stateless 서버가 상태 저장 안함은 참인가 거짓인가?",
+          "answer": "O",
+          "explanation": "Stateless 서버는 클라이언트의 상태를 저장하지 않습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "dns 먼저에서 추출할 수 있는 키워드는 어떤 순서인가?",
+          "answer": [
+            "dns",
+            "먼저"
+          ],
+          "explanation": "DNS는 도메인 이름을 IP 주소로 변환하는 과정에서 먼저 수행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "먼저",
+            "dns"
+          ]
+        },
+        {
+          "type": "keyword-find",
+          "question": "tcp http 응답 렌더링에서 찾을 수 있는 키워드는 무엇인가?",
+          "answer": [
+            "tcp",
+            "http",
+            "응답",
+            "렌더링"
+          ],
+          "explanation": "TCP는 HTTP 응답을 렌더링하는 데 사용되는 프로토콜입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [
+            "tcp",
+            "http",
+            "응답",
+            "렌더링"
+          ],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T10:10:48.617Z"
+}

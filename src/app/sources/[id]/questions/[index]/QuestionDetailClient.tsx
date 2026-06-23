@@ -15,7 +15,6 @@ import {
 // 각각 분리된 독립 컴포넌트들을 default import로 가져옵니다.
 import McqQuestion from "@/components/questions/McqQuestion";
 import OxQuestion from "@/components/questions/OxQuestion";
-import ShortQuestion from "@/components/questions/ShortQuestion";
 import BlankQuestion from "@/components/questions/BlankQuestion";
 import SequenceQuestion from "@/components/questions/SequenceQuestion";
 import KeywordListQuestion from "@/components/questions/KeywordListQuestion";
@@ -78,7 +77,9 @@ export default function QuestionDetailClient({
 
     let isCorrect = false;
 
-    // 2. 새로운 유형들은 정답 데이터 형태가 배열 구조(또는 JSON 형태 배열 문자열)이므로 분기 채점 유도
+    // 공통 정규화 함수 (소문자 변환 + 양옆 공백 제거)
+    const normalize = (str: string) => str.toLowerCase().trim();
+
     if (["keyword-find", "keyword-list", "sequence"].includes(question.type)) {
       try {
         const userArray: string[] = JSON.parse(answer);
@@ -86,29 +87,27 @@ export default function QuestionDetailClient({
           ? question.answer
           : JSON.parse(question.answer as unknown as string);
 
-        if (question.type === "keyword-find") {
-          // 키워드 찾기는 순서 상관없이 요소 일치 여부 검사
+        if (
+          question.type === "keyword-find" ||
+          question.type === "keyword-list"
+        ) {
+          // [수정됨] 대소문자 무시 비교 로직
+          const normalizedUser = userArray.map(normalize);
+          const normalizedServer = serverArray.map(normalize);
+
           isCorrect =
-            userArray.length === serverArray.length &&
-            userArray.every((val) => serverArray.includes(val));
-        } else if (question.type === "keyword-list") {
-          // 주관식 다중 나열은 동의어 목록(acceptedAnswers)과 유연하게 크로스체킹하면 좋으나,
-          // 기본적으로 유저 입력 배열이 정답 배열 원소들을 모두 상호 포함하는지 체크
-          isCorrect =
-            userArray.length === serverArray.length &&
-            userArray.every((val) =>
-              serverArray.map((s) => s.trim()).includes(val.trim()),
-            );
+            normalizedUser.length === normalizedServer.length &&
+            normalizedServer.every((val) => normalizedUser.includes(val));
         } else if (question.type === "sequence") {
-          // 순서 맞추기는 인덱스 순서까지 완벽히 일치해야 정답
+          // 순서 맞추기는 인덱스 순서와 대소문자까지 동일해야 한다면 아래와 같이 유지
           isCorrect = JSON.stringify(userArray) === JSON.stringify(serverArray);
         }
       } catch (e) {
         isCorrect = false;
       }
     } else {
-      // 기본 텍스트 단일 매칭 유형 (ox, mcq, short, blank)
-      isCorrect = answer.trim() === String(question.answer).trim();
+      // [수정됨] 단일 매칭도 대소문자 무시 고려가 필요할 수 있음
+      isCorrect = normalize(answer) === normalize(String(question.answer));
     }
 
     setResult(isCorrect ? "correct" : "wrong");

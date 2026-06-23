@@ -1,0 +1,40 @@
+{
+  "sourceId": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+  "version": "mul-agent-test1",
+  "questions": [
+    {
+      "type": "mcq",
+      "question": "TCP는 어떤 종류의 프로토콜인가?",
+      "answer": "연결 지향",
+      "explanation": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+      "choices": [
+        "연결 지향",
+        "비연결 지향",
+        "데이터그램",
+        "패킷 지향"
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "sequence",
+      "question": "데이터를 안정적으로 전송하기 위해 사용하는 과정은 무엇인가?",
+      "answer": "3-way Handshake",
+      "explanation": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "3-way Handshake"
+      ]
+    },
+    {
+      "type": "ox",
+      "question": "패킷 손실 시 재전송을 수행한다. (O/X)",
+      "answer": "O",
+      "explanation": "패킷 손실 시 재전송을 수행한다."
+    }
+  ],
+  "createdAt": "2026-06-23T08:42:56.183Z"
+}

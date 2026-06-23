@@ -1,0 +1,216 @@
+{
+  "sourceId": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
+  "version": "mul-agent-test10",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "REST는 Stateless를 따른다.",
+      "answer": "O",
+      "explanation": "REST는 Stateless 아키텍처 스타일을 따르며, 서버가 클라이언트의 상태를 저장하지 않습니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "keyword-list",
+      "question": "REST의 주요 특징",
+      "answer": [
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface"
+      ],
+      "explanation": "REST의 주요 특징으로는 Stateless, Cacheable, Uniform Interface가 있습니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "sequence",
+      "question": "HTTP 요청 과정",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청",
+        "응답"
+      ],
+      "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 응답의 순서로 진행됩니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "응답",
+        "TCP 연결",
+        "HTTP 요청",
+        "DNS 조회"
+      ]
+    },
+    {
+      "type": "ox",
+      "question": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+      "answer": "O",
+      "explanation": "REST는 서버가 클라이언트의 상태를 저장하지 않으며, 각 요청은 독립적입니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "ox",
+          "source": "REST는 Stateless를 따른다.",
+          "extract": "REST는 Stateless를 따른다.",
+          "answerShape": "string"
+        },
+        {
+          "type": "keyword-list",
+          "source": "REST의 주요 특징",
+          "extract": [
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "sequence",
+          "source": "HTTP 요청 과정",
+          "extract": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청",
+            "응답"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "ox",
+          "source": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+          "extract": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+          "answerShape": "string"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "ox",
+          "question": "REST는 Stateless를 따른다.",
+          "answer": "O",
+          "explanation": "REST는 Stateless 아키텍처 스타일을 따르며, 서버가 클라이언트의 상태를 저장하지 않습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "REST의 주요 특징",
+          "answer": [
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface"
+          ],
+          "explanation": "REST의 주요 특징으로는 Stateless, Cacheable, Uniform Interface가 있습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청",
+            "응답"
+          ],
+          "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 응답의 순서로 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "응답",
+            "TCP 연결",
+            "HTTP 요청",
+            "DNS 조회"
+          ]
+        },
+        {
+          "type": "ox",
+          "question": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+          "answer": "O",
+          "explanation": "REST는 서버가 클라이언트의 상태를 저장하지 않으며, 각 요청은 독립적입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "ox",
+          "question": "REST는 Stateless를 따른다.",
+          "answer": "O",
+          "explanation": "REST는 Stateless 아키텍처 스타일을 따르며, 서버가 클라이언트의 상태를 저장하지 않습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "keyword-list",
+          "question": "REST의 주요 특징",
+          "answer": [
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface"
+          ],
+          "explanation": "REST의 주요 특징으로는 Stateless, Cacheable, Uniform Interface가 있습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청",
+            "응답"
+          ],
+          "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 응답의 순서로 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "응답",
+            "TCP 연결",
+            "HTTP 요청",
+            "DNS 조회"
+          ]
+        },
+        {
+          "type": "ox",
+          "question": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+          "answer": "O",
+          "explanation": "REST는 서버가 클라이언트의 상태를 저장하지 않으며, 각 요청은 독립적입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T10:28:42.189Z"
+}

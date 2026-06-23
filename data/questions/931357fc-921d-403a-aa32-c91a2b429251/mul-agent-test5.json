@@ -1,0 +1,74 @@
+{
+  "sourceId": "931357fc-921d-403a-aa32-c91a2b429251",
+  "version": "mul-agent-test5",
+  "questions": [
+    {
+      "type": "keyword-list",
+      "question": "What are the main features of REST?",
+      "answer": [
+        "Client-Server",
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "Layered System"
+      ],
+      "explanation": "The main features of REST include Client-Server, Stateless, Cacheable, Uniform Interface, and Layered System.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "keyword-list",
+          "source": "REST의 주요 특징",
+          "extract": "Client-Server, Stateless, Cacheable, Uniform Interface, Layered System"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "What are the main features of REST?",
+          "answer": [
+            "Client-Server",
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface",
+            "Layered System"
+          ],
+          "explanation": "The main features of REST include Client-Server, Stateless, Cacheable, Uniform Interface, and Layered System.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "What are the main features of REST?",
+          "answer": [
+            "Client-Server",
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface",
+            "Layered System"
+          ],
+          "explanation": "The main features of REST include Client-Server, Stateless, Cacheable, Uniform Interface, and Layered System.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T09:12:14.884Z"
+}

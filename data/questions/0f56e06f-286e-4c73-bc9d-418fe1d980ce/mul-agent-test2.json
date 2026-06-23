@@ -1,0 +1,279 @@
+{
+  "sourceId": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+  "version": "mul-agent-test2",
+  "questions": [
+    {
+      "type": "mcq",
+      "question": "TCP는 어떤 종류의 프로토콜인가?",
+      "answer": "연결 지향(Connection-Oriented) 프로토콜",
+      "explanation": "TCP는 데이터를 안정적으로 전송하기 위해 연결 지향 프로토콜로 설계되었습니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "연결 지향(Connection-Oriented) 프로토콜"
+        },
+        {
+          "key": "B",
+          "text": "비연결 지향(Connectionless) 프로토콜"
+        },
+        {
+          "key": "C",
+          "text": "데이터그램 프로토콜"
+        },
+        {
+          "key": "D",
+          "text": "신뢰성 없는 프로토콜"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "sequence",
+      "question": "TCP에서 데이터 전송을 위해 사용하는 과정은 무엇인가?",
+      "answer": "3-way Handshake",
+      "explanation": "TCP는 연결을 설정하기 위해 3-way Handshake 과정을 사용합니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "3-way Handshake"
+        },
+        {
+          "key": "B",
+          "text": "2-way Handshake"
+        },
+        {
+          "key": "C",
+          "text": "4-way Handshake"
+        },
+        {
+          "key": "D",
+          "text": "연결 종료"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "TCP는 패킷 손실 시 재전송을 수행한다. (O/X)",
+      "answer": "O",
+      "explanation": "TCP는 신뢰성 있는 데이터 전송을 위해 패킷 손실 시 재전송을 수행합니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "O"
+        },
+        {
+          "key": "B",
+          "text": "X"
+        },
+        {
+          "key": "C",
+          "text": "모름"
+        },
+        {
+          "key": "D",
+          "text": "해당 없음"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "mcq",
+          "source": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "extract": "연결 지향(Connection-Oriented) 프로토콜"
+        },
+        {
+          "type": "sequence",
+          "source": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "extract": "3-way Handshake"
+        },
+        {
+          "type": "ox",
+          "source": "패킷 손실 시 재전송을 수행한다.",
+          "extract": "재전송을 수행한다"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "TCP는 어떤 종류의 프로토콜인가?",
+          "answer": "연결 지향(Connection-Oriented) 프로토콜",
+          "explanation": "TCP는 데이터를 안정적으로 전송하기 위해 연결 지향 프로토콜로 설계되었습니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "연결 지향(Connection-Oriented) 프로토콜"
+            },
+            {
+              "key": "B",
+              "text": "비연결 지향(Connectionless) 프로토콜"
+            },
+            {
+              "key": "C",
+              "text": "데이터그램 프로토콜"
+            },
+            {
+              "key": "D",
+              "text": "신뢰성 없는 프로토콜"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "TCP에서 데이터 전송을 위해 사용하는 과정은 무엇인가?",
+          "answer": "3-way Handshake",
+          "explanation": "TCP는 연결을 설정하기 위해 3-way Handshake 과정을 사용합니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "3-way Handshake"
+            },
+            {
+              "key": "B",
+              "text": "2-way Handshake"
+            },
+            {
+              "key": "C",
+              "text": "4-way Handshake"
+            },
+            {
+              "key": "D",
+              "text": "연결 종료"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "TCP는 패킷 손실 시 재전송을 수행한다. (O/X)",
+          "answer": "O",
+          "explanation": "TCP는 신뢰성 있는 데이터 전송을 위해 패킷 손실 시 재전송을 수행합니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "O"
+            },
+            {
+              "key": "B",
+              "text": "X"
+            },
+            {
+              "key": "C",
+              "text": "모름"
+            },
+            {
+              "key": "D",
+              "text": "해당 없음"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "TCP는 어떤 종류의 프로토콜인가?",
+          "answer": "연결 지향(Connection-Oriented) 프로토콜",
+          "explanation": "TCP는 데이터를 안정적으로 전송하기 위해 연결 지향 프로토콜로 설계되었습니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "연결 지향(Connection-Oriented) 프로토콜"
+            },
+            {
+              "key": "B",
+              "text": "비연결 지향(Connectionless) 프로토콜"
+            },
+            {
+              "key": "C",
+              "text": "데이터그램 프로토콜"
+            },
+            {
+              "key": "D",
+              "text": "신뢰성 없는 프로토콜"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "TCP에서 데이터 전송을 위해 사용하는 과정은 무엇인가?",
+          "answer": "3-way Handshake",
+          "explanation": "TCP는 연결을 설정하기 위해 3-way Handshake 과정을 사용합니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "3-way Handshake"
+            },
+            {
+              "key": "B",
+              "text": "2-way Handshake"
+            },
+            {
+              "key": "C",
+              "text": "4-way Handshake"
+            },
+            {
+              "key": "D",
+              "text": "연결 종료"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "TCP는 패킷 손실 시 재전송을 수행한다. (O/X)",
+          "answer": "O",
+          "explanation": "TCP는 신뢰성 있는 데이터 전송을 위해 패킷 손실 시 재전송을 수행합니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "O"
+            },
+            {
+              "key": "B",
+              "text": "X"
+            },
+            {
+              "key": "C",
+              "text": "모름"
+            },
+            {
+              "key": "D",
+              "text": "해당 없음"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T09:00:28.373Z"
+}

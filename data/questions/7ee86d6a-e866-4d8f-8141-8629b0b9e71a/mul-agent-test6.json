@@ -1,0 +1,56 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "mul-agent-test6",
+  "questions": [
+    {
+      "type": "sequence",
+      "question": "HTTP 요청 과정의 순서는 무엇인가요?",
+      "answer": "1. DNS 조회, 2. TCP 연결, 3. HTTP 요청 전송, 4. 서버 응답 수신, 5. 브라우저 렌더링",
+      "explanation": "HTTP 요청 과정은 특정 순서에 따라 진행됩니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "sequence",
+          "source": "HTTP 요청 과정",
+          "extract": "1. DNS 조회 2. TCP 연결 3. HTTP 요청 전송 4. 서버 응답 수신 5. 브라우저 렌더링"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정의 순서는 무엇인가요?",
+          "answer": "1. DNS 조회, 2. TCP 연결, 3. HTTP 요청 전송, 4. 서버 응답 수신, 5. 브라우저 렌더링",
+          "explanation": "HTTP 요청 과정은 특정 순서에 따라 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정의 순서는 무엇인가요?",
+          "answer": "1. DNS 조회, 2. TCP 연결, 3. HTTP 요청 전송, 4. 서버 응답 수신, 5. 브라우저 렌더링",
+          "explanation": "HTTP 요청 과정은 특정 순서에 따라 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T09:16:41.529Z"
+}

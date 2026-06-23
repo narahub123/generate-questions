@@ -23,7 +23,11 @@ export default function SequenceQuestion({
 
   useEffect(() => {
     if (question.shuffledItems) {
-      setPool([...question.shuffledItems]);
+      // 배열을 무작위로 섞는 로직 추가
+      const shuffled = [...question.shuffledItems].sort(
+        () => Math.random() - 0.5,
+      );
+      setPool(shuffled);
       setSelectedOrder([]);
     }
   }, [question, submitted]);

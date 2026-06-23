@@ -1,4 +1,4 @@
-import { VALID_TYPES } from "@/lib/generateQuestions";
+import { VALID_TYPES } from "@/lib/ai/contracts";
 
 // 1. 신규 조건부 문제 유형 3가지 추가
 export type QuestionType = (typeof VALID_TYPES)[number];

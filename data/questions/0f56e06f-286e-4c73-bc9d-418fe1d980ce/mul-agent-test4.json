@@ -1,0 +1,126 @@
+{
+  "sourceId": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+  "version": "mul-agent-test4",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+      "answer": "O",
+      "explanation": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+      "answer": "O",
+      "explanation": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "패킷 손실 시 재전송을 수행한다.",
+      "answer": "O",
+      "explanation": "패킷 손실 시 재전송을 수행한다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "ox",
+          "source": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "extract": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다."
+        },
+        {
+          "type": "ox",
+          "source": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "extract": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다."
+        },
+        {
+          "type": "ox",
+          "source": "패킷 손실 시 재전송을 수행한다.",
+          "extract": "패킷 손실 시 재전송을 수행한다."
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "ox",
+          "question": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "answer": "O",
+          "explanation": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "answer": "O",
+          "explanation": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "패킷 손실 시 재전송을 수행한다.",
+          "answer": "O",
+          "explanation": "패킷 손실 시 재전송을 수행한다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "ox",
+          "question": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "answer": "O",
+          "explanation": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "answer": "O",
+          "explanation": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "패킷 손실 시 재전송을 수행한다.",
+          "answer": "O",
+          "explanation": "패킷 손실 시 재전송을 수행한다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T09:08:30.804Z"
+}

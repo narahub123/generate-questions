@@ -1,0 +1,92 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "mul-agent-test7",
+  "questions": [
+    {
+      "type": "sequence",
+      "question": "What are the steps in the HTTP 요청 과정?",
+      "answer": [
+        "1. DNS 조회",
+        "2. TCP 연결",
+        "3. HTTP 요청 전송",
+        "4. 서버 응답 수신",
+        "5. 브라우저 렌더링"
+      ],
+      "explanation": "The HTTP 요청 과정 consists of five distinct steps that occur in order to successfully make an HTTP request and render the response in a browser.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "1. DNS 조회",
+        "2. TCP 연결",
+        "3. HTTP 요청 전송",
+        "4. 서버 응답 수신",
+        "5. 브라우저 렌더링"
+      ]
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "sequence",
+          "source": "HTTP 요청 과정",
+          "extract": "1. DNS 조회 2. TCP 연결 3. HTTP 요청 전송 4. 서버 응답 수신 5. 브라우저 렌더링"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "What are the steps in the HTTP 요청 과정?",
+          "answer": [
+            "1. DNS 조회",
+            "2. TCP 연결",
+            "3. HTTP 요청 전송",
+            "4. 서버 응답 수신",
+            "5. 브라우저 렌더링"
+          ],
+          "explanation": "The HTTP 요청 과정 consists of five distinct steps that occur in order to successfully make an HTTP request and render the response in a browser.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "1. DNS 조회",
+            "2. TCP 연결",
+            "3. HTTP 요청 전송",
+            "4. 서버 응답 수신",
+            "5. 브라우저 렌더링"
+          ]
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "What are the steps in the HTTP 요청 과정?",
+          "answer": [
+            "1. DNS 조회",
+            "2. TCP 연결",
+            "3. HTTP 요청 전송",
+            "4. 서버 응답 수신",
+            "5. 브라우저 렌더링"
+          ],
+          "explanation": "The HTTP 요청 과정 consists of five distinct steps that occur in order to successfully make an HTTP request and render the response in a browser.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "1. DNS 조회",
+            "2. TCP 연결",
+            "3. HTTP 요청 전송",
+            "4. 서버 응답 수신",
+            "5. 브라우저 렌더링"
+          ]
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T09:21:35.955Z"
+}

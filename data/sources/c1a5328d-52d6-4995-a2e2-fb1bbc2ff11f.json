@@ -6,6 +6,8 @@
   "hasQuestions": true,
   "versions": [
     "v4.2",
-    "v4.3"
+    "v4.3",
+    "mul-agent-test9",
+    "mul-agent-test10"
   ]
 }

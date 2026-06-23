@@ -6,7 +6,7 @@ import { Plus, X } from "lucide-react";
 
 interface KeywordListQuestionProps {
   question: Question;
-  answer: string; // 상위 상태 (JSON string)
+  answer: string; // JSON.stringify(string[]) 형태
   setAnswer: (val: string) => void;
   submitted: boolean;
 }
@@ -20,37 +20,31 @@ export default function KeywordListQuestion({
   const [inputValue, setInputValue] = useState("");
   const [chips, setChips] = useState<string[]>([]);
 
-  // 1. 상위 answer 상태나 문제(question)가 바뀔 때 로컬 칩 상태 동기화
+  // 1. 상위 answer 상태가 바뀔 때 로컬 상태와 동기화
   useEffect(() => {
-    if (answer) {
-      try {
-        const parsed = JSON.parse(answer);
-        if (Array.isArray(parsed)) {
-          setChips(parsed);
-          return;
-        }
-      } catch (e) {
-        console.error("답안 파싱 실패", e);
-      }
+    try {
+      const parsed = answer ? JSON.parse(answer) : [];
+      setChips(Array.isArray(parsed) ? parsed : []);
+    } catch (e) {
+      setChips([]);
     }
-    // answer가 비어있거나 올바르지 않은 포맷이면 비워줌
-    setChips([]);
-  }, [answer, question]);
+  }, [answer]);
 
-  // 2. 새로운 문제가 로드되면 입력창 글자 비우기
+  // 2. 새로운 문제가 로드되면 입력창 비우기
   useEffect(() => {
     setInputValue("");
   }, [question]);
 
+  // 3. 키워드 추가 로직 (대소문자 무시 및 소문자 통일 저장)
   const handleAddChip = () => {
     if (submitted) return;
-    const trimmed = inputValue.trim();
+
+    // 핵심: 입력값을 소문자로 변환하여 비교 및 저장
+    const trimmed = inputValue.trim().toLowerCase();
     if (!trimmed) return;
 
-    // 중복 방지
     if (!chips.includes(trimmed)) {
       const updated = [...chips, trimmed];
-      // 로컬 상태를 바꾸는 대신 상위 상태를 업데이트 -> useEffect가 감지하여 로컬 칩을 변경함
       setAnswer(JSON.stringify(updated));
     }
     setInputValue("");
@@ -58,7 +52,7 @@ export default function KeywordListQuestion({
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // form 서브밋 방지 및 엔터 키 입력 차단
+      e.preventDefault();
       handleAddChip();
     }
   };
@@ -75,7 +69,7 @@ export default function KeywordListQuestion({
       <div className="flex flex-wrap gap-2 p-3 min-h-[52px] bg-gray-50/50 border border-dashed border-gray-200 rounded-xl">
         {chips.length === 0 && (
           <span className="text-xs text-gray-400 self-center pl-1">
-            아래에 핵심 키워드를 입력하여 추가해 주세요.
+            핵심 키워드를 입력하여 추가해 주세요.
           </span>
         )}
         {chips.map((chip, idx) => (
@@ -97,14 +91,14 @@ export default function KeywordListQuestion({
         ))}
       </div>
 
-      {/* 입력창 인터페이스 (제출 완료 후에는 UI 청결을 위해 숨김 처리) */}
+      {/* 입력창 인터페이스 */}
       {!submitted && (
         <div className="flex gap-2">
           <input
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="기억나는 원리/특성 키워드를 입력하세요"
+            placeholder="키워드 입력 후 Enter"
             className="flex-1 border border-gray-300 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
           />
           <button

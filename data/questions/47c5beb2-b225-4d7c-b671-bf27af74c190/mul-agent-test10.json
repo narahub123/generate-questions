@@ -1,0 +1,219 @@
+{
+  "sourceId": "47c5beb2-b225-4d7c-b671-bf27af74c190",
+  "version": "mul-agent-test10",
+  "questions": [
+    {
+      "type": "mcq",
+      "question": "TCP란 무엇인가?",
+      "answer": "A",
+      "explanation": "TCP는 연결 지향 프로토콜입니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "연결 지향 프로토콜이다."
+        },
+        {
+          "key": "B",
+          "text": "비연결 지향 프로토콜이다."
+        },
+        {
+          "key": "C",
+          "text": "데이터그램 프로토콜이다."
+        },
+        {
+          "key": "D",
+          "text": "패킷 스위칭 프로토콜이다."
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "blank",
+      "question": "HTTP 기본 포트는?",
+      "answer": "80",
+      "explanation": "HTTP의 기본 포트 번호는 80입니다."
+    },
+    {
+      "type": "mcq",
+      "question": "REST의 특징은?",
+      "answer": "A",
+      "explanation": "REST는 Stateless한 특성을 가지고 있습니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "Stateless"
+        },
+        {
+          "key": "B",
+          "text": "Stateful"
+        },
+        {
+          "key": "C",
+          "text": "동기식"
+        },
+        {
+          "key": "D",
+          "text": "비동기식"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "mcq",
+          "source": "TCP란 무엇인가?",
+          "extract": "연결 지향 프로토콜이다.",
+          "answerShape": "choice"
+        },
+        {
+          "type": "blank",
+          "source": "HTTP 기본 포트는?",
+          "extract": "80",
+          "answerShape": "string"
+        },
+        {
+          "type": "mcq",
+          "source": "REST의 특징은?",
+          "extract": "Stateless",
+          "answerShape": "choice"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "TCP란 무엇인가?",
+          "answer": "A",
+          "explanation": "TCP는 연결 지향 프로토콜입니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "연결 지향 프로토콜이다."
+            },
+            {
+              "key": "B",
+              "text": "비연결 지향 프로토콜이다."
+            },
+            {
+              "key": "C",
+              "text": "데이터그램 프로토콜이다."
+            },
+            {
+              "key": "D",
+              "text": "패킷 스위칭 프로토콜이다."
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "blank",
+          "question": "HTTP 기본 포트는?",
+          "answer": "80",
+          "explanation": "HTTP의 기본 포트 번호는 80입니다."
+        },
+        {
+          "type": "mcq",
+          "question": "REST의 특징은?",
+          "answer": "A",
+          "explanation": "REST는 Stateless한 특성을 가지고 있습니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Stateless"
+            },
+            {
+              "key": "B",
+              "text": "Stateful"
+            },
+            {
+              "key": "C",
+              "text": "동기식"
+            },
+            {
+              "key": "D",
+              "text": "비동기식"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "TCP란 무엇인가?",
+          "answer": "A",
+          "explanation": "TCP는 연결 지향 프로토콜입니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "연결 지향 프로토콜이다."
+            },
+            {
+              "key": "B",
+              "text": "비연결 지향 프로토콜이다."
+            },
+            {
+              "key": "C",
+              "text": "데이터그램 프로토콜이다."
+            },
+            {
+              "key": "D",
+              "text": "패킷 스위칭 프로토콜이다."
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "blank",
+          "question": "HTTP 기본 포트는?",
+          "answer": "80",
+          "explanation": "HTTP의 기본 포트 번호는 80입니다."
+        },
+        {
+          "type": "mcq",
+          "question": "REST의 특징은?",
+          "answer": "A",
+          "explanation": "REST는 Stateless한 특성을 가지고 있습니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "Stateless"
+            },
+            {
+              "key": "B",
+              "text": "Stateful"
+            },
+            {
+              "key": "C",
+              "text": "동기식"
+            },
+            {
+              "key": "D",
+              "text": "비동기식"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T10:27:25.763Z"
+}

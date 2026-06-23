@@ -1,0 +1,92 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "mul-agent-test8",
+  "questions": [
+    {
+      "type": "sequence",
+      "question": "HTTP 요청 과정의 순서를 나열하시오.",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "서버 응답 수신",
+        "브라우저 렌더링"
+      ],
+      "explanation": "HTTP 요청 과정은 DNS 조회부터 시작하여 브라우저 렌더링까지의 순서로 진행됩니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "서버 응답 수신",
+        "브라우저 렌더링"
+      ]
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "sequence",
+          "source": "HTTP 요청 과정",
+          "extract": "1. DNS 조회\n2. TCP 연결\n3. HTTP 요청 전송\n4. 서버 응답 수신\n5. 브라우저 렌더링"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정의 순서를 나열하시오.",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ],
+          "explanation": "HTTP 요청 과정은 DNS 조회부터 시작하여 브라우저 렌더링까지의 순서로 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ]
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정의 순서를 나열하시오.",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ],
+          "explanation": "HTTP 요청 과정은 DNS 조회부터 시작하여 브라우저 렌더링까지의 순서로 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ]
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T09:44:37.464Z"
+}

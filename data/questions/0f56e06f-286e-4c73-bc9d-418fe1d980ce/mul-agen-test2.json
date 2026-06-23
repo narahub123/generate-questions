@@ -1,0 +1,141 @@
+{
+  "sourceId": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+  "version": "mul-agen-test2",
+  "questions": [
+    {
+      "type": "mcq",
+      "question": "TCP는 어떤 종류의 프로토콜인가?",
+      "answer": "연결 지향(Connection-Oriented) 프로토콜",
+      "explanation": "TCP는 연결 지향 프로토콜로, 데이터 전송을 위해 연결을 설정합니다.",
+      "choices": [
+        "연결 지향(Connection-Oriented) 프로토콜",
+        "비연결 지향(Connectionless) 프로토콜",
+        "데이터그램 프로토콜",
+        "전송 프로토콜"
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "sequence",
+      "question": "데이터를 안정적으로 전송하기 위해 사용하는 과정은 무엇인가?",
+      "answer": "3-way Handshake",
+      "explanation": "3-way Handshake는 TCP 연결을 설정하기 위한 과정입니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "패킷 손실 시 재전송을 수행한다.",
+      "answer": "O",
+      "explanation": "TCP는 패킷 손실이 발생할 경우 재전송을 통해 데이터의 신뢰성을 보장합니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "mcq",
+          "source": "TCP는 연결 지향(Connection-Oriented) 프로토콜이다.",
+          "extract": "연결 지향(Connection-Oriented) 프로토콜"
+        },
+        {
+          "type": "sequence",
+          "source": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "extract": "3-way Handshake"
+        },
+        {
+          "type": "ox",
+          "source": "패킷 손실 시 재전송을 수행한다.",
+          "extract": "재전송을 수행한다"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "TCP는 어떤 종류의 프로토콜인가?",
+          "answer": "연결 지향(Connection-Oriented) 프로토콜",
+          "explanation": "TCP는 연결 지향 프로토콜로, 데이터 전송을 위해 연결을 설정합니다.",
+          "choices": [
+            "연결 지향(Connection-Oriented) 프로토콜",
+            "비연결 지향(Connectionless) 프로토콜",
+            "데이터그램 프로토콜",
+            "전송 프로토콜"
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "데이터를 안정적으로 전송하기 위해 사용하는 과정은 무엇인가?",
+          "answer": "3-way Handshake",
+          "explanation": "3-way Handshake는 TCP 연결을 설정하기 위한 과정입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "패킷 손실 시 재전송을 수행한다.",
+          "answer": "O",
+          "explanation": "TCP는 패킷 손실이 발생할 경우 재전송을 통해 데이터의 신뢰성을 보장합니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "TCP는 어떤 종류의 프로토콜인가?",
+          "answer": "연결 지향(Connection-Oriented) 프로토콜",
+          "explanation": "TCP는 연결 지향 프로토콜로, 데이터 전송을 위해 연결을 설정합니다.",
+          "choices": [
+            "연결 지향(Connection-Oriented) 프로토콜",
+            "비연결 지향(Connectionless) 프로토콜",
+            "데이터그램 프로토콜",
+            "전송 프로토콜"
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "sequence",
+          "question": "데이터를 안정적으로 전송하기 위해 사용하는 과정은 무엇인가?",
+          "answer": "3-way Handshake",
+          "explanation": "3-way Handshake는 TCP 연결을 설정하기 위한 과정입니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "패킷 손실 시 재전송을 수행한다.",
+          "answer": "O",
+          "explanation": "TCP는 패킷 손실이 발생할 경우 재전송을 통해 데이터의 신뢰성을 보장합니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-23T08:56:43.665Z"
+}
