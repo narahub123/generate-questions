@@ -5,6 +5,7 @@
   "createdAt": "2026-06-22T06:04:48.875Z",
   "hasQuestions": true,
   "versions": [
-    "v4.2"
+    "v4.2",
+    "selector-v3.1-13"
   ]
 }

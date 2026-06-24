@@ -1,0 +1,129 @@
+{
+  "sourceId": "365b92d6-6bc8-4577-ad93-fe5f727f95fb",
+  "version": "selector-v3.1-13",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "HTTP의 기본 포트는 443이다.",
+      "answer": "O",
+      "explanation": "HTTP의 기본 포트는 443이 아니라 80이다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "TCP는 비연결 지향 프로토콜이다.",
+      "answer": "X",
+      "explanation": "TCP는 연결 지향 프로토콜이다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "ox",
+      "question": "OSI는 6계층으로 이루어져 있다.",
+      "answer": "X",
+      "explanation": "OSI는 7계층으로 이루어져 있다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "ox",
+          "source": "HTTP의 기본 포트는 443이다.",
+          "extract": "HTTP의 기본 포트는 443이다.",
+          "answerShape": "string"
+        },
+        {
+          "type": "ox",
+          "source": "TCP는 비연결 지향 프로토콜이다.",
+          "extract": "TCP는 비연결 지향 프로토콜이다.",
+          "answerShape": "string"
+        },
+        {
+          "type": "ox",
+          "source": "OSI는 6계층으로 이루어져 있다.",
+          "extract": "OSI는 6계층으로 이루어져 있다.",
+          "answerShape": "string"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "ox",
+          "question": "HTTP의 기본 포트는 443이다.",
+          "answer": "O",
+          "explanation": "HTTP의 기본 포트는 443이 아니라 80이다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "TCP는 비연결 지향 프로토콜이다.",
+          "answer": "X",
+          "explanation": "TCP는 연결 지향 프로토콜이다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "OSI는 6계층으로 이루어져 있다.",
+          "answer": "X",
+          "explanation": "OSI는 7계층으로 이루어져 있다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "ox",
+          "question": "HTTP의 기본 포트는 443이다.",
+          "answer": "O",
+          "explanation": "HTTP의 기본 포트는 443이 아니라 80이다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "TCP는 비연결 지향 프로토콜이다.",
+          "answer": "X",
+          "explanation": "TCP는 연결 지향 프로토콜이다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "ox",
+          "question": "OSI는 6계층으로 이루어져 있다.",
+          "answer": "X",
+          "explanation": "OSI는 7계층으로 이루어져 있다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T06:01:37.976Z"
+}
