@@ -6,6 +6,7 @@
   "hasQuestions": true,
   "questionCount": 5,
   "versions": [
-    "v4.2"
+    "v4.2",
+    "selector-v3.2-14"
   ]
 }

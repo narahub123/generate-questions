@@ -1,0 +1,125 @@
+{
+  "sourceId": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
+  "version": "selector-v3.2-8",
+  "questions": [
+    {
+      "type": "sequence",
+      "question": "HTTP 요청 과정의 순서를 나열하시오.",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청",
+        "응답"
+      ],
+      "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 그리고 응답의 순서로 진행됩니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "응답",
+        "TCP 연결",
+        "HTTP 요청",
+        "DNS 조회"
+      ]
+    },
+    {
+      "type": "ox",
+      "question": "REST는 서버가 클라이언트 상태를 저장하지 않는다. (O/X)",
+      "answer": "O",
+      "explanation": "REST 아키텍처는 서버가 클라이언트의 상태를 저장하지 않고, 클라이언트가 필요한 상태 정보를 유지하도록 설계되었습니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "sequence",
+          "source": "HTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청\n4. 응답",
+          "extract": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청",
+            "응답"
+          ],
+          "answerShape": "string[]"
+        },
+        {
+          "type": "ox",
+          "source": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+          "extract": "REST는 서버가 클라이언트 상태를 저장하지 않는다.",
+          "answerShape": "string"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정의 순서를 나열하시오.",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청",
+            "응답"
+          ],
+          "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 그리고 응답의 순서로 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "응답",
+            "TCP 연결",
+            "HTTP 요청",
+            "DNS 조회"
+          ]
+        },
+        {
+          "type": "ox",
+          "question": "REST는 서버가 클라이언트 상태를 저장하지 않는다. (O/X)",
+          "answer": "O",
+          "explanation": "REST 아키텍처는 서버가 클라이언트의 상태를 저장하지 않고, 클라이언트가 필요한 상태 정보를 유지하도록 설계되었습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "HTTP 요청 과정의 순서를 나열하시오.",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청",
+            "응답"
+          ],
+          "explanation": "HTTP 요청 과정은 DNS 조회, TCP 연결, HTTP 요청, 그리고 응답의 순서로 진행됩니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "응답",
+            "TCP 연결",
+            "HTTP 요청",
+            "DNS 조회"
+          ]
+        },
+        {
+          "type": "ox",
+          "question": "REST는 서버가 클라이언트 상태를 저장하지 않는다. (O/X)",
+          "answer": "O",
+          "explanation": "REST 아키텍처는 서버가 클라이언트의 상태를 저장하지 않고, 클라이언트가 필요한 상태 정보를 유지하도록 설계되었습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T06:24:52.004Z"
+}

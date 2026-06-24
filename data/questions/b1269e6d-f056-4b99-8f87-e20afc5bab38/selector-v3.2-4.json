@@ -1,0 +1,85 @@
+{
+  "sourceId": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+  "version": "selector-v3.2-4",
+  "questions": [
+    {
+      "type": "keyword-list",
+      "question": "TCP와 UDP의 특징을 나열하시오.",
+      "answer": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림",
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "explanation": "TCP와 UDP는 각각의 프로토콜로서 서로 다른 특징을 가지고 있습니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "keyword-list",
+          "source": "TCP\n\n- 연결 지향\n- 신뢰성 보장\n- 속도가 상대적으로 느림\n\nUDP\n\n- 비연결\n- 신뢰성 보장 없음\n- 속도가 빠름",
+          "extract": [
+            "연결 지향",
+            "신뢰성 보장",
+            "속도가 상대적으로 느림",
+            "비연결",
+            "신뢰성 보장 없음",
+            "속도가 빠름"
+          ],
+          "answerShape": "string[]"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "TCP와 UDP의 특징을 나열하시오.",
+          "answer": [
+            "연결 지향",
+            "신뢰성 보장",
+            "속도가 상대적으로 느림",
+            "비연결",
+            "신뢰성 보장 없음",
+            "속도가 빠름"
+          ],
+          "explanation": "TCP와 UDP는 각각의 프로토콜로서 서로 다른 특징을 가지고 있습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "TCP와 UDP의 특징을 나열하시오.",
+          "answer": [
+            "연결 지향",
+            "신뢰성 보장",
+            "속도가 상대적으로 느림",
+            "비연결",
+            "신뢰성 보장 없음",
+            "속도가 빠름"
+          ],
+          "explanation": "TCP와 UDP는 각각의 프로토콜로서 서로 다른 특징을 가지고 있습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T06:27:10.257Z"
+}

@@ -1,0 +1,81 @@
+{
+  "sourceId": "931357fc-921d-403a-aa32-c91a2b429251",
+  "version": "selector-v3.2",
+  "questions": [
+    {
+      "type": "keyword-list",
+      "question": "REST의 주요 특징은 무엇인가요?",
+      "answer": [
+        "Client-Server",
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "Layered System"
+      ],
+      "explanation": "REST는 웹 아키텍처 스타일로, 클라이언트와 서버 간의 상호작용을 정의하는 여러 가지 주요 특징을 가지고 있습니다.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "keyword-list",
+          "source": "REST의 주요 특징",
+          "extract": [
+            "Client-Server",
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface",
+            "Layered System"
+          ],
+          "answerShape": "string[]"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "REST의 주요 특징은 무엇인가요?",
+          "answer": [
+            "Client-Server",
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface",
+            "Layered System"
+          ],
+          "explanation": "REST는 웹 아키텍처 스타일로, 클라이언트와 서버 간의 상호작용을 정의하는 여러 가지 주요 특징을 가지고 있습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "keyword-list",
+          "question": "REST의 주요 특징은 무엇인가요?",
+          "answer": [
+            "Client-Server",
+            "Stateless",
+            "Cacheable",
+            "Uniform Interface",
+            "Layered System"
+          ],
+          "explanation": "REST는 웹 아키텍처 스타일로, 클라이언트와 서버 간의 상호작용을 정의하는 여러 가지 주요 특징을 가지고 있습니다.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T06:14:08.886Z"
+}

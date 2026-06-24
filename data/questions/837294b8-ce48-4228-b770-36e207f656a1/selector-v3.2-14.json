@@ -1,0 +1,456 @@
+{
+  "sourceId": "837294b8-ce48-4228-b770-36e207f656a1",
+  "version": "selector-v3.2-14",
+  "questions": [
+    {
+      "type": "mcq",
+      "question": "A사는 B사의 지분 80%를 취득하여 지배력을 획득하였다. 다음 중 연결재무제표 작성 시 제거되는 거래로 가장 적절한 것은?",
+      "answer": "A",
+      "explanation": "A사가 B사로부터 구매한 재고자산 미실현이익은 연결재무제표 작성 시 제거되어야 하는 거래입니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "A사가 B사로부터 구매한 재고자산 미실현이익"
+        },
+        {
+          "key": "B",
+          "text": "A사가 B사에 지급한 배당금"
+        },
+        {
+          "key": "C",
+          "text": "B사가 A사에 판매한 자산"
+        },
+        {
+          "key": "D",
+          "text": "A사가 B사에 제공한 서비스"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "mcq",
+      "question": "다음 자료가 주어졌다. 판매단가 10,000원, 단위당 변동원가 6,000원, 고정원가 20,000,000원 손익분기 판매량은?",
+      "answer": "C",
+      "explanation": "손익분기 판매량은 고정원가를 단위당 기여이익으로 나누어 계산합니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "1,000개"
+        },
+        {
+          "key": "B",
+          "text": "2,000개"
+        },
+        {
+          "key": "C",
+          "text": "3,000개"
+        },
+        {
+          "key": "D",
+          "text": "4,000개"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 손금불산입 항목으로 옳은 것은?",
+      "answer": "A",
+      "explanation": "벌금 및 과태료는 손금불산입 항목으로 분류됩니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "벌금 및 과태료"
+        },
+        {
+          "key": "B",
+          "text": "임직원 급여"
+        },
+        {
+          "key": "C",
+          "text": "법인세"
+        },
+        {
+          "key": "D",
+          "text": "감가상각비"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 자본구조이론에 대한 설명으로 옳은 것은?",
+      "answer": "A",
+      "explanation": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다는 설명은 자본구조이론의 핵심입니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다"
+        },
+        {
+          "key": "B",
+          "text": "부채 비율이 높을수록 기업 가치는 항상 증가한다"
+        },
+        {
+          "key": "C",
+          "text": "자본비용은 부채와 자본의 가중평균이다"
+        },
+        {
+          "key": "D",
+          "text": "부채는 항상 위험을 증가시킨다"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    },
+    {
+      "type": "mcq",
+      "question": "다음 중 감사인의 의견 형태로 적절하지 않은 것은?",
+      "answer": "A",
+      "explanation": "수정의견은 감사인의 의견 형태로 적절하지 않습니다.",
+      "choices": [
+        {
+          "key": "A",
+          "text": "수정의견"
+        },
+        {
+          "key": "B",
+          "text": "적정의견"
+        },
+        {
+          "key": "C",
+          "text": "부적정의견"
+        },
+        {
+          "key": "D",
+          "text": "한정의견"
+        }
+      ],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": []
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "mcq",
+          "source": "A사는 B사의 지분 80%를 취득하여 지배력을 획득하였다. 다음 중 연결재무제표 작성 시 제거되는 거래로 가장 적절한 것은?",
+          "extract": "A사가 B사로부터 구매한 재고자산 미실현이익",
+          "answerShape": "choice"
+        },
+        {
+          "type": "mcq",
+          "source": "다음 자료가 주어졌다. 판매단가 10,000원, 단위당 변동원가 6,000원, 고정원가 20,000,000원 손익분기 판매량은?",
+          "extract": "3,000개",
+          "answerShape": "choice"
+        },
+        {
+          "type": "mcq",
+          "source": "다음 중 손금불산입 항목으로 옳은 것은?",
+          "extract": "벌금 및 과태료",
+          "answerShape": "choice"
+        },
+        {
+          "type": "mcq",
+          "source": "다음 중 자본구조이론에 대한 설명으로 옳은 것은?",
+          "extract": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다",
+          "answerShape": "choice"
+        },
+        {
+          "type": "mcq",
+          "source": "다음 중 감사인의 의견 형태로 적절하지 않은 것은?",
+          "extract": "수정의견",
+          "answerShape": "choice"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "A사는 B사의 지분 80%를 취득하여 지배력을 획득하였다. 다음 중 연결재무제표 작성 시 제거되는 거래로 가장 적절한 것은?",
+          "answer": "A",
+          "explanation": "A사가 B사로부터 구매한 재고자산 미실현이익은 연결재무제표 작성 시 제거되어야 하는 거래입니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "A사가 B사로부터 구매한 재고자산 미실현이익"
+            },
+            {
+              "key": "B",
+              "text": "A사가 B사에 지급한 배당금"
+            },
+            {
+              "key": "C",
+              "text": "B사가 A사에 판매한 자산"
+            },
+            {
+              "key": "D",
+              "text": "A사가 B사에 제공한 서비스"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 자료가 주어졌다. 판매단가 10,000원, 단위당 변동원가 6,000원, 고정원가 20,000,000원 손익분기 판매량은?",
+          "answer": "C",
+          "explanation": "손익분기 판매량은 고정원가를 단위당 기여이익으로 나누어 계산합니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "1,000개"
+            },
+            {
+              "key": "B",
+              "text": "2,000개"
+            },
+            {
+              "key": "C",
+              "text": "3,000개"
+            },
+            {
+              "key": "D",
+              "text": "4,000개"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 중 손금불산입 항목으로 옳은 것은?",
+          "answer": "A",
+          "explanation": "벌금 및 과태료는 손금불산입 항목으로 분류됩니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "벌금 및 과태료"
+            },
+            {
+              "key": "B",
+              "text": "임직원 급여"
+            },
+            {
+              "key": "C",
+              "text": "법인세"
+            },
+            {
+              "key": "D",
+              "text": "감가상각비"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 중 자본구조이론에 대한 설명으로 옳은 것은?",
+          "answer": "A",
+          "explanation": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다는 설명은 자본구조이론의 핵심입니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다"
+            },
+            {
+              "key": "B",
+              "text": "부채 비율이 높을수록 기업 가치는 항상 증가한다"
+            },
+            {
+              "key": "C",
+              "text": "자본비용은 부채와 자본의 가중평균이다"
+            },
+            {
+              "key": "D",
+              "text": "부채는 항상 위험을 증가시킨다"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 중 감사인의 의견 형태로 적절하지 않은 것은?",
+          "answer": "A",
+          "explanation": "수정의견은 감사인의 의견 형태로 적절하지 않습니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "수정의견"
+            },
+            {
+              "key": "B",
+              "text": "적정의견"
+            },
+            {
+              "key": "C",
+              "text": "부적정의견"
+            },
+            {
+              "key": "D",
+              "text": "한정의견"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "mcq",
+          "question": "A사는 B사의 지분 80%를 취득하여 지배력을 획득하였다. 다음 중 연결재무제표 작성 시 제거되는 거래로 가장 적절한 것은?",
+          "answer": "A",
+          "explanation": "A사가 B사로부터 구매한 재고자산 미실현이익은 연결재무제표 작성 시 제거되어야 하는 거래입니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "A사가 B사로부터 구매한 재고자산 미실현이익"
+            },
+            {
+              "key": "B",
+              "text": "A사가 B사에 지급한 배당금"
+            },
+            {
+              "key": "C",
+              "text": "B사가 A사에 판매한 자산"
+            },
+            {
+              "key": "D",
+              "text": "A사가 B사에 제공한 서비스"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 자료가 주어졌다. 판매단가 10,000원, 단위당 변동원가 6,000원, 고정원가 20,000,000원 손익분기 판매량은?",
+          "answer": "C",
+          "explanation": "손익분기 판매량은 고정원가를 단위당 기여이익으로 나누어 계산합니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "1,000개"
+            },
+            {
+              "key": "B",
+              "text": "2,000개"
+            },
+            {
+              "key": "C",
+              "text": "3,000개"
+            },
+            {
+              "key": "D",
+              "text": "4,000개"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 중 손금불산입 항목으로 옳은 것은?",
+          "answer": "A",
+          "explanation": "벌금 및 과태료는 손금불산입 항목으로 분류됩니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "벌금 및 과태료"
+            },
+            {
+              "key": "B",
+              "text": "임직원 급여"
+            },
+            {
+              "key": "C",
+              "text": "법인세"
+            },
+            {
+              "key": "D",
+              "text": "감가상각비"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 중 자본구조이론에 대한 설명으로 옳은 것은?",
+          "answer": "A",
+          "explanation": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다는 설명은 자본구조이론의 핵심입니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "세금 존재 시 부채 사용은 가치 증가 요인이 될 수 있다"
+            },
+            {
+              "key": "B",
+              "text": "부채 비율이 높을수록 기업 가치는 항상 증가한다"
+            },
+            {
+              "key": "C",
+              "text": "자본비용은 부채와 자본의 가중평균이다"
+            },
+            {
+              "key": "D",
+              "text": "부채는 항상 위험을 증가시킨다"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        },
+        {
+          "type": "mcq",
+          "question": "다음 중 감사인의 의견 형태로 적절하지 않은 것은?",
+          "answer": "A",
+          "explanation": "수정의견은 감사인의 의견 형태로 적절하지 않습니다.",
+          "choices": [
+            {
+              "key": "A",
+              "text": "수정의견"
+            },
+            {
+              "key": "B",
+              "text": "적정의견"
+            },
+            {
+              "key": "C",
+              "text": "부적정의견"
+            },
+            {
+              "key": "D",
+              "text": "한정의견"
+            }
+          ],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": []
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T06:18:29.515Z"
+}

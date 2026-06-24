@@ -1,0 +1,99 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "selector-v3.2-3",
+  "questions": [
+    {
+      "type": "sequence",
+      "question": "What is the correct order of the HTTP request process?",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "서버 응답 수신",
+        "브라우저 렌더링"
+      ],
+      "explanation": "The HTTP request process involves several steps that must be followed in a specific order to successfully retrieve web content.",
+      "choices": [],
+      "acceptedAnswers": [],
+      "candidates": [],
+      "shuffledItems": [
+        "서버 응답 수신",
+        "브라우저 렌더링",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "DNS 조회"
+      ]
+    }
+  ],
+  "trace": {
+    "selector": {
+      "tasks": [
+        {
+          "type": "sequence",
+          "source": "HTTP 요청 과정\n\n1. DNS 조회\n2. TCP 연결\n3. HTTP 요청 전송\n4. 서버 응답 수신\n5. 브라우저 렌더링",
+          "extract": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ],
+          "answerShape": "string[]"
+        }
+      ]
+    },
+    "generator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "What is the correct order of the HTTP request process?",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ],
+          "explanation": "The HTTP request process involves several steps that must be followed in a specific order to successfully retrieve web content.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "서버 응답 수신",
+            "브라우저 렌더링",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "DNS 조회"
+          ]
+        }
+      ]
+    },
+    "validator": {
+      "questions": [
+        {
+          "type": "sequence",
+          "question": "What is the correct order of the HTTP request process?",
+          "answer": [
+            "DNS 조회",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "서버 응답 수신",
+            "브라우저 렌더링"
+          ],
+          "explanation": "The HTTP request process involves several steps that must be followed in a specific order to successfully retrieve web content.",
+          "choices": [],
+          "acceptedAnswers": [],
+          "candidates": [],
+          "shuffledItems": [
+            "서버 응답 수신",
+            "브라우저 렌더링",
+            "TCP 연결",
+            "HTTP 요청 전송",
+            "DNS 조회"
+          ]
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T06:22:11.701Z"
+}
