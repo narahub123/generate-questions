@@ -43,7 +43,11 @@
     "content": "슬라이딩 윈도우(Sliding Window)는 연속된 구간을 효율적으로 탐색하기 위한 알고리즘 패턴이다. 핵심은 “구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용”하는 것이다.\n\n1. 핵심 개념\n\n배열이나 문자열에서 고정 길이 또는 가변 길이의 연속 구간(window)을 잡고,\n이 구간을 한 칸씩 이동시키면서 값을 갱신한다.\n\n완전 탐색: O(n²)\n슬라이딩 윈도우: O(n)\n2. 기본 구조 (고정 길이)\n\n예: 길이 k의 부분합\n\nlet sum = 0;\n\n// 초기 윈도우\nfor (let i = 0; i < k; i++) {\n  sum += arr[i];\n}\n\nlet result = sum;\n\n// 윈도우 이동\nfor (let i = k; i < arr.length; i++) {\n  sum += arr[i];       // 새 값 추가\n  sum -= arr[i - k];   // 이전 값 제거\n  result = Math.max(result, sum);\n}\n\n👉 포인트:\n매번 다시 계산하지 않고 “추가 + 제거”로 갱신\n\n3. 가변 길이 슬라이딩 윈도우\n\n조건을 만족하는 구간을 찾는 형태\n\n예: 합이 S 이상인 최소 길이\n\nlet left = 0;\nlet sum = 0;\nlet result = Infinity;\n\nfor (let right = 0; right < arr.length; right++) {\n  sum += arr[right];\n\n  while (sum >= target) {\n    result = Math.min(result, right - left + 1);\n    sum -= arr[left];\n    left++;\n  }\n}\n\n👉 포인트:\n\nright 확장\n조건 만족하면 left 축소\n4. 언제 사용하는가\n\n다음 조건이면 거의 슬라이딩 윈도우다:\n\n“연속된 부분 배열 / 부분 문자열”\n“최대 / 최소 / 개수”\n“길이 k 고정”\n“조건 만족하는 최소/최대 구간”\n5. 대표 유형\n1) 고정 길이\n최대 합\n평균\nk개 문자 패턴\n2) 가변 길이\n최소 길이 subarray\n조건 만족하는 longest substring\n중복 없는 substring\n6. 핵심 사고 방식\n\n슬라이딩 윈도우는 결국 이것 하나다:\n\n“전체를 다시 보지 말고, 변화된 부분만 업데이트해라”\n\n7. 자주 하는 실수\n매번 window 전체를 다시 계산 (O(n²))\nleft 이동 조건을 잘못 설정\nwindow 상태(합, count 등) 업데이트 누락\n8. 한 줄 정리\n\n연속 구간 문제를 “확장 + 축소 + 상태 갱신”으로 O(n)에 해결하는 패턴",
     "createdAt": "2026-06-15T04:56:41.047Z",
     "hasQuestions": true,
-    "questionCount": 5
+    "questionCount": 5,
+    "versions": [
+      "v0.3-long",
+      "v0.3-long2"
+    ]
   },
   {
     "id": "fd714bc4-4115-4ed6-b735-7ddb940f0d3d",
@@ -129,7 +133,8 @@
       "mul-agent-test3",
       "mul-agent-test4",
       "mul-agent-test5",
-      "select-v3.1"
+      "select-v3.1",
+      "v0.1-1"
     ]
   },
   {
@@ -144,7 +149,8 @@
       "v4.2",
       "mul-agent-test5",
       "selector-v3.1",
-      "selector-v3.2"
+      "selector-v3.2",
+      "v0.1-2"
     ]
   },
   {
@@ -163,7 +169,9 @@
       "mul-agent-test8",
       "mul-agent-test9",
       "selector-v3.1",
-      "selector-v3.2-3"
+      "selector-v3.2-3",
+      "v0.2-3",
+      "v0.3-3"
     ]
   },
   {
@@ -176,7 +184,8 @@
       "v4.2",
       "v4.3",
       "selector-v3.1",
-      "selector-v3.2-4"
+      "selector-v3.2-4",
+      "v0.2-4"
     ]
   },
   {
@@ -188,7 +197,8 @@
     "versions": [
       "v4.2",
       "selector-v3.1-5",
-      "selector-v3.2-5"
+      "selector-v3.2-5",
+      "v0.3-5"
     ]
   },
   {
@@ -215,7 +225,8 @@
       "mul-agent-test9",
       "mul-agent-test10",
       "selector-v3.1-8",
-      "selector-v3.2-8"
+      "selector-v3.2-8",
+      "v0.3-8"
     ]
   },
   {

@@ -1,9 +1,10 @@
 "use client";
 
-import { Question } from "@/types";
+import { useMemo } from "react"; // 1. useMemo 추가
+import { BaseQuestion } from "@/lib/ai2/types";
 
 interface McqQuestionProps {
-  question: Question;
+  question: BaseQuestion;
   answer: string;
   setAnswer: (val: string) => void;
   submitted: boolean;
@@ -15,15 +16,22 @@ export default function McqQuestion({
   setAnswer,
   submitted,
 }: McqQuestionProps) {
+  // 2. 선택지를 컴포넌트 마운트 시 한 번만 무작위로 섞음
+  const shuffledChoices = useMemo(() => {
+    if (!question.choices) return [];
+    return [...question.choices].sort(() => Math.random() - 0.5);
+  }, [question.choices]);
+
   return (
     <ul className="grid gap-3">
-      {question.choices?.map((c) => {
-        const isSelected = answer === c.key;
+      {/* 3. question.choices 대신 shuffledChoices 사용 */}
+      {shuffledChoices.map((c, index) => {
+        const isSelected = answer === c;
         return (
-          <li key={c.key}>
+          <li key={c}>
             <button
               disabled={submitted}
-              onClick={() => setAnswer(c.key)}
+              onClick={() => setAnswer(c)}
               className={`w-full text-left p-4 rounded-xl border text-sm font-medium transition-all flex items-center gap-3
                 ${
                   isSelected
@@ -35,9 +43,9 @@ export default function McqQuestion({
                 className={`w-6 h-6 rounded-full border flex items-center justify-center text-xs font-bold transition-colors
                 ${isSelected ? "bg-blue-600 border-blue-600 text-white" : "border-gray-300 bg-white text-gray-500"}`}
               >
-                {c.key}
+                {index + 1}
               </span>
-              <span>{c.text}</span>
+              <span>{c}</span>
             </button>
           </li>
         );

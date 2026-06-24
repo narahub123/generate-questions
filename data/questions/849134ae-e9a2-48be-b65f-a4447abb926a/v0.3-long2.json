@@ -1,0 +1,500 @@
+{
+  "sourceId": "849134ae-e9a2-48be-b65f-a4447abb926a",
+  "version": "v0.3-long2",
+  "questions": [
+    {
+      "taskId": "1",
+      "type": "keyword-list",
+      "question": "슬라이딩 윈도우 알고리즘 패턴의 주요 키워드는 무엇인가요?",
+      "answer": [
+        "고정 길이",
+        "가변 길이",
+        "최대 합",
+        "최소 길이 subarray",
+        "조건 만족하는 longest substring"
+      ],
+      "explanation": "슬라이딩 윈도우 알고리즘 패턴의 주요 키워드는 고정 길이와 가변 길이의 구간을 다루는 방식으로, 최대 합, 최소 길이 subarray, 조건 만족하는 longest substring 등 다양한 문제를 해결하는 데 사용됩니다."
+    },
+    {
+      "taskId": "2",
+      "type": "ox",
+      "question": "구간을 이동하며 이전 계산을 재사용하는 것이 슬라이딩 윈도우 알고리즘의 특징이다.",
+      "answer": "O",
+      "explanation": "슬라이딩 윈도우 알고리즘은 구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용하는 방식으로 효율성을 높이는 알고리즘이다."
+    },
+    {
+      "taskId": "3",
+      "type": "mcq",
+      "question": "고정 길이 슬라이딩 윈도우 구조의 특징은 무엇인가?",
+      "choices": [
+        "구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용한다.",
+        "구간의 길이가 가변적이다.",
+        "O(n²) 복잡도로 동작한다.",
+        "구간을 한 칸씩 이동시키면서 값을 갱신한다.",
+        "모든 요소를 다시 계산해야 한다."
+      ],
+      "answer": "구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용한다.",
+      "explanation": "고정 길이 슬라이딩 윈도우 구조는 구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용하는 방식으로 동작하여 O(n) 복잡도로 효율적으로 문제를 해결한다."
+    },
+    {
+      "taskId": "4",
+      "type": "ox",
+      "question": "완전 탐색의 시간 복잡도는 O(n²)이다.",
+      "answer": "O",
+      "explanation": "완전 탐색은 모든 경우를 다 확인해야 하므로, n개의 요소가 있을 때 n*n = O(n²)의 시간 복잡도를 가집니다."
+    },
+    {
+      "taskId": "5",
+      "type": "ox",
+      "question": "슬라이딩 윈도우의 시간 복잡도는 O(n)이다.",
+      "answer": "O",
+      "explanation": "슬라이딩 윈도우 알고리즘은 구간을 매번 새로 계산하지 않고, 이전 계산을 재사용하여 O(n) 시간 복잡도로 효율적으로 탐색할 수 있기 때문에 정답은 O입니다."
+    },
+    {
+      "taskId": "6",
+      "type": "keyword-find",
+      "question": "가변 길이 슬라이딩 윈도우 구조의 특징을 설명하는 키워드는 무엇인가요?",
+      "answer": [
+        "조건 만족하는 구간",
+        "right 확장",
+        "left 축소",
+        "최소 길이 subarray",
+        "조건 만족하는 longest substring"
+      ],
+      "candidates": [
+        "조건 만족하는 구간",
+        "right 확장",
+        "left 축소",
+        "최소 길이 subarray",
+        "조건 만족하는 longest substring",
+        "고정 길이",
+        "최대 합",
+        "평균",
+        "k개 문자 패턴"
+      ],
+      "explanation": "가변 길이 슬라이딩 윈도우는 조건을 만족하는 구간을 찾는 알고리즘으로, 'right 확장'과 'left 축소'를 통해 최소 길이의 부분 배열을 찾는 특징이 있습니다. 이러한 키워드들은 가변 길이 슬라이딩 윈도우의 핵심 개념을 설명합니다."
+    },
+    {
+      "taskId": "7",
+      "type": "keyword-list",
+      "question": "조건을 만족하는 구간을 찾기 위한 방법은 무엇인가요?",
+      "answer": ["슬라이딩 윈도우", "연속 구간 탐색"],
+      "explanation": "슬라이딩 윈도우는 조건을 만족하는 구간을 효율적으로 찾기 위한 알고리즘 패턴으로, 연속된 부분 배열이나 문자열에서 고정 길이 또는 가변 길이의 구간을 탐색하는 데 사용됩니다."
+    },
+    {
+      "taskId": "8",
+      "type": "mcq",
+      "question": "슬라이딩 윈도우 알고리즘이 연속된 부분 배열/문자열에서 사용되는 이유는 무엇인가?",
+      "choices": [
+        "구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용하기 위해",
+        "모든 요소를 한 번에 처리하기 위해",
+        "복잡도를 O(n²)로 줄이기 위해",
+        "모든 경우의 수를 고려하기 위해"
+      ],
+      "answer": "구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용하기 위해",
+      "explanation": "슬라이딩 윈도우 알고리즘은 연속된 구간을 효율적으로 탐색하기 위해 설계되었으며, 구간을 매번 새로 계산하지 않고 이전 계산을 재사용함으로써 시간 복잡도를 O(n)으로 줄일 수 있습니다."
+    },
+    {
+      "taskId": "9",
+      "type": "keyword-find",
+      "question": "고정 길이 슬라이딩 윈도우의 대표 유형 예시로 무엇이 있나요?",
+      "answer": ["최대 합", "평균", "k개 문자 패턴"],
+      "explanation": "고정 길이 슬라이딩 윈도우의 대표 유형 예시는 최대 합, 평균, k개 문자 패턴입니다. 이러한 유형들은 고정된 길이의 구간을 사용하여 특정 계산을 효율적으로 수행하는 데 사용됩니다.",
+      "candidates": [
+        "최대 합",
+        "평균",
+        "k개 문자 패턴",
+        "최소 길이 subarray",
+        "조건 만족하는 longest substring"
+      ]
+    },
+    {
+      "taskId": "10",
+      "type": "keyword-find",
+      "question": "가변 길이 슬라이딩 윈도우의 대표 유형 예시로 어떤 것들이 있나요?",
+      "answer": [
+        "최소 길이 subarray",
+        "조건 만족하는 longest substring",
+        "중복 없는 substring"
+      ],
+      "explanation": "가변 길이 슬라이딩 윈도우의 대표 유형 예시는 최소 길이 subarray, 조건 만족하는 longest substring, 중복 없는 substring입니다. 이들은 모두 연속된 부분 배열이나 문자열에서 특정 조건을 만족하는 구간을 찾는 문제에 해당합니다."
+    },
+    {
+      "taskId": "11",
+      "type": "ox",
+      "question": "슬라이딩 윈도우 사고 방식은 업데이트를 포함한다.",
+      "answer": "O",
+      "explanation": "슬라이딩 윈도우 사고 방식은 구간을 매번 새로 계산하지 않고, 이동하면서 이전 계산을 재사용하여 상태를 갱신하는 방식이기 때문에 업데이트를 포함한다고 할 수 있습니다."
+    },
+    {
+      "taskId": "12",
+      "type": "mcq",
+      "question": "슬라이딩 윈도우에서 흔히 발생하는 실수는 무엇인가?",
+      "choices": [
+        "매번 window 전체를 다시 계산 (O(n²))",
+        "left 이동 조건을 잘못 설정",
+        "window 상태(합, count 등) 업데이트 누락",
+        "구간을 잘못 설정",
+        "조건을 잘못 이해"
+      ],
+      "answer": "매번 window 전체를 다시 계산 (O(n²))",
+      "explanation": "슬라이딩 윈도우의 핵심은 이전 계산을 재사용하여 효율적으로 구간을 탐색하는 것이므로, 매번 전체를 다시 계산하는 것은 일반적인 실수입니다."
+    },
+    {
+      "taskId": "13",
+      "type": "sequence",
+      "question": "연속 구간 문제 해결 방법의 단계는 무엇인가요?",
+      "answer": [
+        "고정 길이 슬라이딩 윈도우",
+        "가변 길이 슬라이딩 윈도우",
+        "언제 사용하는가",
+        "대표 유형",
+        "핵심 사고 방식",
+        "자주 하는 실수",
+        "한 줄 정리"
+      ],
+      "candidates": [
+        "언제 사용하는가",
+        "고정 길이 슬라이딩 윈도우",
+        "가변 길이 슬라이딩 윈도우",
+        "한 줄 정리",
+        "자주 하는 실수",
+        "핵심 사고 방식",
+        "대표 유형"
+      ]
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "슬라이딩 윈도우 알고리즘 패턴",
+          "keywords": ["슬라이딩 윈도우", "알고리즘", "패턴"]
+        },
+        {
+          "id": "2",
+          "content": "구간을 이동하며 이전 계산 재사용",
+          "keywords": ["구간", "이동", "재사용"]
+        },
+        {
+          "id": "3",
+          "content": "고정 길이 슬라이딩 윈도우 구조",
+          "keywords": ["고정 길이", "구조"]
+        },
+        {
+          "id": "4",
+          "content": "완전 탐색 시간 복잡도 O(n²)",
+          "keywords": ["완전 탐색", "O(n²)"]
+        },
+        {
+          "id": "5",
+          "content": "슬라이딩 윈도우 시간 복잡도 O(n)",
+          "keywords": ["슬라이딩 윈도우", "O(n)"]
+        },
+        {
+          "id": "6",
+          "content": "가변 길이 슬라이딩 윈도우 구조",
+          "keywords": ["가변 길이", "구조"]
+        },
+        {
+          "id": "7",
+          "content": "조건 만족하는 구간 찾기",
+          "keywords": ["조건", "구간", "찾기"]
+        },
+        {
+          "id": "8",
+          "content": "연속된 부분 배열/문자열에서 사용",
+          "keywords": ["연속", "부분 배열", "문자열"]
+        },
+        {
+          "id": "9",
+          "content": "고정 길이 대표 유형 예시",
+          "keywords": ["고정 길이", "대표 유형", "예시"]
+        },
+        {
+          "id": "10",
+          "content": "가변 길이 대표 유형 예시",
+          "keywords": ["가변 길이", "대표 유형", "예시"]
+        },
+        {
+          "id": "11",
+          "content": "슬라이딩 윈도우 사고 방식",
+          "keywords": ["사고 방식", "업데이트"]
+        },
+        {
+          "id": "12",
+          "content": "슬라이딩 윈도우에서의 실수",
+          "keywords": ["실수", "O(n²)", "조건 설정"]
+        },
+        {
+          "id": "13",
+          "content": "연속 구간 문제 해결 방법",
+          "keywords": ["연속 구간", "해결 방법", "O(n)"]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "1",
+        "type": "keyword-list",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "슬라이딩 윈도우 알고리즘 패턴의 주요 키워드",
+        "difficulty": "medium"
+      },
+      {
+        "id": "2",
+        "type": "ox",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "구간을 이동하며 이전 계산을 재사용하는 것이 슬라이딩 윈도우 알고리즘의 특징이다.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "3",
+        "type": "mcq",
+        "conceptId": "3",
+        "intent": "distinguish",
+        "target": "고정 길이 슬라이딩 윈도우 구조의 특징은 무엇인가?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "4",
+        "type": "ox",
+        "conceptId": "4",
+        "intent": "recall",
+        "target": "완전 탐색의 시간 복잡도는 O(n²)이다.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "5",
+        "type": "ox",
+        "conceptId": "5",
+        "intent": "recall",
+        "target": "슬라이딩 윈도우의 시간 복잡도는 O(n)이다.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "6",
+        "type": "keyword-find",
+        "conceptId": "6",
+        "intent": "apply",
+        "target": "가변 길이 슬라이딩 윈도우 구조의 특징을 설명하는 키워드",
+        "difficulty": "medium"
+      },
+      {
+        "id": "7",
+        "type": "keyword-list",
+        "conceptId": "7",
+        "intent": "recall",
+        "target": "조건을 만족하는 구간을 찾기 위한 방법",
+        "difficulty": "hard"
+      },
+      {
+        "id": "8",
+        "type": "mcq",
+        "conceptId": "8",
+        "intent": "understand",
+        "target": "슬라이딩 윈도우 알고리즘이 연속된 부분 배열/문자열에서 사용되는 이유는 무엇인가?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "9",
+        "type": "keyword-find",
+        "conceptId": "9",
+        "intent": "apply",
+        "target": "고정 길이 슬라이딩 윈도우의 대표 유형 예시",
+        "difficulty": "medium"
+      },
+      {
+        "id": "10",
+        "type": "keyword-find",
+        "conceptId": "10",
+        "intent": "apply",
+        "target": "가변 길이 슬라이딩 윈도우의 대표 유형 예시",
+        "difficulty": "medium"
+      },
+      {
+        "id": "11",
+        "type": "ox",
+        "conceptId": "11",
+        "intent": "understand",
+        "target": "슬라이딩 윈도우 사고 방식은 업데이트를 포함한다.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "12",
+        "type": "mcq",
+        "conceptId": "12",
+        "intent": "distinguish",
+        "target": "슬라이딩 윈도우에서 흔히 발생하는 실수는 무엇인가?",
+        "difficulty": "hard"
+      },
+      {
+        "id": "13",
+        "type": "sequence",
+        "conceptId": "13",
+        "intent": "apply",
+        "target": "연속 구간 문제 해결 방법의 단계",
+        "difficulty": "hard"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "1",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      },
+      {
+        "taskId": "2",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": ["O", "X"]
+          }
+        }
+      },
+      {
+        "taskId": "3",
+        "type": "mcq",
+        "requiredFields": ["choices"],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "4",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": ["O", "X"]
+          }
+        }
+      },
+      {
+        "taskId": "5",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": ["O", "X"]
+          }
+        }
+      },
+      {
+        "taskId": "6",
+        "type": "keyword-find",
+        "requiredFields": ["candidates"],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "7",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      },
+      {
+        "taskId": "8",
+        "type": "mcq",
+        "requiredFields": ["choices"],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "9",
+        "type": "keyword-find",
+        "requiredFields": ["candidates"],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "10",
+        "type": "keyword-find",
+        "requiredFields": ["candidates"],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "11",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": ["O", "X"]
+          }
+        }
+      },
+      {
+        "taskId": "12",
+        "type": "mcq",
+        "requiredFields": ["choices"],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "13",
+        "type": "sequence",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustPreserveOrder": true
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": false,
+      "errors": [
+        {
+          "taskId": "10",
+          "reason": "missing field: candidates"
+        },
+        {
+          "taskId": "13",
+          "reason": "no explanation"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T08:55:23.572Z"
+}

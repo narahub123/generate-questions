@@ -1,0 +1,227 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "v0.2-3",
+  "questions": [
+    {
+      "type": "mcq",
+      "question": "What does DNS stand for?",
+      "choices": [
+        "Domain Name System",
+        "Dynamic Network Service",
+        "Data Network Security",
+        "Distributed Name Service"
+      ],
+      "answer": "Domain Name System",
+      "explanation": "DNS stands for Domain Name System, which is a system that translates human-friendly domain names to IP addresses."
+    },
+    {
+      "type": "ox",
+      "question": "TCP 연결은 3단계 핸드셰이크를 사용하여 설정된다.",
+      "answer": "O",
+      "explanation": "TCP 연결은 클라이언트와 서버 간의 연결을 설정하기 위해 3단계 핸드셰이크 과정을 거칩니다."
+    },
+    {
+      "type": "blank",
+      "question": "The process of sending an HTTP request involves the use of ______.",
+      "answer": "HTTP method",
+      "explanation": "In the process of sending an HTTP request, an HTTP method (such as GET, POST, PUT, DELETE) is used to specify the desired action to be performed on the resource."
+    },
+    {
+      "type": "keyword-find",
+      "question": "Identify the components involved in receiving a server response.",
+      "answer": [
+        "서버 응답 수신"
+      ],
+      "explanation": "서버 응답 수신은 HTTP 요청 과정에서 서버로부터 응답을 받는 단계입니다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "List the steps involved in browser rendering.",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "서버 응답 수신",
+        "브라우저 렌더링"
+      ],
+      "explanation": "The steps involved in browser rendering include the processes from DNS lookup to the final rendering of the webpage."
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "DNS 조회",
+          "keywords": [
+            "DNS",
+            "조회"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "TCP 연결",
+          "keywords": [
+            "TCP",
+            "연결"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "HTTP 요청 전송",
+          "keywords": [
+            "HTTP",
+            "요청",
+            "전송"
+          ]
+        },
+        {
+          "id": "4",
+          "content": "서버 응답 수신",
+          "keywords": [
+            "서버",
+            "응답",
+            "수신"
+          ]
+        },
+        {
+          "id": "5",
+          "content": "브라우저 렌더링",
+          "keywords": [
+            "브라우저",
+            "렌더링"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task1",
+        "type": "mcq",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "What does DNS stand for?",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task2",
+        "type": "ox",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "TCP connections are established using a three-way handshake.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task3",
+        "type": "blank",
+        "conceptId": "3",
+        "intent": "apply",
+        "target": "The process of sending an HTTP request involves the use of ______.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task4",
+        "type": "keyword-find",
+        "conceptId": "4",
+        "intent": "distinguish",
+        "target": "Identify the components involved in receiving a server response.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "task5",
+        "type": "keyword-list",
+        "conceptId": "5",
+        "intent": "recall",
+        "target": "List the steps involved in browser rendering.",
+        "difficulty": "hard"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "task1",
+        "type": "MCQ",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task2",
+        "type": "OX",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "task3",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task4",
+        "type": "keyword-find",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustBeExactMatch": true
+          }
+        }
+      },
+      {
+        "taskId": "task5",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": false,
+      "errors": [
+        {
+          "taskId": "mcq",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "ox",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "blank",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "keyword-find",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "keyword-list",
+          "reason": "missing spec"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T07:53:36.703Z"
+}

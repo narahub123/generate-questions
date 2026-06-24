@@ -7,6 +7,7 @@
   "versions": [
     "v4.2",
     "selector-v3.1-5",
-    "selector-v3.2-5"
+    "selector-v3.2-5",
+    "v0.3-5"
   ]
 }

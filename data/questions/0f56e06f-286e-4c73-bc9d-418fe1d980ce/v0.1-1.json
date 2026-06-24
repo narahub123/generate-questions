@@ -1,0 +1,151 @@
+{
+  "sourceId": "0f56e06f-286e-4c73-bc9d-418fe1d980ce",
+  "version": "v0.1-1",
+  "questions": [
+    {
+      "type": "ox",
+      "question": "TCP는 연결 지향 프로토콜이다.",
+      "answer": "O",
+      "explanation": "TCP는 데이터 전송의 안정성을 보장하기 위해 연결 지향 프로토콜로 설계되었으며, 3-way Handshake를 통해 연결을 설정하고 패킷 손실 시 재전송을 수행합니다."
+    },
+    {
+      "type": "mcq",
+      "question": "데이터를 안정적으로 전송하기 위해 사용하는 방법은 무엇인가?",
+      "choices": [
+        "UDP 프로토콜",
+        "3-way Handshake",
+        "패킷 손실 시 재전송",
+        "HTTP 프로토콜",
+        "FTP 프로토콜"
+      ],
+      "answer": "3-way Handshake",
+      "explanation": "TCP는 연결 지향 프로토콜로, 데이터의 안정적인 전송을 위해 3-way Handshake를 사용하고, 패킷 손실 시 재전송을 수행합니다."
+    },
+    {
+      "type": "keyword-list",
+      "question": "패킷 손실 시 수행하는 작업은 무엇인가?",
+      "answer": [
+        "재전송",
+        "3-way Handshake"
+      ],
+      "explanation": "TCP는 패킷 손실이 발생했을 때 재전송을 통해 데이터의 안정성을 확보하며, 이를 위해 3-way Handshake 과정을 사용하여 연결을 설정합니다."
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "TCP는 연결 지향 프로토콜이다.",
+          "keywords": [
+            "TCP",
+            "연결 지향",
+            "프로토콜"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "데이터를 안정적으로 전송하기 위해 3-way Handshake를 사용한다.",
+          "keywords": [
+            "데이터",
+            "안정적 전송",
+            "3-way Handshake"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "패킷 손실 시 재전송을 수행한다.",
+          "keywords": [
+            "패킷 손실",
+            "재전송"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "1",
+        "type": "ox",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "TCP는 연결 지향 프로토콜이다.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "2",
+        "type": "mcq",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "데이터를 안정적으로 전송하기 위해 사용하는 방법은 무엇인가?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "3",
+        "type": "keyword-list",
+        "conceptId": "3",
+        "intent": "recall",
+        "target": "패킷 손실 시 수행하는 작업은 무엇인가?",
+        "difficulty": "medium"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "1",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "2",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "3",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": false,
+      "errors": [
+        {
+          "taskId": "ox",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "mcq",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "keyword-list",
+          "reason": "missing spec"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T07:34:41.016Z"
+}

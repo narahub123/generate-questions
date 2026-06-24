@@ -22,11 +22,9 @@ export default function SequenceQuestion({
   const [selectedOrder, setSelectedOrder] = useState<string[]>([]);
 
   useEffect(() => {
-    if (question.shuffledItems) {
+    if (question.candidates) {
       // 배열을 무작위로 섞는 로직 추가
-      const shuffled = [...question.shuffledItems].sort(
-        () => Math.random() - 0.5,
-      );
+      const shuffled = [...question.candidates].sort(() => Math.random() - 0.5);
       setPool(shuffled);
       setSelectedOrder([]);
     }

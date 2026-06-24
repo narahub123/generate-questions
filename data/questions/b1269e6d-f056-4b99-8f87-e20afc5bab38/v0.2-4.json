@@ -1,0 +1,229 @@
+{
+  "sourceId": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+  "version": "v0.2-4",
+  "questions": [
+    {
+      "taskId": "task1",
+      "type": "ox",
+      "question": "TCP is a connection-oriented protocol.",
+      "answer": "O",
+      "explanation": "TCP는 연결 지향 프로토콜로, 데이터 전송 전에 연결을 설정하고 신뢰성을 보장합니다."
+    },
+    {
+      "taskId": "task2",
+      "type": "mcq",
+      "question": "Which of the following describes TCP?",
+      "choices": [
+        "Connection-oriented",
+        "Unreliable",
+        "Fast speed",
+        "Reliable",
+        "Slow speed"
+      ],
+      "answer": "Connection-oriented, Reliable, Slow speed",
+      "explanation": "TCP is a connection-oriented protocol that ensures reliability but is relatively slower compared to UDP."
+    },
+    {
+      "taskId": "task3",
+      "type": "keyword-find",
+      "question": "Identify the keywords associated with TCP.",
+      "answer": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림"
+      ],
+      "explanation": ""
+    },
+    {
+      "taskId": "task4",
+      "type": "ox",
+      "question": "UDP is a connection-oriented protocol.",
+      "answer": "X",
+      "explanation": "UDP is a connectionless protocol."
+    },
+    {
+      "taskId": "task5",
+      "type": "mcq",
+      "question": "Which of the following describes UDP?",
+      "choices": [
+        "Connection-oriented",
+        "No reliability guarantee",
+        "Fast speed",
+        "Connectionless",
+        "Reliable delivery"
+      ],
+      "answer": "No reliability guarantee",
+      "explanation": ""
+    },
+    {
+      "taskId": "task6",
+      "type": "keyword-find",
+      "question": "Identify the keywords associated with UDP.",
+      "answer": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "explanation": ""
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "TCP",
+          "keywords": [
+            "연결 지향",
+            "신뢰성",
+            "느림"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "UDP",
+          "keywords": [
+            "비연결",
+            "신뢰성 없음",
+            "빠름"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task1",
+        "type": "ox",
+        "conceptId": "1",
+        "intent": "distinguish",
+        "target": "TCP is a connection-oriented protocol.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task2",
+        "type": "mcq",
+        "conceptId": "1",
+        "intent": "understand",
+        "target": "Which of the following describes TCP?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task3",
+        "type": "keyword-find",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "Identify the keywords associated with TCP.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task4",
+        "type": "ox",
+        "conceptId": "2",
+        "intent": "distinguish",
+        "target": "UDP is a connection-oriented protocol.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task5",
+        "type": "mcq",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "Which of the following describes UDP?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task6",
+        "type": "keyword-find",
+        "conceptId": "2",
+        "intent": "recall",
+        "target": "Identify the keywords associated with UDP.",
+        "difficulty": "medium"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "task1",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "task2",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task3",
+        "type": "keyword-find",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustBeExactMatch": true
+          }
+        }
+      },
+      {
+        "taskId": "task4",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "task5",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task6",
+        "type": "keyword-find",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustBeExactMatch": true
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": []
+    }
+  },
+  "createdAt": "2026-06-24T08:02:39.632Z"
+}

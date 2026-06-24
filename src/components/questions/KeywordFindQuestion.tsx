@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Question } from "@/types";
 
 interface KeywordFindQuestionProps {
   question: Question;
-  answer: string; // 상위 상태 (JSON string 형태로 저장)
+  answer: string;
   setAnswer: (val: string) => void;
   submitted: boolean;
 }
@@ -16,10 +16,14 @@ export default function KeywordFindQuestion({
   setAnswer,
   submitted,
 }: KeywordFindQuestionProps) {
-  // 현재 선택된 키워드들을 추적하는 로컬 상태
   const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
 
-  // 키워드 클릭 시 토글 핸들러
+  // 1. candidates를 무작위로 섞은 배열 생성 (question.candidates가 바뀔 때만 다시 섞임)
+  const shuffledCandidates = useMemo(() => {
+    if (!question.candidates) return [];
+    return [...question.candidates].sort(() => Math.random() - 0.5);
+  }, [question.candidates]);
+
   const handleToggle = (keyword: string) => {
     if (submitted) return;
 
@@ -31,12 +35,9 @@ export default function KeywordFindQuestion({
     }
 
     setSelectedKeywords(updated);
-    // 상위 컴포넌트의 단일 string 상태와 호환되도록 JSON 문자열로 변환하여 저장
-    // (채점 시에는 JSON.parse(answer)와 question.answer 배열을 비교하면 됩니다)
     setAnswer(JSON.stringify(updated.sort()));
   };
 
-  // 문제 번호나 인덱스가 바뀔 때 상태 초기화
   useEffect(() => {
     if (!submitted) {
       setSelectedKeywords([]);
@@ -46,7 +47,8 @@ export default function KeywordFindQuestion({
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap gap-2.5">
-        {question.candidates?.map((keyword) => {
+        {/* 2. shuffledCandidates 사용 */}
+        {shuffledCandidates.map((keyword) => {
           const isSelected = selectedKeywords.includes(keyword);
           return (
             <button
@@ -60,15 +62,7 @@ export default function KeywordFindQuestion({
                     : "border-gray-200 bg-white hover:bg-gray-50 text-gray-700"
                 }`}
             >
-              <span className="inline-flex items-center gap-1.5">
-                <span
-                  className={`w-4 h-4 rounded-md border flex items-center justify-center text-[10px] transition-colors
-                    ${isSelected ? "bg-blue-600 border-blue-600 text-white" : "border-gray-300 bg-white"}`}
-                >
-                  {isSelected && "✓"}
-                </span>
-                {keyword}
-              </span>
+              {keyword}
             </button>
           );
         })}

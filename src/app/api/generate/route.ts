@@ -1,4 +1,4 @@
-import { generateQuestions } from "@/lib/ai/generateQuestions";
+import { runPipeline } from "@/lib/ai2/runPipeline";
 import fs from "fs";
 import path from "path";
 
@@ -29,12 +29,22 @@ export async function POST(req: Request) {
   // =========================
   // AI 실행 (멀티 에이전트)
   // =========================
-  const result = await generateQuestions(source.content);
+  const pipelineResult = await runPipeline(source.content);
 
-  const { questions, trace } = result;
+  const { analysis, tasks, spec, questions, result } = pipelineResult;
 
   // =========================
-  // 1. 문제 저장 (trace 포함)
+  // trace 구성 (디버깅용)
+  // =========================
+  const trace = {
+    analysis,
+    tasks,
+    spec,
+    validation: result,
+  };
+
+  // =========================
+  // 1. 문제 저장
   // =========================
   fs.writeFileSync(
     questionPath,
@@ -43,7 +53,7 @@ export async function POST(req: Request) {
         sourceId,
         version: version.trim(),
         questions,
-        trace, // 👈 핵심 추가
+        trace,
         createdAt: new Date().toISOString(),
       },
       null,
@@ -85,6 +95,6 @@ export async function POST(req: Request) {
     ok: true,
     version: version.trim(),
     questionCount: questions.length,
-    trace, // 👈 디버깅용 (필요하면 dev에서만)
+    trace,
   });
 }

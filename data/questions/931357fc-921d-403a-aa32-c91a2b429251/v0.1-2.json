@@ -1,0 +1,203 @@
+{
+  "sourceId": "931357fc-921d-403a-aa32-c91a2b429251",
+  "version": "v0.1-2",
+  "questions": [
+    {
+      "type": "keyword-list",
+      "question": "List the components of a Client-Server architecture.",
+      "answer": ["Client", "Server"],
+      "explanation": "In a Client-Server architecture, the main components are the client, which requests services, and the server, which provides those services."
+    },
+    {
+      "type": "ox",
+      "question": "Does a stateless system maintain client context between requests?",
+      "answer": "X",
+      "explanation": "A stateless system does not maintain any client context between requests, meaning each request is treated independently."
+    },
+    {
+      "type": "mcq",
+      "question": "Which of the following describes a property of a cacheable response?",
+      "choices": [
+        "A cacheable response can be reused for subsequent requests.",
+        "A cacheable response must always be stored on the client side.",
+        "A cacheable response can only be cached for a limited time.",
+        "A cacheable response is always sent with a 'Cache-Control' header."
+      ],
+      "answer": "A cacheable response can be reused for subsequent requests.",
+      "explanation": "Cacheable responses are designed to be reused for future requests, which can improve performance and reduce latency."
+    },
+    {
+      "type": "blank",
+      "question": "The principle of a _______ interface simplifies the architecture by allowing different systems to communicate.",
+      "answer": "uniform",
+      "explanation": "A uniform interface is a key constraint of REST that simplifies the architecture by enabling different systems to communicate in a standardized way."
+    },
+    {
+      "type": "sequence",
+      "question": "Order the layers in a layered system architecture.",
+      "answer": [
+        "Client-Server",
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "Layered System"
+      ],
+      "explanation": "This sequence represents the fundamental characteristics of a layered system architecture in REST."
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "Client-Server",
+          "keywords": ["Client", "Server"]
+        },
+        {
+          "id": "2",
+          "content": "Stateless",
+          "keywords": ["Stateless"]
+        },
+        {
+          "id": "3",
+          "content": "Cacheable",
+          "keywords": ["Cacheable"]
+        },
+        {
+          "id": "4",
+          "content": "Uniform Interface",
+          "keywords": ["Uniform", "Interface"]
+        },
+        {
+          "id": "5",
+          "content": "Layered System",
+          "keywords": ["Layered", "System"]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task-1",
+        "type": "keyword-list",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "List the components of a Client-Server architecture.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task-2",
+        "type": "ox",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "A stateless system maintains no client context between requests.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task-3",
+        "type": "mcq",
+        "conceptId": "3",
+        "intent": "distinguish",
+        "target": "Which of the following describes a property of a cacheable response?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task-4",
+        "type": "blank",
+        "conceptId": "4",
+        "intent": "apply",
+        "target": "The principle of a _______ interface simplifies the architecture by allowing different systems to communicate.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "task-5",
+        "type": "sequence",
+        "conceptId": "5",
+        "intent": "understand",
+        "target": "Order the layers in a layered system architecture.",
+        "difficulty": "medium"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "task-1",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      },
+      {
+        "taskId": "task-2",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": ["O", "X"]
+          }
+        }
+      },
+      {
+        "taskId": "task-3",
+        "type": "mcq",
+        "requiredFields": ["choices"],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task-4",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task-5",
+        "type": "sequence",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustPreserveOrder": true
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": false,
+      "errors": [
+        {
+          "taskId": "keyword-list",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "ox",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "mcq",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "string",
+          "reason": "missing spec"
+        },
+        {
+          "taskId": "sequence",
+          "reason": "missing spec"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T07:44:49.483Z"
+}

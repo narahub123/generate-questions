@@ -1,0 +1,218 @@
+{
+  "sourceId": "7ee86d6a-e866-4d8f-8141-8629b0b9e71a",
+  "version": "v0.3-3",
+  "questions": [
+    {
+      "taskId": "1",
+      "type": "ox",
+      "question": "DNS 조회는 도메인 이름을 IP 주소로 변환하는 과정이다.",
+      "answer": "O",
+      "explanation": ""
+    },
+    {
+      "taskId": "2",
+      "type": "mcq",
+      "question": "TCP 연결의 목적은 무엇인가?",
+      "choices": [
+        "데이터 전송을 위한 안정적인 연결을 제공한다.",
+        "서버의 IP 주소를 찾기 위해 사용된다.",
+        "HTTP 요청을 전송하기 위해 필요하다.",
+        "브라우저 렌더링을 위한 데이터를 준비한다."
+      ],
+      "answer": "데이터 전송을 위한 안정적인 연결을 제공한다.",
+      "explanation": "TCP 연결은 데이터 전송을 위한 안정적인 연결을 제공하여, 데이터가 손실 없이 전달될 수 있도록 보장합니다."
+    },
+    {
+      "taskId": "3",
+      "type": "blank",
+      "question": "HTTP 요청 전송 시 필요한 메서드는 _____이다.",
+      "answer": "GET",
+      "explanation": ""
+    },
+    {
+      "taskId": "4",
+      "type": "keyword-find",
+      "question": "서버 응답 수신 시 확인해야 할 요소는 무엇인가?",
+      "answer": [
+        "상태 코드",
+        "헤더 정보",
+        "본문 내용"
+      ],
+      "explanation": ""
+    },
+    {
+      "taskId": "5",
+      "type": "sequence",
+      "question": "브라우저 렌더링 과정의 순서를 나열하시오.",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청 전송",
+        "서버 응답 수신",
+        "브라우저 렌더링"
+      ],
+      "explanation": ""
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "DNS 조회",
+          "keywords": [
+            "DNS",
+            "조회"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "TCP 연결",
+          "keywords": [
+            "TCP",
+            "연결"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "HTTP 요청 전송",
+          "keywords": [
+            "HTTP",
+            "요청",
+            "전송"
+          ]
+        },
+        {
+          "id": "4",
+          "content": "서버 응답 수신",
+          "keywords": [
+            "서버",
+            "응답",
+            "수신"
+          ]
+        },
+        {
+          "id": "5",
+          "content": "브라우저 렌더링",
+          "keywords": [
+            "브라우저",
+            "렌더링"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "1",
+        "type": "ox",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "DNS 조회는 도메인 이름을 IP 주소로 변환하는 과정이다.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "2",
+        "type": "mcq",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "TCP 연결의 목적은 무엇인가?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "3",
+        "type": "blank",
+        "conceptId": "3",
+        "intent": "apply",
+        "target": "HTTP 요청 전송 시 필요한 메서드는 _____이다.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "4",
+        "type": "keyword-find",
+        "conceptId": "4",
+        "intent": "distinguish",
+        "target": "서버 응답 수신 시 확인해야 할 요소는 무엇인가?",
+        "difficulty": "hard"
+      },
+      {
+        "id": "5",
+        "type": "sequence",
+        "conceptId": "5",
+        "intent": "apply",
+        "target": "브라우저 렌더링 과정의 순서를 나열하시오.",
+        "difficulty": "hard"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "1",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "2",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "3",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "4",
+        "type": "keyword-find",
+        "requiredFields": [
+          "candidates"
+        ],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "5",
+        "type": "sequence",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustPreserveOrder": true
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": false,
+      "errors": [
+        {
+          "taskId": "4",
+          "reason": "missing field: candidates"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-24T08:22:03.417Z"
+}

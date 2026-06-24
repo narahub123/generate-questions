@@ -1,0 +1,413 @@
+{
+  "sourceId": "c1a5328d-52d6-4995-a2e2-fb1bbc2ff11f",
+  "version": "v0.3-8",
+  "questions": [
+    {
+      "taskId": "task1",
+      "type": "mcq",
+      "question": "What does REST stand for in REST API?",
+      "choices": [
+        "Representational State Transfer",
+        "Remote Execution State Transfer",
+        "Resource Efficient State Transfer",
+        "Real-time State Transfer"
+      ],
+      "answer": "Representational State Transfer",
+      "explanation": "REST stands for Representational State Transfer, which is an architectural style for designing networked applications."
+    },
+    {
+      "taskId": "task2",
+      "type": "ox",
+      "question": "A stateless API maintains client state across multiple requests.",
+      "answer": "X",
+      "explanation": "REST APIs are stateless, meaning they do not maintain client state across requests."
+    },
+    {
+      "taskId": "task3",
+      "type": "blank",
+      "question": "In RESTful services, responses can be ________ to improve performance.",
+      "answer": "Cacheable",
+      "explanation": ""
+    },
+    {
+      "taskId": "task4",
+      "type": "keyword-find",
+      "question": "Identify the key components of a uniform interface.",
+      "answer": [
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface"
+      ],
+      "candidates": [
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "Stateful",
+        "Non-cacheable"
+      ],
+      "explanation": ""
+    },
+    {
+      "taskId": "task5",
+      "type": "sequence",
+      "question": "Order the steps in the HTTP request process.",
+      "answer": [
+        "1. DNS 조회",
+        "2. TCP 연결",
+        "3. HTTP 요청",
+        "4. 응답"
+      ],
+      "explanation": ""
+    },
+    {
+      "taskId": "task6",
+      "type": "keyword-list",
+      "question": "List the steps involved in a DNS lookup.",
+      "answer": [
+        "DNS 조회",
+        "TCP 연결",
+        "HTTP 요청",
+        "응답"
+      ],
+      "explanation": ""
+    },
+    {
+      "taskId": "task7",
+      "type": "mcq",
+      "question": "Which protocol is used for establishing a TCP connection?",
+      "choices": [
+        "HTTP",
+        "FTP",
+        "TCP",
+        "UDP",
+        "SMTP"
+      ],
+      "answer": "TCP",
+      "explanation": "TCP (Transmission Control Protocol) is the protocol used for establishing a TCP connection."
+    },
+    {
+      "taskId": "task8",
+      "type": "blank",
+      "question": "An HTTP request consists of a request line, headers, and ________.",
+      "answer": "body",
+      "explanation": ""
+    },
+    {
+      "taskId": "task9",
+      "type": "keyword-find",
+      "question": "Identify the key elements of an HTTP response.",
+      "answer": [
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface"
+      ],
+      "candidates": [
+        "Stateless",
+        "Cacheable",
+        "Uniform Interface",
+        "HTTP 요청",
+        "TCP 연결"
+      ],
+      "explanation": ""
+    },
+    {
+      "taskId": "task10",
+      "type": "ox",
+      "question": "Server state storage is a characteristic of stateless APIs.",
+      "answer": "X",
+      "explanation": "Stateless APIs do not store server state."
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "REST API",
+          "keywords": [
+            "REST",
+            "API"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "Stateless",
+          "keywords": [
+            "Stateless"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "Cacheable",
+          "keywords": [
+            "Cacheable"
+          ]
+        },
+        {
+          "id": "4",
+          "content": "Uniform Interface",
+          "keywords": [
+            "Uniform",
+            "Interface"
+          ]
+        },
+        {
+          "id": "5",
+          "content": "HTTP 요청 과정",
+          "keywords": [
+            "HTTP",
+            "요청",
+            "과정"
+          ]
+        },
+        {
+          "id": "6",
+          "content": "DNS 조회",
+          "keywords": [
+            "DNS",
+            "조회"
+          ]
+        },
+        {
+          "id": "7",
+          "content": "TCP 연결",
+          "keywords": [
+            "TCP",
+            "연결"
+          ]
+        },
+        {
+          "id": "8",
+          "content": "HTTP 요청",
+          "keywords": [
+            "HTTP",
+            "요청"
+          ]
+        },
+        {
+          "id": "9",
+          "content": "응답",
+          "keywords": [
+            "응답"
+          ]
+        },
+        {
+          "id": "10",
+          "content": "서버 상태 저장",
+          "keywords": [
+            "서버",
+            "상태",
+            "저장"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task1",
+        "type": "mcq",
+        "conceptId": "1",
+        "intent": "understand",
+        "target": "What does REST stand for in REST API?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task2",
+        "type": "ox",
+        "conceptId": "2",
+        "intent": "recall",
+        "target": "A stateless API maintains client state across multiple requests.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task3",
+        "type": "blank",
+        "conceptId": "3",
+        "intent": "recall",
+        "target": "In RESTful services, responses can be ________ to improve performance.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task4",
+        "type": "keyword-find",
+        "conceptId": "4",
+        "intent": "understand",
+        "target": "Identify the key components of a uniform interface.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "task5",
+        "type": "sequence",
+        "conceptId": "5",
+        "intent": "apply",
+        "target": "Order the steps in the HTTP request process.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task6",
+        "type": "keyword-list",
+        "conceptId": "6",
+        "intent": "recall",
+        "target": "List the steps involved in a DNS lookup.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "task7",
+        "type": "mcq",
+        "conceptId": "7",
+        "intent": "distinguish",
+        "target": "Which protocol is used for establishing a TCP connection?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task8",
+        "type": "blank",
+        "conceptId": "8",
+        "intent": "recall",
+        "target": "An HTTP request consists of a request line, headers, and ________.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task9",
+        "type": "keyword-find",
+        "conceptId": "9",
+        "intent": "understand",
+        "target": "Identify the key elements of an HTTP response.",
+        "difficulty": "hard"
+      },
+      {
+        "id": "task10",
+        "type": "ox",
+        "conceptId": "10",
+        "intent": "recall",
+        "target": "Server state storage is a characteristic of stateless APIs.",
+        "difficulty": "easy"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "task1",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task2",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "task3",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task4",
+        "type": "keyword-find",
+        "requiredFields": [
+          "candidates"
+        ],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task5",
+        "type": "sequence",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustPreserveOrder": true
+          }
+        }
+      },
+      {
+        "taskId": "task6",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      },
+      {
+        "taskId": "task7",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task8",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task9",
+        "type": "keyword-find",
+        "requiredFields": [
+          "candidates"
+        ],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task10",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": []
+    }
+  },
+  "createdAt": "2026-06-24T08:27:45.249Z"
+}

@@ -1,0 +1,179 @@
+{
+  "sourceId": "a9b7131f-af60-4993-8f98-d121b265cd74",
+  "version": "v0.3-5",
+  "questions": [
+    {
+      "taskId": "task1",
+      "type": "keyword-list",
+      "question": "JWT 구성 요소를 나열하시오.",
+      "answer": [
+        "Header",
+        "Payload",
+        "Signature"
+      ],
+      "explanation": "JWT는 Header, Payload, Signature의 세 부분으로 구성됩니다."
+    },
+    {
+      "taskId": "task2",
+      "type": "mcq",
+      "question": "JWT의 Header 정보에 포함되는 주요 요소는 무엇인가요?",
+      "choices": [
+        "알고리즘 정보",
+        "사용자 정보",
+        "위변조 방지",
+        "서명",
+        "토큰"
+      ],
+      "answer": "알고리즘 정보",
+      "explanation": "JWT의 Header에는 알고리즘 정보가 저장됩니다."
+    },
+    {
+      "taskId": "task3",
+      "type": "blank",
+      "question": "Payload에 포함된 __________ 정보",
+      "answer": "사용자 정보(Claim)",
+      "explanation": "JWT의 Payload 부분에는 사용자 정보가 포함됩니다."
+    },
+    {
+      "taskId": "task4",
+      "type": "ox",
+      "question": "Signature는 위변조 방지 기능을 제공한다.",
+      "answer": "O",
+      "explanation": "Signature는 위변조를 방지하는 기능을 제공합니다."
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "JWT 구성 요소",
+          "keywords": [
+            "JWT",
+            "구성",
+            "Header",
+            "Payload",
+            "Signature"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "Header 정보",
+          "keywords": [
+            "Header",
+            "알고리즘",
+            "정보"
+          ]
+        },
+        {
+          "id": "3",
+          "content": "Payload 사용자 정보",
+          "keywords": [
+            "Payload",
+            "사용자",
+            "정보",
+            "Claim"
+          ]
+        },
+        {
+          "id": "4",
+          "content": "Signature 기능",
+          "keywords": [
+            "Signature",
+            "위변조",
+            "방지"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task1",
+        "type": "keyword-list",
+        "conceptId": "1",
+        "intent": "recall",
+        "target": "JWT 구성 요소",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task2",
+        "type": "mcq",
+        "conceptId": "2",
+        "intent": "understand",
+        "target": "Header 정보의 주요 요소",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task3",
+        "type": "blank",
+        "conceptId": "3",
+        "intent": "apply",
+        "target": "Payload에 포함된 __________ 정보",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task4",
+        "type": "ox",
+        "conceptId": "4",
+        "intent": "distinguish",
+        "target": "Signature는 위변조 방지 기능을 제공한다.",
+        "difficulty": "easy"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "task1",
+        "type": "keyword-list",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "minAnswers": 2
+          }
+        }
+      },
+      {
+        "taskId": "task2",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task3",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task4",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": true,
+      "errors": []
+    }
+  },
+  "createdAt": "2026-06-24T08:18:55.522Z"
+}
