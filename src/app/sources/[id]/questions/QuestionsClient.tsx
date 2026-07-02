@@ -30,7 +30,13 @@ export default function QuestionsClient({ id }: { id: string }) {
         `/api/questions?sourceId=${id}&version=${encodeURIComponent(version)}`,
       );
       const data = await res.json();
-      setQuestions(data.questions || []);
+
+      const recallItem = {
+        type: "recall",
+        question: "학습한 내용을 바탕으로 백지 테스트를 진행해 보세요.",
+      };
+
+      setQuestions([recallItem, ...(data.questions || [])]);
     } catch (error) {
       console.error("문제를 불러오는데 실패했습니다.", error);
     } finally {
@@ -124,7 +130,7 @@ export default function QuestionsClient({ id }: { id: string }) {
                 // 3. 개별 문제를 풀러 이동할 때도 어떤 버전의 문제셋인지 쿼리 파라미터로 명시해줍니다.
                 onClick={() =>
                   router.push(
-                    `/sources/${id}/questions/${i}?version=${encodeURIComponent(version)}`,
+                    `/sources/${id}/questions/${i - 1}?version=${encodeURIComponent(version)}`,
                   )
                 }
                 className="group flex items-start justify-between p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-blue-500 hover:shadow-md cursor-pointer transition-all duration-200"

@@ -4,7 +4,8 @@ export type QuestionType =
   | "blank"
   | "keyword-find"
   | "keyword-list"
-  | "sequence";
+  | "sequence"
+  | "recall";
 
 /** 1) ANALYZER */
 export type AnalyzerInput = {
