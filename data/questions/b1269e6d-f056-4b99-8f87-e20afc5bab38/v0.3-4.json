@@ -1,0 +1,201 @@
+{
+  "sourceId": "b1269e6d-f056-4b99-8f87-e20afc5bab38",
+  "version": "v0.3-4",
+  "questions": [
+    {
+      "taskId": "task-1",
+      "type": "ox",
+      "question": "TCP는 연결 지향 프로토콜이다.",
+      "answer": "O",
+      "explanation": "TCP는 연결 지향 프로토콜로, 데이터 전송 전에 연결을 설정하고, 데이터의 신뢰성을 보장합니다."
+    },
+    {
+      "taskId": "task-2",
+      "type": "mcq",
+      "question": "Which of the following is a characteristic of TCP?",
+      "answer": "신뢰성 보장",
+      "choices": [
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 빠름",
+        "비연결",
+        "속도가 상대적으로 느림"
+      ],
+      "explanation": "TCP는 연결 지향 프로토콜로, 데이터 전송의 신뢰성을 보장합니다."
+    },
+    {
+      "taskId": "task-3",
+      "type": "keyword-find",
+      "question": "Identify the characteristics of UDP.",
+      "answer": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름"
+      ],
+      "candidates": [
+        "비연결",
+        "신뢰성 보장 없음",
+        "속도가 빠름",
+        "연결 지향",
+        "신뢰성 보장",
+        "속도가 상대적으로 느림"
+      ],
+      "explanation": "UDP의 특징은 비연결, 신뢰성 보장 없음, 속도가 빠름입니다. 이들은 UDP의 주요 속성을 나타내며, TCP와 비교할 때의 차별점입니다."
+    },
+    {
+      "taskId": "task-4",
+      "type": "blank",
+      "question": "UDP is a __________ protocol.",
+      "answer": "connectionless",
+      "explanation": "UDP is referred to as a connectionless protocol because it does not establish a connection before sending data and does not guarantee the delivery of packets."
+    },
+    {
+      "taskId": "task-5",
+      "type": "sequence",
+      "question": "Order the following characteristics of TCP: connection-oriented, reliable, slower speed.",
+      "answer": [
+        "connection-oriented",
+        "reliable",
+        "slower speed"
+      ],
+      "explanation": "The correct order of TCP characteristics is 'connection-oriented', 'reliable', and 'slower speed' because TCP is designed to establish a connection before data transmission, ensures that data is delivered accurately, and operates at a slower speed compared to other protocols like UDP."
+    }
+  ],
+  "trace": {
+    "analysis": {
+      "concepts": [
+        {
+          "id": "1",
+          "content": "TCP",
+          "keywords": [
+            "연결 지향",
+            "신뢰성 보장",
+            "속도 느림"
+          ]
+        },
+        {
+          "id": "2",
+          "content": "UDP",
+          "keywords": [
+            "비연결",
+            "신뢰성 없음",
+            "속도 빠름"
+          ]
+        }
+      ]
+    },
+    "tasks": [
+      {
+        "id": "task-1",
+        "type": "ox",
+        "conceptId": "1",
+        "intent": "distinguish",
+        "target": "TCP is a connection-oriented protocol.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task-2",
+        "type": "mcq",
+        "conceptId": "1",
+        "intent": "understand",
+        "target": "Which of the following is a characteristic of TCP?",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task-3",
+        "type": "keyword-find",
+        "conceptId": "2",
+        "intent": "recall",
+        "target": "Identify the characteristics of UDP.",
+        "difficulty": "medium"
+      },
+      {
+        "id": "task-4",
+        "type": "blank",
+        "conceptId": "2",
+        "intent": "apply",
+        "target": "UDP is a __________ protocol.",
+        "difficulty": "easy"
+      },
+      {
+        "id": "task-5",
+        "type": "sequence",
+        "conceptId": "1",
+        "intent": "understand",
+        "target": "Order the following characteristics of TCP: connection-oriented, reliable, slower speed.",
+        "difficulty": "hard"
+      }
+    ],
+    "spec": [
+      {
+        "taskId": "task-1",
+        "type": "ox",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "values": [
+              "O",
+              "X"
+            ]
+          }
+        }
+      },
+      {
+        "taskId": "task-2",
+        "type": "mcq",
+        "requiredFields": [
+          "choices"
+        ],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {
+            "minChoices": 3,
+            "maxChoices": 5
+          }
+        }
+      },
+      {
+        "taskId": "task-3",
+        "type": "keyword-find",
+        "requiredFields": [
+          "candidates"
+        ],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task-4",
+        "type": "blank",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string",
+          "constraints": {}
+        }
+      },
+      {
+        "taskId": "task-5",
+        "type": "sequence",
+        "requiredFields": [],
+        "outputRule": {
+          "answerType": "string[]",
+          "constraints": {
+            "mustPreserveOrder": true
+          }
+        }
+      }
+    ],
+    "validation": {
+      "valid": false,
+      "errors": [
+        {
+          "taskId": "task-5",
+          "reason": "sequence must have candidates"
+        }
+      ]
+    }
+  },
+  "createdAt": "2026-06-25T01:14:12.379Z"
+}
